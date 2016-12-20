@@ -42,13 +42,13 @@ listings/%.pl: %.pl
 	mkdir -p $(@D)
 	cp $< $@
 
-backmatter.tex : ../classicthesis_mine/backmatter.tex
+backmatter.tex : ../latex/classicthesis_mine/backmatter.tex
 	cp $< $@
 
 vpath %.png $(ORIG_FIGURE_DIRS)
 vpath %.pl $(ORIG_LISTING_DIRS)
 
-mathematica.tex : ../METADATA ../../mathematica/METADATA
+mathematica.tex : ../METADATA $(HOME)/physicsplay/mathematica/METADATA
 	(cd .. ; ./METADATA -mathematica -latex -gabook $(REDACTED) > $(THISBOOK)/mathematica.tex)
 
 stokesTheoremGeometricAlgebra.pdf : calculus/stokesTheoremGeometricAlgebra.tex
