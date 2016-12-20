@@ -1,5 +1,6 @@
 THISDIR := gabookI
 THISBOOK := $(THISDIR)
+BASEVER := 034cbf4
 
 include ../latex/make.bookvars
 
