@@ -286,7 +286,7 @@ d^2 \Bx
 
 This is the oriented area element that lies in the \textAndIndex{tangent plane} at the point of evaluation, and has the magnitude of the area of that segment of the surface, as depicted in \cref{fig:loopIntegralAreaElements:loopIntegralAreaElementsFig3}.
 
-\imageFigure{../../physicsplay/figures/gabook/loopIntegralAreaElementsFig3}{Oriented area element tiling of a surface}{fig:loopIntegralAreaElements:loopIntegralAreaElementsFig3}{0.3}
+\imageFigure{../figures.gabook/loopIntegralAreaElementsFig3}{Oriented area element tiling of a surface}{fig:loopIntegralAreaElements:loopIntegralAreaElementsFig3}{0.3}
 
 Observe that we have no requirement to introduce a normal to the surface to describe the direction of the plane.  The wedge product provides the information about the orientation of the place in the space, even when the vector space that our vector lies in has dimension greater than three.
 
@@ -446,9 +446,9 @@ Expanded out in full this is
 
 which can be cross checked against \cref{fig:clockwiseLoopOnSurface:clockwiseLoopOnSurfaceFig12} to demonstrate that this specifies a clockwise orientation.  For the surface with oriented area \(d\Bx_1 \wedge d\Bx_2\), the clockwise loop is designated with line elements (1)-(4), we see that the contributions around this loop (in boxes) match \eqnref{eqn:stokesTheoremGeometricAlgebra:5810}.
 
-\imageFigure{../../physicsplay/figures/gabook/clockwiseLoopOnSurfaceFig12}{Clockwise loop}{fig:clockwiseLoopOnSurface:clockwiseLoopOnSurfaceFig12}{0.3}
+\imageFigure{../figures.gabook/clockwiseLoopOnSurfaceFig12}{Clockwise loop}{fig:clockwiseLoopOnSurface:clockwiseLoopOnSurfaceFig12}{0.3}
 
-%\imageFigure{../../physicsplay/figures/gabook/cylindricalPolarParameterizationFig6}{Oriented polar parameterization loop}{fig:cylindricalPolarParameterization:cylindricalPolarParameterizationFig6}{0.15}
+%\imageFigure{../figures.gabook/cylindricalPolarParameterizationFig6}{Oriented polar parameterization loop}{fig:cylindricalPolarParameterization:cylindricalPolarParameterizationFig6}{0.15}
 
 \makeexample{Green's theorem, a 2D Cartesian parameterization for a Euclidean space}{example:stokesTheoremGeometricAlgebra:2920}{
 
@@ -532,7 +532,7 @@ f_2(x_0, y)
 
 As expected, we can also obtain this by integrating \eqnref{eqn:stokesTheoremGeometricAlgebra:3020}.
 
-\imageFigure{../../physicsplay/figures/gabook/euclidean2DloopFig4}{Euclidean 2D loop}{fig:euclidean2Dloop:euclidean2DloopFig4}{0.15}
+\imageFigure{../figures.gabook/euclidean2DloopFig4}{Euclidean 2D loop}{fig:euclidean2Dloop:euclidean2DloopFig4}{0.15}
 }
 
 \makeexample{Cylindrical parameterization}{example:stokesTheoremGeometricAlgebra:3060}{
@@ -545,9 +545,9 @@ With \(\kappa = \Be_3 \Be_4\), such a space is conveniently parameterized as ill
 \Bx(\rho, \theta, h) = x \Be_1 + y \Be_2 + \rho \Be_3 e^{\kappa \theta}.
 \end{dmath}
 
-\imageFigure{../../physicsplay/figures/gabook/cylindricalPolarParameterizationFig7}{Cylindrical polar parameterization}{fig:cylindricalPolarParameterization:cylindricalPolarParameterizationFig7}{0.15}
+\imageFigure{../figures.gabook/cylindricalPolarParameterizationFig7}{Cylindrical polar parameterization}{fig:cylindricalPolarParameterization:cylindricalPolarParameterizationFig7}{0.15}
 
-%\imageFigure{../../physicsplay/figures/gabook/cylindricalPolarParameterizationFig5}{Cylindrical polar parameterization}{fig:cylindricalPolarParameterization:cylindricalPolarParameterizationFig5}{0.15}
+%\imageFigure{../figures.gabook/cylindricalPolarParameterizationFig5}{Cylindrical polar parameterization}{fig:cylindricalPolarParameterization:cylindricalPolarParameterizationFig5}{0.15}
 
 Note that the Euclidean case where \(\lr{\Be_4}^2 = 1\) rejection of the non-axial components of \(\Bx\) expands to
 
@@ -1030,7 +1030,7 @@ so that for \(\beta > 0\), the volume element can be
 
 This scaling choice is illustrated in \cref{fig:outwardsNormal:outwardsNormalFig8}, and represents the ``outwards'' normal.  With such a scaling choice we have
 
-\imageFigure{../../physicsplay/figures/gabook/outwardsNormalFig8}{Outwards normal}{fig:outwardsNormal:outwardsNormalFig8}{0.15}
+\imageFigure{../figures.gabook/outwardsNormalFig8}{Outwards normal}{fig:outwardsNormal:outwardsNormalFig8}{0.15}
 
 \begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3800}
 \beta du^1 du^2 = dA,
@@ -1360,7 +1360,7 @@ There is a geometric interpretation to these oriented area integrals, especially
 
 When written out in this differential form, each of the respective area elements is an oriented area along one of the faces of the parameterization volume, much like the line integral that results from a two parameter volume curl integral.  This is visualized in \cref{fig:sphereicalParameterizationBoundaryFaces:sphereicalParameterizationBoundaryFacesFig9}.  In this figure, faces (1) and (3) are ``top faces'', those with signs matching the tops of the evaluation ranges \eqnref{eqn:stokesTheoremGeometricAlgebra:4070}, whereas face (2) is a bottom face with a sign that is correspondingly reversed.
 
-\imageFigure{../../physicsplay/figures/gabook/sphereicalParameterizationBoundaryFacesFig9}{Boundary faces of a spherical parameterization region}{fig:sphereicalParameterizationBoundaryFaces:sphereicalParameterizationBoundaryFacesFig9}{0.25}
+\imageFigure{../figures.gabook/sphereicalParameterizationBoundaryFacesFig9}{Boundary faces of a spherical parameterization region}{fig:sphereicalParameterizationBoundaryFaces:sphereicalParameterizationBoundaryFacesFig9}{0.25}
 }
 %FIXME: figure titled 'Oriented surface of a three parameter subspace' in older doc looks nicer.
 
@@ -1721,7 +1721,7 @@ This provides us a divergence and normal relationship, with \(-I^2\) terms on ea
 
 Let's consider this graphically for an Euclidean metric as illustrated in \cref{fig:normalsOnSurfaceAreaElement:normalsOnSurfaceAreaElementFig10}.
 
-\imageFigure{../../physicsplay/figures/gabook/normalsOnSurfaceAreaElementFig10}{Normals on area element}{fig:normalsOnSurfaceAreaElement:normalsOnSurfaceAreaElementFig10}{0.25}
+\imageFigure{../figures.gabook/normalsOnSurfaceAreaElementFig10}{Normals on area element}{fig:normalsOnSurfaceAreaElement:normalsOnSurfaceAreaElementFig10}{0.25}
 
 We see that
 \begin{itemize}
@@ -1852,7 +1852,7 @@ and
 
 The outwards normals at the upper integration ranges of a three parameter surface are depicted in \cref{fig:normalsOnVolumeAreaElement:normalsOnVolumeAreaElementFig11}.
 
-\imageFigure{../../physicsplay/figures/gabook/normalsOnVolumeAreaElementFig11}{Outwards normals on volume at upper integration ranges.}{fig:normalsOnVolumeAreaElement:normalsOnVolumeAreaElementFig11}{0.25}
+\imageFigure{../figures.gabook/normalsOnVolumeAreaElementFig11}{Outwards normals on volume at upper integration ranges.}{fig:normalsOnVolumeAreaElement:normalsOnVolumeAreaElementFig11}{0.25}
 
 This sign alternation originates with the two form elements \(\lr{d\Bx_i \wedge d\Bx_j} \cdot F\) from the Stokes boundary integral, which were explicitly evaluated at the endpoints of the integral.  That is, for \(k \ne i,j\),
 
