@@ -224,20 +224,5 @@ This is important since since the conventions for the sign of the Green's functi
 
 What's cool about this result is that it applies not only to gradient equations in Euclidean spaces, but also to multivector (or even just vector) fields \( F \), instead of the usual scalar functions that we usually apply Green's functions to.
 
-\makeexample{Electrostatics}{example:gradientGreensFunction:1}{
-As a check of the sign consider the electrostatics equation
-
-\begin{dmath}\label{eqn:gradientGreensFunction:380}
-\spacegrad \BE = \frac{\rho}{\epsilon_0},
-\end{dmath}
-
-for which we have after substitution into \cref{eqn:gradientGreensFunction:320}
-\begin{dmath}\label{eqn:gradientGreensFunction:400}
-\BE(\Bx) = \inv{4 \pi \epsilon_0} \int_V dV' \frac{\Bx - \Bx'}{\Abs{\Bx - \Bx'}^3} \rho(\Bx').
-\end{dmath}
-
-This matches the sign found in a trusted reference such as \citep{jackson1975cew}.
-} % example
-
 %}
 %\EndArticle

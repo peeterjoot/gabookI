@@ -93,7 +93,7 @@ d^{k-1} \Bx = \sum_{i = 1}^k (-1)^{k-i} d\Bx_1 \wedge d\Bx_2 \cdots \wedge d\Bx_
 =
 \sum_{i = 1}^k (-1)^{k-i} \int \evalrange{
    %\lr{ \lr{ d\Bx_1 \wedge d\Bx_2 \cdots \widehat{d\Bx_i} \cdots \wedge d\Bx_k } \cdot F }
-   \lr{ \lr{ d\Bx_1 \wedge d\Bx_2 \cdots \wedge d\Bx_{i-1} \wedge d\Bx_{i+1} \wedge \cdots \wedge d\Bx_k } \cdot F }
+   \Biglr{ \lr{ d\Bx_1 \wedge d\Bx_2 \cdots \wedge d\Bx_{i-1} \wedge d\Bx_{i+1} \wedge \cdots \wedge d\Bx_k } \cdot F }
 }{u^i = u^i(0)}{u^i(1)},
 \end{dmath}
 
@@ -170,9 +170,9 @@ F \lr{
 \int_{u^{i+1}}
 \cdots
 \int_{u^k}
-\evalrange{ \lr{
+\evalrange{ \Biglr{
 %F d\Bx_1 \wedge d\Bx_2 \cdots \widehat{d\Bx_i} \cdots \wedge d\Bx_k G
-F d\Bx_1 \wedge d\Bx_2 \cdots d\Bx_{i-1} d\Bx_{i+1} \cdots \wedge d\Bx_k G
+F d\Bx_1 \wedge d\Bx_2 \cdots \wedge d\Bx_{i-1} \wedge d\Bx_{i+1} \wedge \cdots \wedge d\Bx_k G
 }
 }{u^i = u^i(0)}{u^i(1)}.
 \end{dmath}

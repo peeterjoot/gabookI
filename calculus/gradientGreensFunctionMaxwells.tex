@@ -1,0 +1,19 @@
+%
+% Copyright © 2016 Peeter Joot.  All Rights Reserved.
+% Licenced as described in the file LICENSE under the root directory of this GIT repository.
+%
+\makeexample{Electrostatics}{example:gradientGreensFunction:1}{
+As a check of the sign consider the electrostatics equation
+
+\begin{dmath}\label{eqn:gradientGreensFunction:380}
+\spacegrad \BE = \frac{\rho}{\epsilon_0},
+\end{dmath}
+
+for which we have after substitution into \cref{eqn:gradientGreensFunction:320}
+\begin{dmath}\label{eqn:gradientGreensFunction:400}
+\BE(\Bx) = \inv{4 \pi \epsilon_0} \int_V dV' \frac{\Bx - \Bx'}{\Abs{\Bx - \Bx'}^3} \rho(\Bx').
+\end{dmath}
+
+This matches the sign found in a trusted reference such as \citep{jackson1975cew}.
+} % example
+
