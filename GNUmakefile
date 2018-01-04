@@ -51,3 +51,5 @@ mathematica.tex : ../METADATA ../mathematica/METADATA
 	(cd .. ; ./METADATA -mathematica -latex -gabook $(REDACTED) > $(THISBOOK)/mathematica.tex)
 
 stokesTheoremGeometricAlgebra.pdf : calculus/stokesTheoremGeometricAlgebra.tex
+
+bi.pdf : basics/bivector.tex

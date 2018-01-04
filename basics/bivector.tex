@@ -5,7 +5,7 @@
 
 %
 %
-%\input{../peeter_prologue.tex}
+%\input{../latex/peeter_prologue.tex}
 
 %\chapter{Bivector Geometry}
 \index{bivector}
@@ -14,7 +14,7 @@
 %\blogpage{http://sites.google.com/site/peeterjoot/geometric-algebra/bivector.pdf?revision=2}
 %\revisionInfo{ March 9, 2008.  \(RCSfile: bivector.tex,v \) Last \(Revision: 1.16 \) \(Date: 2009/10/22 02:07:20 \) }
 
-\beginArtWithToc
+%\beginArtWithToc
 
 \section{Motivation}
 
@@ -65,105 +65,90 @@ The geometric product of two bivectors can be written:
 
 Because we have three terms involved, unlike the vector dot and wedge product we cannot generally separate these terms by symmetric and antisymmetric parts.  However forming those sums will still worthwhile, especially for the case of intersecting bivectors since the last term will be zero in that case.
 
-\subsection{Sign change of each grade term with commutation}
+\subsection{Simple case.  When the bivectors are blades.}
 
-Starting with the last term we can first observe that
+If a bivector is a 2-blade (i.e. a wedge of two vectors), then it can be written as the product of two normal vectors, such as
 
-\begin{equation}
-\label{eqn:bivector:wedgesign}
-\BA \wedge \BB = \BB \wedge \BA
-\end{equation}
+\begin{dmath}\label{eqn:bivector:1123}
+\BA = \Bm \Bn.
+\end{dmath}
 
-To show this let \(\BA = \Ba \wedge \Bb\), and \(\BB = \Bc \wedge \Bd\).  When
+In this case the square of a bivector
 
-\(\BA \wedge \BB \ne 0\), one can write:
+\begin{dmath}\label{eqn:bivector:1143}
+\BA^2
+= \Bm \Bn \Bm \Bn
+= - \Bm^2 \Bn^2,
+\end{dmath}
 
-\begin{equation}\label{eqn:bivector:43}
+is always a scalar.  For products of two 2-blades, there are two cases of interest.  The first is when there is a line of intersection between the two blades, and the second when all factors of the blades are normal.
+
+\begin{enumerate}[(a)]
+\item Intersecting case.  Let
+
+\begin{equation}\label{eqn:bivector:1163}
 \begin{aligned}
-\BA \wedge \BB
-&= \Ba \wedge \Bb \wedge \Bc \wedge \Bd \\
-&= - \Bb \wedge \Bc \wedge \Bd \wedge \Ba \\
-&= \Bc \wedge \Bd \wedge \Ba \wedge \Bb \\
-&= \BB \wedge \BA \\
+\BA &= \Bm \Bn \\
+\BB &= \Bm \Bp,
 \end{aligned}
 \end{equation}
 
-To see how the signs of the remaining two terms vary with commutation form:
+where \( \Bm \cdot \Bn = \Bm \cdot \Bp = 0 \).
+Here we have
 
-\begin{equation}\label{eqn:bivector:63}
+\begin{dmath}\label{eqn:bivector:1183}
 \begin{aligned}
-(\BA + \BB)^2
-&= (\BA + \BB)(\BA + \BB) \\
-&= \BA^2 + \BB^2 + \BA \BB + \BB \BA \\
+\BA \BB &= \Bm \Bn \Bm \Bp = -\Bm^2 \Bn \Bp \\
+\BB \BA &= \Bm \Bp \Bm \Bn = -\Bm^2 \Bp \Bn,
+\end{aligned}
+\end{dmath}
+
+so
+\begin{dmath}\label{eqn:bivector:1203}
+\begin{aligned}
+\inv{2} \lr{ \BA \BB + \BB \BA } &= -\Bm^2 \inv{2} \lr{ \Bn \Bp + \Bp \Bn } = - \Bm^2 \lr{ \Bn \cdot \Bp } \\
+\inv{2} \lr{ \BA \BB - \BB \BA } &= -\Bm^2 \inv{2} \lr{ \Bn \Bp - \Bp \Bn } = - \Bm^2 \lr{ \Bn \wedge \Bp } \\
+\end{aligned}
+\end{dmath}
+
+The symmetric sum of two intersecting 2-blades is a scalar, whereas the antisymmetric sum is a 2-blade.
+\item Non-intersecting case.  This case is only possible in spaces with dimension greater than 3.  Let
+
+\begin{equation}\label{eqn:bivector:1223}
+\begin{aligned}
+\BA &= \Bm \Bn \\
+\BB &= \Bs \Bt,
 \end{aligned}
 \end{equation}
 
-When \(\BA\) and \(\BB\) intersect we can write \(\BA = \Ba \wedge \Bx\), and \(\BB = \Bb \wedge \Bx\), thus the sum is a bivector
+where all of \( \Bm, \Bn, \Bs, \Bt \) are normal.  The products of these 2-blades are
+\begin{dmath}\label{eqn:bivector:1243}
+\BA \BB = \Bm \Bn \Bs \Bt,
+\end{dmath}
 
-\begin{equation}\label{eqn:bivector:83}
+and
+\begin{dmath}\label{eqn:bivector:1263}
+\BB \BA
+= \Bs \Bt \Bm \Bn
+= \Bm \Bs \Bt \Bn
+= \Bm \Bn \Bs \Bt
+= \BA \BB.
+\end{dmath}
+
+So, we have
+\begin{dmath}\label{eqn:bivector:1283}
 \begin{aligned}
-(\BA + \BB)
-= (\Ba + \Bb) \wedge \Bx
+\inv{2} \lr{ \BA \BB + \BB \BA } &= \gpgrade{ \BA \BB }{4} \\
+\inv{2} \lr{ \BA \BB - \BB \BA } &= 0.
 \end{aligned}
-\end{equation}
+\end{dmath}
 
-And so, the square of the two is a scalar.  When \(\BA\) and \(\BB\) have only non intersecting components, such as the grade two \R{4} multivector \(\Be_{12} + \Be_{34}\), the square of this sum will have both grade four and scalar parts.
+The symmetric sum of non-intersecting 2-blades is a 4-blade, but the antisymetric sum is zero.
+\end{enumerate}
 
-Since the LHS = RHS, and the grades of the two also must be the same.  This implies that the quantity
+From this, we can conclude that for 2-blades \( \BA, \BB \)
 
-\begin{equation}\label{eqn:bivector:103}
-\begin{aligned}
-\BA \BB + \BB \BA =
-\BA \cdot \BB + \BB \cdot \BA
-+\gpgradetwo{\BA \BB} + \gpgradetwo{\BB \BA}
-+\BA \wedge \BB + \BB \wedge \BA
-\end{aligned}
-\end{equation}
-
-is a scalar \(\iff\) \(\BA + \BB\) is a bivector, and in general has scalar and grade four terms.  Because this symmetric sum has no grade two terms, regardless of whether \(\BA\), and \(\BB\) intersect, we have:
-
-\begin{equation}\label{eqn:bivector:123}
-\begin{aligned}
-\gpgradetwo{\BA \BB} + \gpgradetwo{\BB \BA} = 0
-\end{aligned}
-\end{equation}
-\begin{equation}
-\label{eqn:bivector:signgradetwo}
-\implies
-\gpgradetwo{\BA \BB} = -\gpgradetwo{\BB \BA}
-\end{equation}
-
-One would intuitively expect \(\BA \cdot \BB = \BB \cdot \BA\).  This can be demonstrated by forming the complete symmetric sum
-
-\begin{equation}\label{eqn:bivector:143}
-\begin{aligned}
-\BA \BB + \BB \BA
-&=
-{\BA \cdot \BB} +{\BB \cdot \BA}
-+\gpgrade{\BA \BB}{2} +\gpgrade{\BB \BA}{2}
-+{\BA \wedge \BB} + {\BB \wedge \BA} \\
-&=
-{\BA \cdot \BB} +{\BB \cdot \BA}
-+\gpgrade{\BA \BB}{2} -\gpgrade{\BA \BB}{2}
-+{\BA \wedge \BB} + {\BA \wedge \BB} \\
-&=
-{\BA \cdot \BB} +{\BB \cdot \BA}
-+2{\BA \wedge \BB} \\
-\end{aligned}
-\end{equation}
-
-The LHS commutes with interchange of \(\BA\) and \(\BB\), as does \({\BA \wedge \BB}\).  So for the RHS to also commute, the remaining grade 0 term must also:
-
-\begin{equation}
-\label{eqn:bivector:dotsign}
-\BA \cdot \BB = \BB \cdot \BA
-\end{equation}
-
-\subsection{Dot, wedge and grade two terms of bivector product}
 \index{grade selection}
-
-Collecting the results of the previous section and substituting back into \eqnref{eqn:bivector:ABprod} we have:
-
 \begin{equation}
 \label{eqn:bivector:AdotB}
 \BA \cdot \BB = \gpgrade{\frac{\BA \BB + \BB\BA}{2}}{0}
@@ -195,6 +180,182 @@ When these intersect in a line the wedge term is zero, so for that special case 
 
 (note that this is always the case for \R{3}).
 
+\subsection{General bivector case.}
+
+A general bivector can not neccessarily be written as a wedge product.  One such example is
+
+\begin{dmath}\label{eqn:bivector:1303}
+\BA = \Be_{12} + \Be_{34}.
+\end{dmath}
+
+There is no common factor in this bivector, so it cannot be expressed as product of normal vectors, or equivalently, as a wedge product.  To understand the effects of commutation with a pair of general bivectors consider the coordinate representation of two bivectors.  Let
+
+\begin{dmath}\label{eqn:bivector:1323}
+\begin{aligned}
+\BA &= \sum_{ij \in [1,N]} a_{ij} \Be_{ij} \lr{ 1 - \delta_{ij} } \\
+\BB &= \sum_{ij \in [1,N]} b_{ij} \Be_{ij} \lr{ 1 - \delta_{ij} }.
+\end{aligned}
+\end{dmath}
+
+The product \( \BA \BB \) is
+
+\begin{dmath}\label{eqn:bivector:1343}
+\BA \BB
+=
+\sum_{qrst \in [1,N]}
+a_{qr}
+b_{st}
+\lr{ 1 - \delta_{qr} }
+\lr{ 1 - \delta_{st} }
+\Be_{qrst}
+.
+\end{dmath}
+
+Let's consider the possible grades of the multivector \( \Be_{qrst} \).
+
+\begin{itemize}
+\item 0.  Whenever \( qr = st \), or \( qr = ts \), then
+\( \Be_{qrst} \) is a scalar.
+In this case
+\( \Be_{qrst} = \Be_{stqr} \).
+\item 2.  Whenever one but not both of \( q \) or \( r \) equals \( s \) or \( t \), then
+\( \Be_{qrst} \) is a 2-blade.
+In this case
+\( \Be_{qrst} = -\Be_{stqr} \).
+\item 4.  Whenever
+\( qrst \) are all distinct,
+then \( \Be_{qrst} \) is a 4-blade.
+In this case
+\( \Be_{qrst} = \Be_{stqr} \).
+\end{itemize}
+
+We can conclude that the grades 0 and 4 components of the product \( \BA \BB \) commute, whereas the grade 2 component anticommutes.
+This means that
+
+\begin{dmath}\label{eqn:bivector:1363}
+\begin{aligned}
+\inv{2} \lr{ \BA \BB + \BB \BA } &=
+\gpgradezero{ \BA \BB }
++
+\gpgrade{ \BA \BB }{4}
+=
+\BA \cdot \BB + \BA \wedge \BB \\
+\inv{2} \lr{ \BA \BB - \BB \BA } &=
+\gpgrade{ \BA \BB }{2},
+\end{aligned}
+\end{dmath}
+
+and that
+
+\begin{dmath}\label{eqn:bivector:1383}
+\begin{aligned}
+\BA \cdot \BB          &= \BB \cdot \BA  \\
+\BA \wedge \BB         &= \BB \wedge \BA \\
+\gpgrade{ \BA \BB }{2} &= -\gpgrade{ \BB \BA }{2}.
+\end{aligned}
+\end{dmath}
+
+%  Mohamed Karimullah <moh_imt_kar@hotmail.com> :
+%
+% "What this is saying is that A·B + B·A must commute with interchange of A and B; which clearly it is.  Therefore, some steps are missing in order to make the final conclusion, namely that A·B = B·A. "
+%
+% (rewrote this subsection above in response.)
+%
+%\subsection{ORIGINAL TEXT.  REWRITE.}
+%\subsubsection{Sign change of each grade term with commutation}
+%
+%Starting with the last term we can first observe that
+%
+%\begin{equation}
+%\label{eqn:bivector:wedgesign}
+%\BA \wedge \BB = \BB \wedge \BA
+%\end{equation}
+%
+%To show this let \(\BA = \Ba \wedge \Bb\), and \(\BB = \Bc \wedge \Bd\).  When
+%
+%\(\BA \wedge \BB \ne 0\), one can write:
+%
+%\begin{equation}\label{eqn:bivector:43}
+%\begin{aligned}
+%\BA \wedge \BB
+%&= \Ba \wedge \Bb \wedge \Bc \wedge \Bd \\
+%&= - \Bb \wedge \Bc \wedge \Bd \wedge \Ba \\
+%&= \Bc \wedge \Bd \wedge \Ba \wedge \Bb \\
+%&= \BB \wedge \BA \\
+%\end{aligned}
+%\end{equation}
+%
+%To see how the signs of the remaining two terms vary with commutation form:
+%
+%\begin{equation}\label{eqn:bivector:63}
+%\begin{aligned}
+%(\BA + \BB)^2
+%&= (\BA + \BB)(\BA + \BB) \\
+%&= \BA^2 + \BB^2 + \BA \BB + \BB \BA \\
+%\end{aligned}
+%\end{equation}
+%
+%When \(\BA\) and \(\BB\) intersect we can write \(\BA = \Ba \wedge \Bx\), and \(\BB = \Bb \wedge \Bx\), thus the sum is a bivector
+%
+%\begin{equation}\label{eqn:bivector:83}
+%\begin{aligned}
+%(\BA + \BB)
+%= (\Ba + \Bb) \wedge \Bx
+%\end{aligned}
+%\end{equation}
+%
+%And so, the square of the two is a scalar.  When \(\BA\) and \(\BB\) have only non intersecting components, such as the grade two \R{4} multivector \(\Be_{12} + \Be_{34}\), the square of this sum will have both grade four and scalar parts.
+%
+%Since the LHS = RHS, and the grades of the two also must be the same.  This implies that the quantity
+%
+%\begin{equation}\label{eqn:bivector:103}
+%\begin{aligned}
+%\BA \BB + \BB \BA =
+%\BA \cdot \BB + \BB \cdot \BA
+%+\gpgradetwo{\BA \BB} + \gpgradetwo{\BB \BA}
+%+\BA \wedge \BB + \BB \wedge \BA
+%\end{aligned}
+%\end{equation}
+%
+%is a scalar \(\iff\) \(\BA + \BB\) is a bivector, and in general has scalar and grade four terms.  Because this symmetric sum has no grade two terms, regardless of whether \(\BA\), and \(\BB\) intersect, we have:
+%
+%\begin{equation}\label{eqn:bivector:123}
+%\begin{aligned}
+%\gpgradetwo{\BA \BB} + \gpgradetwo{\BB \BA} = 0
+%\end{aligned}
+%\end{equation}
+%\begin{equation}
+%\label{eqn:bivector:signgradetwo}
+%\implies
+%\gpgradetwo{\BA \BB} = -\gpgradetwo{\BB \BA}
+%\end{equation}
+%
+%One would intuitively expect \(\BA \cdot \BB = \BB \cdot \BA\).  This can be demonstrated by forming the complete symmetric sum
+%
+%\begin{equation}\label{eqn:bivector:143}
+%\begin{aligned}
+%\BA \BB + \BB \BA
+%&=
+%{\BA \cdot \BB} +{\BB \cdot \BA}
+%+\gpgrade{\BA \BB}{2} +\gpgrade{\BB \BA}{2}
+%+{\BA \wedge \BB} + {\BB \wedge \BA} \\
+%&=
+%{\BA \cdot \BB} +{\BB \cdot \BA}
+%+\gpgrade{\BA \BB}{2} -\gpgrade{\BA \BB}{2}
+%+{\BA \wedge \BB} + {\BA \wedge \BB} \\
+%&=
+%{\BA \cdot \BB} +{\BB \cdot \BA}
+%+2{\BA \wedge \BB} \\
+%\end{aligned}
+%\end{equation}
+%
+%The LHS commutes with interchange of \(\BA\) and \(\BB\), as does \({\BA \wedge \BB}\).  So for the RHS to also commute, the remaining grade 0 term must also:
+%
+%\begin{equation}
+%\label{eqn:bivector:dotsign}
+%\BA \cdot \BB = \BB \cdot \BA
+%\end{equation}
+%
 \section{Intersection of planes}
 
 Starting with two planes specified parametrically, each in terms of two direction vectors and a point on the plane:
