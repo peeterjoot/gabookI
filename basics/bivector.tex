@@ -63,7 +63,38 @@ The geometric product of two bivectors can be written:
 +{\BB \wedge \BA}
 \end{equation}
 
-Because we have three terms involved, unlike the vector dot and wedge product we cannot generally separate these terms by symmetric and antisymmetric parts.  However forming those sums will still worthwhile, especially for the case of intersecting bivectors since the last term will be zero in that case.
+Unlike the vector dot and wedge products we cannot generally separate the grades of a bivector product using symmetric and antisymmetric sums.
+One of the symmetric or antisymmetric sums must contain more than one grade.
+We will see that the antisymmetric sum of bivectors is a bivector, whereas the symmetric sum of bivectors may contain both grades 0 and 4.
+
+To understand all the possible grades that can be found in a product of bivectors, consider the following coordinate expansion of a pair of bivectors and their product.
+%However forming those sums will still worthwhile, especially for the case of intersecting bivectors since the last term will be zero in that case.
+Let
+
+\begin{dmath}\label{eqn:bivector:1323}
+\begin{aligned}
+\BA &= \sum_{ij \in [1,N]} a_{ij} \Be_{ij} \lr{ 1 - \delta_{ij} } \\
+\BB &= \sum_{ij \in [1,N]} b_{ij} \Be_{ij} \lr{ 1 - \delta_{ij} }.
+\end{aligned}
+\end{dmath}
+
+The product \( \BA \BB \) is
+
+\begin{dmath}\label{eqn:bivector:1343}
+\BA \BB
+=
+\sum_{qrst \in [1,N]}
+a_{qr}
+b_{st}
+\lr{ 1 - \delta_{qr} }
+\lr{ 1 - \delta_{st} }
+\Be_{qrst}
+.
+\end{dmath}
+
+The grades of this multivector are determined by the grades of \( \Be_q \Be_r \Be_s \Be_t \).
+Whenever any two adjacent indices are not equal, those unit vectors may be anticommuted, but whenever they are equal, the vector products result in a scalar.
+This means that only even grades are possible, so a bivector product may only have grades 0, 2, or 4.
 
 \subsection{Simple case.  When the bivectors are blades.}
 
@@ -106,12 +137,24 @@ Here we have
 so
 \begin{dmath}\label{eqn:bivector:1203}
 \begin{aligned}
-\inv{2} \lr{ \BA \BB + \BB \BA } &= -\Bm^2 \inv{2} \lr{ \Bn \Bp + \Bp \Bn } = - \Bm^2 \lr{ \Bn \cdot \Bp } \\
+\inv{2} \lr{ \BA \BB + \BB \BA }
+&= -\Bm^2 \inv{2} \lr{ \Bn \Bp + \Bp \Bn }
+= - \Bm^2 \lr{ \Bn \cdot \Bp } \\
 \inv{2} \lr{ \BA \BB - \BB \BA } &= -\Bm^2 \inv{2} \lr{ \Bn \Bp - \Bp \Bn } = - \Bm^2 \lr{ \Bn \wedge \Bp } \\
 \end{aligned}
 \end{dmath}
 
 The symmetric sum of two intersecting 2-blades is a scalar, whereas the antisymmetric sum is a 2-blade.
+
+By applying the scalar grade selection operator to \cref{eqn:bivector:1183}, and from the definition \( \BA \cdot \BB = \gpgradezero{ \BA \BB } \), for intersecting 2-blades, we also have
+
+\begin{dmath}\label{eqn:bivector:1403}
+\begin{aligned}
+\BA \cdot \BB &= \gpgradezero{\Bm \Bn \Bm \Bp} = -\Bm^2 \Bn \cdot \Bp = \inv{2} \lr{ \BA \BB + \BB \BA } \\
+\BB \cdot \BA &= \gpgradezero{\Bm \Bp \Bm \Bn} = -\Bm^2 \Bp \cdot \Bn = \inv{2} \lr{ \BA \BB + \BB \BA }.
+\end{aligned}
+\end{dmath}
+
 \item Non-intersecting case.  This case is only possible in spaces with dimension greater than 3.  Let
 
 \begin{equation}\label{eqn:bivector:1223}
@@ -188,30 +231,9 @@ A general bivector can not neccessarily be written as a wedge product.  One such
 \BA = \Be_{12} + \Be_{34}.
 \end{dmath}
 
-There is no common factor in this bivector, so it cannot be expressed as product of normal vectors, or equivalently, as a wedge product.  To understand the effects of commutation with a pair of general bivectors consider the coordinate representation of two bivectors.  Let
-
-\begin{dmath}\label{eqn:bivector:1323}
-\begin{aligned}
-\BA &= \sum_{ij \in [1,N]} a_{ij} \Be_{ij} \lr{ 1 - \delta_{ij} } \\
-\BB &= \sum_{ij \in [1,N]} b_{ij} \Be_{ij} \lr{ 1 - \delta_{ij} }.
-\end{aligned}
-\end{dmath}
-
-The product \( \BA \BB \) is
-
-\begin{dmath}\label{eqn:bivector:1343}
-\BA \BB
-=
-\sum_{qrst \in [1,N]}
-a_{qr}
-b_{st}
-\lr{ 1 - \delta_{qr} }
-\lr{ 1 - \delta_{st} }
-\Be_{qrst}
-.
-\end{dmath}
-
-Let's consider the possible grades of the multivector \( \Be_{qrst} \).
+There is no common factor in this bivector, so it cannot be expressed as product of normal vectors, or equivalently, as a wedge product.  To understand the effects of commutation with a pair of general bivectors consider the coordinate representation of the two general bivectors defined in
+\cref{eqn:bivector:1323}, and their product \cref{eqn:bivector:1343}.
+Considering the commutation behaviour of the possible grades of the multivector \( \Be_{qrst} \) is sufficient.
 
 \begin{itemize}
 \item 0.  Whenever \( qr = st \), or \( qr = ts \), then

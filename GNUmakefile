@@ -52,4 +52,4 @@ mathematica.tex : ../METADATA ../mathematica/METADATA
 
 stokesTheoremGeometricAlgebra.pdf : calculus/stokesTheoremGeometricAlgebra.tex
 
-bi.pdf : basics/bivector.tex
+drivers/bi.pdf : basics/bivector.tex
