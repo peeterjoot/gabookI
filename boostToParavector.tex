@@ -35,15 +35,15 @@
 
 \section{Motivation.}
 
-The notation I prefer for relativistic geometric algebra uses Hestenes' space time algebra (STA) \citep{doran2003gap}, where the basis is a four dimensional space \( \setlr{ \gamma_\mu } \), subject to Dirac matric like relations \( \gamma_\mu \cdot \gamma_\nu = \eta_{\mu \nu} \).
+The notation I prefer for relativistic geometric algebra uses Hestenes' space time algebra (STA) \citep{doran2003gap}, where the basis is a four dimensional space \( \setlr{ \gamma_\mu } \), subject to Dirac matrix like relations \( \gamma_\mu \cdot \gamma_\nu = \eta_{\mu \nu} \).
 
 In this formalism a four vector is just the sum of the products of coordinates and basis vectors, for example, using summation convention
 
 \begin{dmath}\label{eqn:boostToParavector:160}
-x = x^\mu \gamma_mu.
+x = x^\mu \gamma_\mu.
 \end{dmath}
 
-The invarient for a four-vector in STA is just the square of that vector
+The invariant for a four-vector in STA is just the square of that vector
 
 \begin{dmath}\label{eqn:boostToParavector:180}
 x^2
@@ -67,7 +67,7 @@ and space-like projections are wedges with the same
 \Bx = x \cdot \gamma_0 = x^k \sigma_k,
 \end{equation}
 
-where sums over latin indexes \( k \in \setlr{1,2,3} \) are implied, and where the elements \( \sigma_k \)
+where sums over Latin indexes \( k \in \setlr{1,2,3} \) are implied, and where the elements \( \sigma_k \)
 
 \begin{dmath}\label{eqn:boostToParavector:80}
 \sigma_k = \gamma_k \gamma_0.
@@ -82,9 +82,9 @@ Rotations in STA involve exponentials of space like bivectors \( \theta = a_{ij}
 x' = e^{ \theta/2 } x e^{ -\theta/2 }.
 \end{equation}
 
-Boosts, on the other hand, have exactly the same form, but the exponenentials are with repsect to space-time bivectors arguments, such as \( \theta = a \wedge \gamma_0 \), where \( a \) is any four-vector.
+Boosts, on the other hand, have exactly the same form, but the exponentials are with respect to space-time bivectors arguments, such as \( \theta = a \wedge \gamma_0 \), where \( a \) is any four-vector.
 
-Observe that both boosts and rotations neccessarily conserve the space-time length of a four vector (or any multivector with a scalar square).
+Observe that both boosts and rotations necessarily conserve the space-time length of a four vector (or any multivector with a scalar square).
 
 \begin{dmath}\label{eqn:boostToParavector:260}
 \lr{x'}^2
@@ -128,13 +128,13 @@ x^2
 \lr{ ct - \Bx }.
 \end{dmath}
 
-Baylis introduces an involution operator \( \overbar{M} \) which toggles the sign of any vector or bivector grades of a multivector.  So if \( M = a + \Ba + I \Bb + I c \), is a multivector with all grades \( 0,1,2,3 \), then the involution of \( M \) is
+Baylis introduces an involution operator \( \overbar{M} \) which toggles the sign of any vector or bivector grades of a multivector.  For example, if \( M = a + \Ba + I \Bb + I c \), where \( a,c \in \bbR \) and \( \Ba, \Bb \in \bbR^3 \) is a multivector with all grades \( 0,1,2,3 \), then the involution of \( M \) is
 
 \begin{dmath}\label{eqn:boostToParavector:300}
 \overbar{M} = a - \Ba - I \Bb + I c.
 \end{dmath}
 
-Utilizing this operator, the invarient length for a paravector \( X \) is \( X \overbar{X} \).
+Utilizing this operator, the invariant length for a paravector \( X \) is \( X \overbar{X} \).
 
 Let's consider how boosts and rotations can be expressed in the paravector form.  The half angle operator for a boost along the spacelike \( \Bv = v \vcap \) direction has the form
 
@@ -180,7 +180,104 @@ X \overbar{ X } L \overbar{ L }
 X \overbar{ X }.
 \end{dmath}
 
-Let's explicitly expand the transformation of \cref{eqn:boostToParavector:140}, so we can relate the rapidity angle \( \phi \) to the magnitude of the velocity.
+Let's explicitly expand the transformation of \cref{eqn:boostToParavector:140}, so we can relate the rapidity angle \( \phi \) to the magnitude of the velocity.  This is most easily done by splitting the spacelike component \( \Bx \) of the four vector into its projective and rejective components
+
+\begin{dmath}\label{eqn:boostToParavector:340}
+\Bx
+= \vcap \vcap \Bx
+= \vcap \lr{ \vcap \cdot \Bx + \vcap \wedge \Bx }
+= \vcap \lr{ \vcap \cdot \Bx } + \vcap \lr{ \vcap \wedge \Bx }
+= \Bx_\parallel + \Bx_\perp.
+\end{dmath}
+
+The exponential
+
+\begin{dmath}\label{eqn:boostToParavector:360}
+e^{-\vcap \phi/2}
+=
+\cosh\lr{ \phi/2 }
+- \vcap \sinh\lr{ \phi/2 },
+\end{dmath}
+
+commutes with any scalar grades and with \( \Bx_\parallel \), but anticommutes with \( \Bx_\perp \), so
+
+\begin{dmath}\label{eqn:boostToParavector:380}
+X'
+=
+\lr{ c t + \Bx_\parallel } e^{ -\vcap \phi/2 } e^{ -\vcap \phi/2 }
++
+\Bx_\perp e^{ \vcap \phi/2 } e^{ -\vcap \phi/2 }
+=
+\lr{ c t + \Bx_\parallel } e^{ -\vcap \phi }
++
+\Bx_\perp
+=
+\lr{ c t + \vcap \lr{ \vcap \cdot \Bx } } \lr{ \cosh \phi - \vcap \sinh \phi }
++
+\Bx_\perp
+=
+\Bx_\perp
++
+\lr{ c t \cosh\phi - \lr{ \vcap \cdot \Bx} \sinh \phi }
++
+\vcap \lr{ \lr{ \vcap \cdot \Bx } \cosh\phi - c t \sinh \phi }
+=
+\Bx_\perp
++
+\cosh\phi \lr{ c t - \lr{ \vcap \cdot \Bx} \tanh \phi }
++
+\vcap \cosh\phi \lr{ \vcap \cdot \Bx  - c t \tanh \phi }.
+\end{dmath}
+
+Employing the argument from \citep{landau1951classical},
+we want \( \phi \) defined so that this has structure of a Galilean transformation in the limit where \( \phi \rightarrow 0 \).  This means we equate
+
+\begin{dmath}\label{eqn:boostToParavector:400}
+\tanh \phi = \frac{v}{c},
+\end{dmath}
+
+so that for small \(\phi\)
+
+\begin{dmath}\label{eqn:boostToParavector:420}
+\Bx' = \Bx - \Bv t.
+\end{dmath}
+
+We can solving for \( \sinh^2 \phi \) and \( \cosh^2 \phi \) in terms of \( v/c \) using
+
+\begin{equation}\label{eqn:boostToParavector:440}
+\tanh^2 \phi
+= \frac{v^2}{c^2}
+=
+\frac{ \sinh^2 \phi }{1 + \sinh^2 \phi}
+=
+\frac{ \cosh^2 \phi - 1 }{\cosh^2 \phi}.
+\end{equation}
+
+which after picking the positive root required for Galilean equivalence gives
+\begin{dmath}\label{eqn:boostToParavector:460}
+\begin{aligned}
+\cosh \phi &= \frac{1}{\sqrt{1 - (\Bv/c)^2}} \equiv \gamma \\
+\sinh \phi &= \frac{v/c}{\sqrt{1 - (\Bv/c)^2}} = \gamma v/c.
+\end{aligned}
+\end{dmath}
+
+The Lorentz boost, written out in full is
+
+\begin{dmath}\label{eqn:boostToParavector:480}
+ct' + \Bx'
+=
+\Bx_\perp
++
+\gamma \lr{ c t - \frac{\Bv}{c} \cdot \Bx }
++
+\gamma \lr{ \vcap \lr{ \vcap \cdot \Bx } - \Bv t }
+.
+\end{dmath}
+
+Authors like Chappelle, et al., that also use paravectors \citep{chappell2014geometric}, specify the form of the
+Lorentz transformation for the electromagnetic field, but for that transformation reversion is used instead of involution.
+I plan to explore that in a later post, starting from the STA formalism that I already understand, and see if I can make sense
+of the underlying rationale.
 
 %}
 \EndArticle
