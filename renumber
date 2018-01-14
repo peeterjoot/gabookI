@@ -19,3 +19,5 @@
 ../latex/bin/lgrep basics/bivector.tex | tee o ; . ./o
 perl -p -i ../latex/bin/latexRegex.pl basics/bivector.tex
 
+../latex/bin/lgrep boostToParavector.tex | tee o ; . ./o
+perl -p -i ../latex/bin/latexRegex.pl boostToParavector.tex

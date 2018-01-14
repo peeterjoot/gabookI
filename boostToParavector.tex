@@ -1,0 +1,187 @@
+%
+% Copyright © 2018 Peeter Joot.  All Rights Reserved.
+% Licenced as described in the file LICENSE under the root directory of this GIT repository.
+%
+%{
+\input{../latex/blogpost.tex}
+\renewcommand{\basename}{boostToParavector}
+%\renewcommand{\dirname}{notes/phy1520/}
+\renewcommand{\dirname}{gabookI/}
+%\newcommand{\dateintitle}{}
+%\newcommand{\keywords}{}
+
+\input{../latex/peeter_prologue_print2.tex}
+
+\usepackage{peeters_layout_exercise}
+\usepackage{peeters_braket}
+\usepackage{peeters_figures}
+\usepackage{siunitx}
+%\usepackage{mhchem} % \ce{}
+%\usepackage{macros_bm} % \bcM
+%\usepackage{macros_qed} % \qedmarker
+%\usepackage{txfonts} % \ointclockwise
+
+\beginArtNoToc
+
+\generatetitle{Lorentz boosts in GA paravector notation.}
+%\chapter{Boosts in paravector notation}
+%\label{chap:boostToParavector}
+% \citep{sakurai2014modern} pr X.Y
+% \citep{pozar2009microwave}
+% \citep{qftLectureNotes}
+% \citep{doran2003gap}
+% \citep{jackson1975cew}
+% \citep{griffiths1999introduction}
+
+\section{Motivation.}
+
+The notation I prefer for relativistic geometric algebra uses Hestenes' space time algebra (STA) \citep{doran2003gap}, where the basis is a four dimensional space \( \setlr{ \gamma_\mu } \), subject to Dirac matric like relations \( \gamma_\mu \cdot \gamma_\nu = \eta_{\mu \nu} \).
+
+In this formalism a four vector is just the sum of the products of coordinates and basis vectors, for example, using summation convention
+
+\begin{dmath}\label{eqn:boostToParavector:160}
+x = x^\mu \gamma_mu.
+\end{dmath}
+
+The invarient for a four-vector in STA is just the square of that vector
+
+\begin{dmath}\label{eqn:boostToParavector:180}
+x^2
+= (x^\mu \gamma_\mu) \cdot (x^\nu \gamma_\nu)
+= \sum_\mu (x^\mu)^2 (\gamma_\mu)^2
+= (x^0)^2 - \sum_{k = 1}^3 (x^k)^2
+= (ct)^2 - \Bx^2.
+\end{dmath}
+
+Recall that a four-vector is time-like if this squared-length is positive, spacelike if negative, and light-like when zero.
+
+Time-like projections are possible by dotting with the ``lab-frame'' time like basis vector \( \gamma_0 \)
+
+\begin{equation}\label{eqn:boostToParavector:200}
+ct = x \cdot \gamma_0 = x^0,
+\end{equation}
+
+and space-like projections are wedges with the same
+
+\begin{equation}\label{eqn:boostToParavector:220}
+\Bx = x \cdot \gamma_0 = x^k \sigma_k,
+\end{equation}
+
+where sums over latin indexes \( k \in \setlr{1,2,3} \) are implied, and where the elements \( \sigma_k \)
+
+\begin{dmath}\label{eqn:boostToParavector:80}
+\sigma_k = \gamma_k \gamma_0.
+\end{dmath}
+
+which are bivectors in STA,
+can be viewed as an Euclidean vector basis \( \setlr{ \sigma_k } \).
+
+Rotations in STA involve exponentials of space like bivectors \( \theta = a_{ij} \gamma_i \wedge \gamma_j \)
+
+\begin{equation}\label{eqn:boostToParavector:240}
+x' = e^{ \theta/2 } x e^{ -\theta/2 }.
+\end{equation}
+
+Boosts, on the other hand, have exactly the same form, but the exponenentials are with repsect to space-time bivectors arguments, such as \( \theta = a \wedge \gamma_0 \), where \( a \) is any four-vector.
+
+Observe that both boosts and rotations neccessarily conserve the space-time length of a four vector (or any multivector with a scalar square).
+
+\begin{dmath}\label{eqn:boostToParavector:260}
+\lr{x'}^2
+=
+\lr{ e^{ \theta/2 } x e^{ -\theta/2 } } \lr{ e^{ \theta/2 } x e^{ -\theta/2 } }
+=
+e^{ \theta/2 } x \lr{ e^{ -\theta/2 } e^{ \theta/2 } } x e^{ -\theta/2 }
+=
+e^{ \theta/2 } x^2 e^{ -\theta/2 }
+=
+x^2 e^{ \theta/2 } e^{ -\theta/2 }
+=
+x^2.
+\end{dmath}
+
+\section{Paravectors.}
+
+Paravectors, as used by Baylis \citep{baylis2004electrodynamics}, represent four-vectors using a Euclidean multivector basis \( \setlr{ \Be_\mu } \), where \( \Be_0 = 1 \).  The conversion between STA and paravector notation requires only multiplication with the timelike basis vector for the lab frame \( \gamma_0 \)
+
+\begin{dmath}\label{eqn:boostToParavector:40}
+X
+=
+x \gamma_0
+= \lr{ x^0 \gamma_0 + x^k \gamma_k } \gamma_0
+= x^0 + x^k \gamma_k \gamma_0
+= x^0 + \Bx
+= c t + \Bx,
+\end{dmath}
+
+We need a different structure for the invariant length in paravector form.  That invariant length is
+\begin{dmath}\label{eqn:boostToParavector:280}
+x^2
+=
+\lr{ \lr{ ct + \Bx } \gamma_0 }
+\lr{ \lr{ ct + \Bx } \gamma_0 }
+=
+\lr{ \lr{ ct + \Bx } \gamma_0 }
+\lr{ \gamma_0 \lr{ ct - \Bx } }
+=
+\lr{ ct + \Bx }
+\lr{ ct - \Bx }.
+\end{dmath}
+
+Baylis introduces an involution operator \( \overbar{M} \) which toggles the sign of any vector or bivector grades of a multivector.  So if \( M = a + \Ba + I \Bb + I c \), is a multivector with all grades \( 0,1,2,3 \), then the involution of \( M \) is
+
+\begin{dmath}\label{eqn:boostToParavector:300}
+\overbar{M} = a - \Ba - I \Bb + I c.
+\end{dmath}
+
+Utilizing this operator, the invarient length for a paravector \( X \) is \( X \overbar{X} \).
+
+Let's consider how boosts and rotations can be expressed in the paravector form.  The half angle operator for a boost along the spacelike \( \Bv = v \vcap \) direction has the form
+
+\begin{dmath}\label{eqn:boostToParavector:120}
+L = e^{ -\vcap \phi/2 },
+\end{dmath}
+
+\begin{dmath}\label{eqn:boostToParavector:140}
+X'
+=
+c t' + \Bx'
+=
+x' \gamma_0
+=
+L x L^\dagger
+=
+e^{ -\vcap \phi/2 } x^\mu \gamma_\mu
+e^{ \vcap \phi/2 } \gamma_0
+=
+e^{ -\vcap \phi/2 } x^\mu \gamma_\mu \gamma_0
+e^{ -\vcap \phi/2 }
+=
+e^{ -\vcap \phi/2 } \lr{ x^0 + \Bx } e^{ -\vcap \phi/2 }
+=
+L X L.
+\end{dmath}
+
+Because the involution operator toggles the sign of vector grades, it is easy to see that the required invariance is maintained
+
+\begin{dmath}\label{eqn:boostToParavector:320}
+X' \overbar{X'}
+=
+L X L
+\overbar{ L X L }
+=
+L X L
+\overbar{ L } \overbar{ X } \overbar{ L }
+=
+L X \overbar{ X } \overbar{ L }
+=
+X \overbar{ X } L \overbar{ L }
+=
+X \overbar{ X }.
+\end{dmath}
+
+Let's explicitly expand the transformation of \cref{eqn:boostToParavector:140}, so we can relate the rapidity angle \( \phi \) to the magnitude of the velocity.
+
+%}
+\EndArticle
+%\EndNoBibArticle
