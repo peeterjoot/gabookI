@@ -1,10 +1,7 @@
 THISDIR := gabookI
 THISBOOK := $(THISDIR)
 
-export BOOKSUBVER := 1
-export BOOKMAJVER := 0
-export REVISIONNUMBER := 3
-
+include make.revision
 include ../latex/make.bookvars
 
 FIGURES := ../figures/$(THISBOOK)
