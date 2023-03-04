@@ -1,0 +1,27 @@
+%
+% Copyright © 2023 Peeter Joot.  All Rights Reserved.
+% Licenced as described in the file LICENSE under the root directory of this GIT repository.
+%
+
+Should you wish to actively contribute typo fixes (or even more significant changes) to this book, you can do so by contacting me, or by forking your own copy of the associated git repositories and building the book pdf from source, and submitting a subsequent merge request.
+
+\begin{lstlisting}[language=bash]
+#!/bin/bash
+
+git clone git@github.com:peeterjoot/latex-notes-compilations.git peeterjoot
+cd peeterjoot
+ 
+submods="figures/gabook mathematica gabookI gapauli latex frequencydomain"
+for i in $submods ; do
+   git submodule update --init $i
+   (cd $i && git checkout master)
+done
+
+export PATH=`pwd`/latex/bin:$PATH
+ 
+cd gabookI
+cp ../latex/scrpage2.sty .
+make parameters.sty mmacells.sty all
+\end{lstlisting}
+
+I reserve the right to impose dictatorial control over any editing and content decisions, and may not accept merge requests as-is, or at all. That said, I will probably not refuse reasonable suggestions or merge requests.
