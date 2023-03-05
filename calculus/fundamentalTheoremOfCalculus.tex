@@ -82,52 +82,51 @@ d^{k-1} \Bx = \sum_{i = 1}^k (-1)^{k-i} d\Bx_1 \wedge d\Bx_2 \cdots \wedge d\Bx_
    [u^2(0), u^2(1) ] \directproduct \cdots \directproduct
    [u^k(0), u^k(1) ] \)
 \item The precise meaning that should be given to oriented area integral is
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:140}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:140}
 \oint_{\partial V} d^{k-1} \Bx \cdot F
 =
 \sum_{i = 1}^k (-1)^{k-i} \int \evalrange{
    %\lr{ \lr{ d\Bx_1 \wedge d\Bx_2 \cdots \widehat{d\Bx_i} \cdots \wedge d\Bx_k } \cdot F }
    \Biglr{ \lr{ d\Bx_1 \wedge d\Bx_2 \cdots \wedge d\Bx_{i-1} \wedge d\Bx_{i+1} \wedge \cdots \wedge d\Bx_k } \cdot F }
 }{u^i = u^i(0)}{u^i(1)},
-\end{dmath}
-
+\end{equation}
 where both the a area form and the blade \( F \) are evaluated at the end points of the parameterization range.
 \item
 The bidirectional vector derivative operator acts both to the left and right on \( F \) and \( G \).  The specific action of this operator is
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:240}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:240}
+\begin{aligned}
 F \boldpartial G
-=
+&=
 (F \boldpartial) G
 +
-F (\boldpartial G)
-=
+F (\boldpartial G) \\
+&=
 (\partial_i F) \Bx^i G
 +
 F \Bx^i (\partial_i G).
-\end{dmath}
+\end{aligned}
+\end{equation}
 \end{itemize}
 
 For Stokes' theorem \cref{thm:stokesTheoremGeometricAlgebra:1740}, after the work of stating exactly what is meant by this theorem, most of the proof follows from the fact that for \( s < k \) the volume curl dot product can be expanded as
-
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:160}
-\int_V d^k \Bx \cdot (\boldpartial \wedge F) =
-\int_V d^k \Bx \cdot (\Bx^i \wedge \partial_i F) =
-\int_V \lr{ d^k \Bx \cdot \Bx^i } \cdot \partial_i F.
-\end{dmath}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:160}
+\begin{aligned}
+\int_V d^k \Bx \cdot (\boldpartial \wedge F) 
+&= \int_V d^k \Bx \cdot (\Bx^i \wedge \partial_i F)  \\
+&= \int_V \lr{ d^k \Bx \cdot \Bx^i } \cdot \partial_i F.
+\end{aligned}
+\end{equation}
 
 Each of the \(du^i\) integrals can be evaluated directly, since each of the remaining \(d\Bx_j = du^j \PDi{u^j}{}, i \ne j \) is calculated with \( u^i \) held fixed.  This allows for the integration over a ``rectangular'' parameterization region, proving the theorem for such a volume parameterization.  A more general proof requires a triangulation of the volume and surface, but the basic principle of the theorem is evident, without that additional work.
-
 \paragraph{Fundamental Theorem of Calculus}
-
 The fundamental theorem can be demonstrated by direct expansion.  With the vector derivative \( \boldpartial \) and its partials \( \partial_i \) acting bidirectionally, that is
-
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:260}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:260}
+\begin{aligned}
 \int_V F d^k \Bx \boldpartial G
-=
-\int_V F d^k \Bx \Bx^i \partial_i G
-=
-\int_V F \lr{ d^k \Bx \cdot \Bx^i + d^k \Bx \wedge \Bx^i } \partial_i G.
-\end{dmath}
+&= \int_V F d^k \Bx \Bx^i \partial_i G \\
+&= \int_V F \lr{ d^k \Bx \cdot \Bx^i + d^k \Bx \wedge \Bx^i } \partial_i G.
+\end{aligned}
+\end{equation}
 
 Both the reciprocal frame vectors and the curvilinear basis span the tangent space of the manifold, since we can write any reciprocal frame vector as a set of projections in the curvilinear basis
 \begin{equation}\label{eqn:fundamentalTheoremOfCalculus:280}

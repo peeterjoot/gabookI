@@ -59,54 +59,48 @@ This means that we have, everywhere that \( x \ne x' \)
 
 Next, consider the curl of the Green's function.
 Zero curl will mean that we have \( \grad G = \grad \cdot G = G \lgrad \).
-
-\begin{dmath}\label{eqn:gradientGreensFunction:140}
+\begin{equation}\label{eqn:gradientGreensFunction:140}
+\begin{aligned}
 S_n (\grad \wedge G)
-=
+&=
 \frac{\grad \wedge (x-x')}{\Abs{x - x'}^{n}}
 +
-\grad \inv{\Abs{x - x'}^{n}} \wedge (x-x')
-=
+\grad \inv{\Abs{x - x'}^{n}} \wedge (x-x') \\
+&=
 \frac{\grad \wedge (x-x')}{\Abs{x - x'}^{n}}
 - \cancel{n
 \frac{x - x'}{\Abs{x - x'}^{n}} \wedge (x-x')}.
-\end{dmath}
-
+\end{aligned}
+\end{equation}
 However,
-
-\begin{dmath}\label{eqn:gradientGreensFunction:160}
+\begin{equation}\label{eqn:gradientGreensFunction:160}
+\begin{aligned}
 \grad \wedge (x-x')
-=
-\grad \wedge x
-=
-e^\mu \wedge e_\nu \partial_\mu x^\nu
-=
-e^\mu \wedge e_\nu \delta_\mu^\nu
-=
-e^\mu \wedge e_\mu.
-\end{dmath}
+&= \grad \wedge x \\
+&= e^\mu \wedge e_\nu \partial_\mu x^\nu \\
+&= e^\mu \wedge e_\nu \delta_\mu^\nu \\
+&= e^\mu \wedge e_\mu.
+\end{aligned}
+\end{equation}
 
 For any metric where \( e_\mu \propto e^\mu \), which is the case in all the ones with physical interest (i.e. \R{3} and Minkowski space), \( \grad \wedge G \) is zero.
 
 Having shown that the gradient of the (presumed) Green's function is zero everywhere that \( x \ne x' \), the guts of the
 demonstration can now proceed.  We wish to evaluate the gradient weighted convolution of the Green's function using the Fundamental Theorem of (Geometric) Calculus.  Here the gradient acts bidirectionally on both the gradient and the test function.  Working in primed coordinates so that the final result is in terms of the unprimed, we have
-
-\begin{dmath}\label{eqn:gradientGreensFunction:60}
+\begin{equation}\label{eqn:gradientGreensFunction:60}
    \int_V G(x,x') d^n x' \lrgrad' F(x')
    = \int_{\partial V} G(x,x') d^{n-1} x' F(x').
-\end{dmath}
+\end{equation}
 
 Let \( d^n x' = dV' I \), \( d^{n-1} x' n = dA' I \), where \( n = n(x') \) is the outward normal to the area element \( d^{n-1} x' \).
 From this point on, lets restrict attention to Euclidean spaces, where \( n^2 = 1 \).  In that case
-
-\begin{dmath}\label{eqn:gradientGreensFunction:80}
+\begin{equation}\label{eqn:gradientGreensFunction:80}
+\begin{aligned}
 \int_V dV' G(x,x') \lrgrad' F(x')
-=
-\int_V dV' \lr{G(x,x') \lgrad'} F(x')
-+
-\int_V dV' G(x,x') \lr{ \rgrad' F(x') }
-= \int_{\partial V} dA' G(x,x') n F(x').
-\end{dmath}
+&= \int_V dV' \lr{G(x,x') \lgrad'} F(x') + \int_V dV' G(x,x') \lr{ \rgrad' F(x') } \\
+&= \int_{\partial V} dA' G(x,x') n F(x').
+\end{aligned}
+\end{equation}
 
 Here, the pseudoscalar \( I \) has been factored out by commuting it with \( G \), using \( G I = (-1)^{n-1} I G \), and then pre-multiplication with \( 1/((-1)^{n-1} I ) \).
 
@@ -183,31 +177,31 @@ In particular, should we have a first order gradient equation
 \spacegrad' F(x') = M(x'),
 \end{equation}
 the inverse of this equation is given by
-%\begin{dmath}\label{eqn:gradientGreensFunction:320}
+%\begin{equation}\label{eqn:gradientGreensFunction:320}
 \boxedEquation{eqn:gradientGreensFunction:320}{
 F(x) = \int_V dV' G(x,x') M(x').
 }
-%\end{dmath}
+%\end{equation}
 
 Note that the sign of the Green's function is explicitly tied to the definition of the convolution integral that is used.
 %There is a slightly annoying negative sign in this convolution integral.
 This is important since since the conventions for the sign of the Green's function or the parameters in the convolution integral often vary.
 %For this definition, it seems desirable to eliminate that negation by variable substitution
 %
-%\begin{dmath}\label{eqn:gradientGreensFunction:340}
+%\begin{equation}\label{eqn:gradientGreensFunction:340}
 %F(y)
 %= -\int_V dV' G(y,x') M(x')
 %= -\int_V dV G(y,x) M(x),
-%\end{dmath}
+%\end{equation}
 %
 %so the inverse of \( \grad F = M \) can be written as
 %
-%%\begin{dmath}\label{eqn:gradientGreensFunction:360}
+%%\begin{equation}\label{eqn:gradientGreensFunction:360}
 %\boxedEquation{eqn:gradientGreensFunction:360}{
 %F(y)
 %= \int_V dV G(x, y) M(x).
 %}
-%\end{dmath}
+%\end{equation}
 
 What's cool about this result is that it applies not only to gradient equations in Euclidean spaces, but also to multivector (or even just vector) fields \( F \), instead of the usual scalar functions that we usually apply Green's functions to.
 %}

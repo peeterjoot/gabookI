@@ -43,66 +43,65 @@ We start by considering \cref{fig:tangentAndNormalVectors:tangentAndNormalVector
 \Bp = ( x, y, f(x, y) ),
 \end{equation}
 then using a duality transformation (multiplication by the pseudoscalar for the space) determine the normal vector to that plane at this point.  Holding either of the two free parameters constant, we find the tangent vectors on that surface to be
-
 \begin{subequations}
-\begin{dmath}\label{eqn:tangentAndNormalVectors:80}
+\begin{equation}\label{eqn:tangentAndNormalVectors:80}
 \Bp_1
 = \left( dx, 0, \PD{x}{f} dx \right)
 \propto \left( 1, 0, \PD{x}{f} \right)
-\end{dmath}
-\begin{dmath}\label{eqn:tangentAndNormalVectors:100}
+\end{equation}
+\begin{equation}\label{eqn:tangentAndNormalVectors:100}
 \Bp_2
 = \left( 0, dy, \PD{y}{f} dy \right)
 \propto \left( 0, 1, \PD{y}{f} \right)
-\end{dmath}
+\end{equation}
 \end{subequations}
 
 The tangent plane is then
-
-\begin{dmath}\label{eqn:tangentAndNormalVectors:120}
-\Bp_1 \wedge \Bp_2 =
+\begin{equation}\label{eqn:tangentAndNormalVectors:120}
+\begin{aligned}
+\Bp_1 \wedge \Bp_2 
+&=
 \left( 1, 0, \PD{x}{f} \right) \wedge
-\left( 0, 1, \PD{y}{f} \right)
-=
+\left( 0, 1, \PD{y}{f} \right) \\
+&=
 \left( \Be_1 + \Be_3 \PD{x}{f} \right)
 \wedge
-\left( \Be_2 + \Be_3 \PD{y}{f} \right)
-=
+\left( \Be_2 + \Be_3 \PD{y}{f} \right) \\
+&=
 \Be_1 \Be_2
 + \Be_1 \Be_3 \PD{y}{f}
 + \Be_3 \Be_2 \PD{x}{f}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 We can factor out the pseudoscalar 3D volume element \(I = \Be_1 \Be_2 \Be_3\), assuming a Euclidean space for which \(\Be_k^2 = 1\).  That is
-
-\begin{dmath}\label{eqn:tangentAndNormalVectors:140}
+\begin{equation}\label{eqn:tangentAndNormalVectors:140}
 \Bp_1 \wedge \Bp_2 =
 \Be_1 \Be_2 \Be_3 \left(
 \Be_3
 - \Be_2 \PD{y}{f}
 - \Be_1 \PD{x}{f}
 \right)
-\end{dmath}
+\end{equation}
 
 Multiplying through by the volume element \(I\) we find that the normal to the surface at this point is
-
-\begin{dmath}\label{eqn:tangentAndNormalVectors:160}
+\begin{equation}\label{eqn:tangentAndNormalVectors:160}
+\begin{aligned}
 \Bn
-\propto -I(\Bp_1 \wedge \Bp_2)
-=
+&\propto -I(\Bp_1 \wedge \Bp_2) \\
+&=
 \Be_3
 - \Be_1 \PD{x}{f}
 - \Be_2 \PD{y}{f}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 Observe that we can write this as
-
 \boxedEquation{eqn:tangentAndNormalVectors:180}{
 \Bn = \spacegrad ( z - f(x, y) ).
 }
 
 Let's see how this works in 4D, so that we know how to handle the Minkowski spaces we find in special relativity.
-
 \section{4D surface}
 Now, let's move up to one additional direction, with
 \begin{equation}\label{eqn:tangentAndNormalVectors:200}
@@ -149,10 +148,10 @@ p_2 \propto ( 0, 0, 1, d_2 f)
 \end{subequations}
 
 Our tangent volume in this neighborhood is
-
-\begin{dmath}\label{eqn:tangentAndNormalVectors:340}
+\begin{equation}\label{eqn:tangentAndNormalVectors:340}
+\begin{aligned}
 p_0 \wedge p_1 \wedge p_2
-=
+&=
 \left(
 \gamma_0 + \gamma_3 \partial_0 f
 \right)
@@ -163,8 +162,8 @@ p_0 \wedge p_1 \wedge p_2
 \wedge
 \left(
 \gamma_2 + \gamma_3 \partial_2 f
-\right)
-=
+\right) \\
+&=
 \left(
 \gamma_0 \gamma_1
 + \gamma_0 \gamma_3 \partial_1 f
@@ -173,10 +172,11 @@ p_0 \wedge p_1 \wedge p_2
 \wedge
 \left(
 \gamma_2 + \gamma_3 \partial_2 f
-\right)
-=
+\right) \\
+&=
 \gamma_{012} - \gamma_{023} \partial_1 f + \gamma_{123} \partial_0 f + \gamma_{013} \partial_2 f.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 Here the shorthand \(\gamma_{ijk} = \gamma_i \gamma_j \gamma_k\) has been used.  Can we factor out a 4D pseudoscalar from this and end up with a coherent result?  We have
 

@@ -83,48 +83,49 @@ x' = e^{ \theta/2 } x e^{ -\theta/2 }.
 Boosts, on the other hand, have exactly the same form, but the exponentials are with respect to space-time bivectors arguments, such as \( \theta = a \wedge \gamma_0 \), where \( a \) is any four-vector.
 
 Observe that both boosts and rotations necessarily conserve the space-time length of a four vector (or any multivector with a scalar square).
-
-\begin{dmath}\label{eqn:boostToParavector:260}
+\begin{equation}\label{eqn:boostToParavector:260}
+\begin{aligned}
 \lr{x'}^2
-=
-\lr{ e^{ \theta/2 } x e^{ -\theta/2 } } \lr{ e^{ \theta/2 } x e^{ -\theta/2 } }
-=
-e^{ \theta/2 } x \lr{ e^{ -\theta/2 } e^{ \theta/2 } } x e^{ -\theta/2 }
-=
-e^{ \theta/2 } x^2 e^{ -\theta/2 }
-=
-x^2 e^{ \theta/2 } e^{ -\theta/2 }
-=
+&=
+\lr{ e^{ \theta/2 } x e^{ -\theta/2 } } \lr{ e^{ \theta/2 } x e^{ -\theta/2 } } \\
+&=
+e^{ \theta/2 } x \lr{ e^{ -\theta/2 } e^{ \theta/2 } } x e^{ -\theta/2 } \\
+&=
+e^{ \theta/2 } x^2 e^{ -\theta/2 } \\
+&=
+x^2 e^{ \theta/2 } e^{ -\theta/2 } \\
+&=
 x^2.
-\end{dmath}
-
+\end{aligned}
+\end{equation}
 \section{Paravectors.}
-
 Paravectors, as used by Baylis \citep{baylis2004electrodynamics}, represent four-vectors using a Euclidean multivector basis \( \setlr{ \Be_\mu } \), where \( \Be_0 = 1 \).  The conversion between STA and paravector notation requires only multiplication with the timelike basis vector for the lab frame \( \gamma_0 \)
-
-\begin{dmath}\label{eqn:boostToParavector:40}
+\begin{equation}\label{eqn:boostToParavector:40}
+\begin{aligned}
 X
-=
-x \gamma_0
-= \lr{ x^0 \gamma_0 + x^k \gamma_k } \gamma_0
-= x^0 + x^k \gamma_k \gamma_0
-= x^0 + \Bx
-= c t + \Bx,
-\end{dmath}
+&= x \gamma_0 \\
+&= \lr{ x^0 \gamma_0 + x^k \gamma_k } \gamma_0 \\
+&= x^0 + x^k \gamma_k \gamma_0 \\
+&= x^0 + \Bx \\
+&= c t + \Bx,
+\end{aligned}
+\end{equation}
 
 We need a different structure for the invariant length in paravector form.  That invariant length is
-\begin{dmath}\label{eqn:boostToParavector:280}
+\begin{equation}\label{eqn:boostToParavector:280}
+\begin{aligned}
 x^2
-=
+&=
 \lr{ \lr{ ct + \Bx } \gamma_0 }
+\lr{ \lr{ ct + \Bx } \gamma_0 } \\
+&=
 \lr{ \lr{ ct + \Bx } \gamma_0 }
-=
-\lr{ \lr{ ct + \Bx } \gamma_0 }
-\lr{ \gamma_0 \lr{ ct - \Bx } }
-=
+\lr{ \gamma_0 \lr{ ct - \Bx } } \\
+&=
 \lr{ ct + \Bx }
 \lr{ ct - \Bx }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 Baylis introduces an involution operator \( \overbar{M} \) which toggles the sign of any vector or bivector grades of a multivector.  For example, if \( M = a + \Ba + I \Bb + I c \), where \( a,c \in \bbR \) and \( \Ba, \Bb \in \bbR^3 \) is a multivector with all grades \( 0,1,2,3 \), then the involution of \( M \) is
 \begin{equation}\label{eqn:boostToParavector:300}

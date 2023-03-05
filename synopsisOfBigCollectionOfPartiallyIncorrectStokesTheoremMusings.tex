@@ -142,27 +142,25 @@ dx = \gamma_i \frac{d x^i}{d\lambda} d\lambda.
 \end{equation}
 %
 The differential dotted with the gradient is
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:280}
-dx
-\cdot
-\grad f
-=
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:280}
+\begin{aligned}
+dx \cdot \grad f
+&=
 \left(\gamma_{j} \frac{d x^{j}}{d\lambda} \right) d\lambda
 \cdot
-\left(\gamma^{i} \partial_{i} f\right)
-= {\delta^{i}}_{j} \PD{x^{i}}{f} \frac{d x^{j}}{d\lambda} d\lambda
-= \PD{x^{i}}{f} \frac{d x^{i}}{d\lambda} d\lambda
-= \frac{d f}{d \lambda} d\lambda.
-\end{dmath}
+\left(\gamma^{i} \partial_{i} f\right) \\
+&= {\delta^{i}}_{j} \PD{x^{i}}{f} \frac{d x^{j}}{d\lambda} d\lambda \\
+&= \PD{x^{i}}{f} \frac{d x^{i}}{d\lambda} d\lambda \\
+&= \frac{d f}{d \lambda} d\lambda.
+\end{aligned}
+\end{equation}
 
 Integration clearly proves \cref{thm:stokesTheoremGeometricAlgebra:140} for this specific parameterization.  This result, however, is independent of the parameterization.  This can be shown by considering any other curve \(C'\), parameterized by \(\sigma\).  As above, for this curve the differential dotted with the gradient is
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:320}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:320}
 dx \cdot
 \grad f
 = \frac{d f}{d \sigma} d\sigma.
-\end{dmath}
+\end{equation}
 
 Utilizing a change of variables, this can be expressed in terms of the \(\lambda\) parameterization
 %
@@ -214,25 +212,24 @@ dx_\beta &= \PD{\beta}{x} d\beta,
 \end{equation}
 %
 so that the area element is
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:560}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:560}
 d^2 x
 = dx_\alpha \wedge dx_\beta
 =
 \gamma_i \wedge \gamma_j \PD{\alpha}{x^i} \PD{\beta}{x^j} d\alpha d\beta.
-\end{dmath}
-
+\end{equation}
 Presuming the area element is made small enough, and the surface is sufficiently smooth, this area element will lie in the subspace of the surface.
 
 Expressed in terms of coordinates, the curl is
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:580}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:580}
+\begin{aligned}
 \grad \wedge f
-=
-\lr{ \gamma^i \partial_i } \wedge \lr{ \gamma^j f_j }
-=
+&=
+\lr{ \gamma^i \partial_i } \wedge \lr{ \gamma^j f_j } \\
+&=
 \gamma^i \wedge \gamma^j \partial_i f_j.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 The curl and the area element dotted together provide the differential form for the surface integral
 %
@@ -469,13 +466,14 @@ d\alpha d\beta d\sigma
 %
 Expanding \(\int_V d^3 x \cdot (\grad \wedge f)\) to compare
 
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:760}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:760}
+\begin{aligned}
 d^3 x \cdot \lr{ \grad \wedge f }
-=
+&=
 \gpgradezero{
 d^3 x \lr{ \gamma^a \wedge \partial_a f }
-}
-=
+} \\
+&=
 \inv{2} \gpgradezero{
 d^3 x \lr{
 \gamma^a \partial_a f
@@ -483,15 +481,15 @@ d^3 x \lr{
 \partial_a f
 \gamma^a
 }
-}
-=
+} \\
+&=
 \inv{2} \gpgradezero{
 d^3 x \gamma^a \partial_a f
 +
 \gamma^a
 d^3 x \partial_a f
-}
-=
+} \\
+&=
 \inv{2}
 \partial_a f  \cdot
 \gpgradetwo{
@@ -499,13 +497,13 @@ d^3 x \gamma^a
 +
 \gamma^a
 d^3 x
-}
-=
+} \\
+&=
 \partial_a f  \cdot
 \lr{
 d^3 x \cdot \gamma^a
-}
-=
+} \\
+&=
 d\alpha d\beta d\sigma
 \PD{\alpha}{x^i}
 \PD{\beta}{x^j}
@@ -515,8 +513,8 @@ d\alpha d\beta d\sigma
 \lr{ \gamma_i \wedge \gamma_j \wedge \gamma_k }
 \cdot
 \gamma^a
-}
-=
+} \\
+&=
 d\alpha d\beta d\sigma
 \PD{\alpha}{x^i}
 \PD{\beta}{x^j}
@@ -526,8 +524,8 @@ d\alpha d\beta d\sigma
 \lr{ \gamma_i \wedge \gamma_j } {\delta_k}^a
 -\lr{ \gamma_i \wedge \gamma_k } {\delta_j}^a
 +\lr{ \gamma_j \wedge \gamma_k } {\delta_i}^a
-}
-=
+} \\
+&=
 d\alpha d\beta d\sigma
 \PD{\alpha}{x^i}
 \PD{\beta}{x^j}
@@ -536,16 +534,14 @@ d\alpha d\beta d\sigma
 \lr{ \gamma_i \wedge \gamma_j } \cdot \partial_k f
 -\lr{ \gamma_i \wedge \gamma_k } \cdot \partial_j f
 +\lr{ \gamma_j \wedge \gamma_k } \cdot \partial_i f
-}
-\end{dmath}
-
+}.
+\end{aligned}
+\end{equation}
 Integrating this yields \eqnref{eqn:stokesTheoremGeometricAlgebra:660}, demonstrating Stokes theorem for this volume parameterization.  Given an open region a change of variables will show that this is true for any parameterization of the subspace.
 
 Like the vector case, there is a requirement to be very specific about the meaning given to the oriented surfaces, and the corresponding oriented volume element.  That volume may be a subspace of a greater than three dimensional space.
-
 \section{Stokes theorem for trivector functions over a four volume}
 % from: stokesNoTensor.tex
-
 For integration of the curl of a trivector function, an integration over a four volume subspace is required.
 The geometrical intuition required to understand, a-priori, how to express the oriented boundary of such a subspace may not come readily, but fortunately algebra is there to come to our aid.
 

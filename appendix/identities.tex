@@ -20,46 +20,45 @@ For vectors \(\Ba\), \(\Bb\), and bivector \(B\), we have
 }
 
 Proof follows by applying the scalar selection operator, expanding the wedge product within it, and eliminating any of the terms that cannot contribute grade zero values
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:2360}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2360}
+\begin{aligned}
 \lr{ \Ba \wedge \Bb } \cdot B
-=
+&=
 \gpgradezero{
 \inv{2} \biglr{ \Ba \Bb - \Bb \Ba } B
-}
-=
+} \\
+&=
 \inv{2}
 \gpgradezero{
 \Ba \lr{ \Bb \cdot B + \cancel{ \Bb \wedge B } }
 -\Bb \lr{ \Ba \cdot B + \cancel{ \Ba \wedge B } }
-}
-=
+} \\
+&=
 \inv{2}
 \gpgradezero{
 \Ba \cdot \lr{ \Bb \cdot B }
 +\cancel{\Ba \wedge \lr{ \Bb \cdot B }}
 -\Bb \cdot \lr{ \Ba \cdot B }
 -\cancel{\Bb \wedge \lr{ \Ba \cdot B }}
-}
-=
+} \\
+&=
 \inv{2}
 \biglr{
 \Ba \cdot \lr{ \Bb \cdot B }
 -\Bb \cdot \lr{ \Ba \cdot B }
 }
 \qedmarker
-\end{dmath}
+\end{aligned}
+\end{equation}
 \maketheorem{Inner product of trivector with bivector}{thm:stokesTheoremGeometricAlgebra:2460}{
-
 Given a bivector \(B\), and trivector \(\Ba \wedge \Bb \wedge \Bc\) where \(\Ba, \Bb\) and \(\Bc\) are vectors, the inner product is
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:2480}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2480}
 \lr{ \Ba \wedge \Bb \wedge \Bc } \cdot B
 =
 \Ba \biglr{ \lr{ \Bb \wedge \Bc } \cdot B }
 +\Bb \biglr{ \lr{ \Bc \wedge \Ba } \cdot B }
 +\Bc \biglr{ \lr{ \Ba \wedge \Bb } \cdot B }.
-\end{dmath}
+\end{equation}
 }
 
 This is also problem 1.1(c) from Exercises 2.1 in \citep{hestenes1999nfc}, and submits to a dumb expansion in successive dot products with a final regrouping.  With \(B = \Bu \wedge \Bv\)
@@ -159,24 +158,24 @@ This is also problem 1.1(c) from Exercises 2.1 in \citep{hestenes1999nfc}, and s
 %
 \maketheorem{Distribution of two trivectors}{thm:stokesTheoremGeometricAlgebra:2560}{
 Given a trivector \(T\) and three vectors \(\Ba, \Bb\), and \(\Bc\), the entire inner product can be expanded in terms of any successive set inner products, subject to change of sign with interchange of any two adjacent vectors within the dot product sequence
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:2580}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2580}
+\begin{aligned}
 \lr{ \Ba \wedge \Bb \wedge \Bc } \cdot T
-=
- \Ba \cdot \lr{ \Bb \cdot \lr{ \Bc \cdot T } }
-=
- -\Ba \cdot \lr{ \Bc \cdot \lr{ \Bb \cdot T } }
-=
- \Bb \cdot \lr{ \Bc \cdot \lr{ \Ba \cdot T } }
-=
-- \Bb \cdot \lr{ \Ba \cdot \lr{ \Bc \cdot T } }
-=
- \Bc \cdot \lr{ \Ba \cdot \lr{ \Bb \cdot T } }
-=
+&=
+ \Ba \cdot \lr{ \Bb \cdot \lr{ \Bc \cdot T } } \\
+&=
+ -\Ba \cdot \lr{ \Bc \cdot \lr{ \Bb \cdot T } } \\
+&=
+ \Bb \cdot \lr{ \Bc \cdot \lr{ \Ba \cdot T } } \\
+&=
+- \Bb \cdot \lr{ \Ba \cdot \lr{ \Bc \cdot T } } \\
+&=
+ \Bc \cdot \lr{ \Ba \cdot \lr{ \Bb \cdot T } } \\
+&=
 - \Bc \cdot \lr{ \Bb \cdot \lr{ \Ba \cdot T } }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 }
-
 %%%We can first show that an asymmetric expansion of the wedge product gives
 %%%
 %%%\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2660}
@@ -220,18 +219,18 @@ To show this, we first expand within a scalar selection operator
 \end{equation}
 %
 Now consider any single term from the scalar selection, such as the first.  This can be reordered using the vector dot product identity
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:2680}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2680}
+\begin{aligned}
 \gpgradezero
 {
   \Ba \Bb \Bc T
 }
-=
+&=
 \gpgradezero
 {
   \Ba \lr{ -\Bc \Bb + 2 \Bb \cdot \Bc } T
-}
-=
+} \\
+&=
 -
 \gpgradezero
 {
@@ -244,21 +243,21 @@ Now consider any single term from the scalar selection, such as the first.  This
   \Ba T
 }
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 The vector-trivector product in the latter grade selection operation above contributes only bivector and quadvector terms, thus contributing nothing.  This can be repeated, showing that
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:2700}
-  \gpgradezero{ \Ba \Bb \Bc T } =
-- \gpgradezero{ \Ba \Bc \Bb T } =
-+ \gpgradezero{ \Bb \Bc \Ba T } =
-- \gpgradezero{ \Bb \Ba \Bc T } =
-+ \gpgradezero{ \Bc \Ba \Bb T } =
-- \gpgradezero{ \Bc \Bb \Ba T }.
-\end{dmath}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2700}
+\begin{aligned}
+   \gpgradezero{ \Ba \Bb \Bc T } &= - \gpgradezero{ \Ba \Bc \Bb T } 
+   &= + \gpgradezero{ \Bb \Bc \Ba T }  \\
+   &= - \gpgradezero{ \Bb \Ba \Bc T }  \\
+   &= + \gpgradezero{ \Bc \Ba \Bb T }  \\
+   &= - \gpgradezero{ \Bc \Bb \Ba T }.
+\end{aligned}
+\end{equation}
 
 Substituting this back into \eqnref{eqn:stokesTheoremGeometricAlgebra:2600} proves \cref{thm:stokesTheoremGeometricAlgebra:2560}.
-
 %%%, then expand the products from the right, eliminating any terms that cannot contribute to a scalar term
 %%%&=
 %%%\inv{6}
@@ -320,34 +319,34 @@ Substituting this back into \eqnref{eqn:stokesTheoremGeometricAlgebra:2600} prov
 %
 \maketheorem{Permutation of two successive dot products with trivector}{thm:stokesTheoremGeometricAlgebra:2740}{
 Given a trivector \(T\) and two vectors \(\Ba\) and \(\Bb\), alternating the order of the dot products changes the sign
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:2760}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2760}
 \Ba \cdot \lr{ \Bb \cdot T }
 =
 -\Bb \cdot \lr{ \Ba \cdot T }.
-\end{dmath}
+\end{equation}
 }
 
 This and \cref{thm:stokesTheoremGeometricAlgebra:2560} are clearly examples of a more general identity, but I'll not try to prove that here.  To show this one, we have
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:2780}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2780}
+\begin{aligned}
 \Ba \cdot \lr{ \Bb \cdot T }
-=
-\gpgradeone{ \Ba \lr{ \Bb \cdot T } }
-=
+&=
+\gpgradeone{ \Ba \lr{ \Bb \cdot T } } \\
+&=
 \inv{2}
-\gpgradeone{ \Ba \Bb T + \Ba T \Bb }
-=
+\gpgradeone{ \Ba \Bb T + \Ba T \Bb } \\
+&=
 \inv{2}
-\gpgradeone{ \lr{ -\Bb \Ba + \cancel{2 \Ba \cdot \Bb}} T + \lr{ \Ba \cdot T} \Bb + \cancel{ \Ba \wedge T} \Bb }
-= \inv{2}
+\gpgradeone{ \lr{ -\Bb \Ba + \cancel{2 \Ba \cdot \Bb}} T + \lr{ \Ba \cdot T} \Bb + \cancel{ \Ba \wedge T} \Bb } \\
+&= \inv{2}
 \lr{
 -\Bb \cdot \lr{ \Ba \cdot T }
 +\lr{ \Ba \cdot T } \cdot \Bb
-}
-=
+} \\
+&=
 -\Bb \cdot \lr{ \Ba \cdot T }. \qedmarker
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 Cancellation of terms above was because they could not contribute to a grade one selection.   We also employed the relation \(\Bx \cdot B = - B \cdot \Bx\) for bivector \(B\) and vector \(\Bx\).
 \maketheorem{Duality in a plane}{thm:stokesTheoremGeometricAlgebra:3200}{
@@ -434,24 +433,22 @@ To complete the proof, we note that the product in \eqnref{eqn:stokesTheoremGeom
 \end{equation}
 
 This duality relation can be recast with a linear denominator
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4850}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4850}
+\begin{aligned}
 \Ba^\conj
-= \frac{\Bb \cdot \lr{ \Ba \wedge \Bb }}{\lr{\Ba \wedge \Bb}^2}
-= \Bb \frac{\Ba \wedge \Bb }{\lr{\Ba \wedge \Bb}^2}
-= \Bb \frac{\Ba \wedge \Bb }{\Abs{\Ba \wedge \Bb }}
+&= \frac{\Bb \cdot \lr{ \Ba \wedge \Bb }}{\lr{\Ba \wedge \Bb}^2} \\
+&= \Bb \frac{\Ba \wedge \Bb }{\lr{\Ba \wedge \Bb}^2} \\
+&= \Bb \frac{\Ba \wedge \Bb }{\Abs{\Ba \wedge \Bb }}
       \frac{\Abs{\Ba \wedge \Bb}}{\Ba \wedge \Bb }
 \inv{\lr{\Ba \wedge \Bb}},
-\end{dmath}
-
+\end{aligned}
+\end{equation}
 or
 \boxedEquation{eqn:stokesTheoremGeometricAlgebra:4870}{
 \Ba^\conj
 = \Bb \inv{\lr{\Ba \wedge \Bb}}.
 }
-
 We can use this form after scaling it appropriately to express duality in terms of the pseudoscalar.
-
 \maketheorem{Dual vector in a three vector subspace}{thm:stokesTheoremGeometricAlgebra:4950}{
 In the subspace spanned by \(\setlr{\Ba, \Bb, \Bc}\), the dual of \(\Ba\) is
 %
@@ -462,16 +459,16 @@ In the subspace spanned by \(\setlr{\Ba, \Bb, \Bc}\), the dual of \(\Ba\) is
 }
 
 Consider the dot product of \(\acap^\conj\) with \(\Bu \in \setlr{\Ba, \Bb, \Bc}\).
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4970}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4970}
+\begin{aligned}
 \Bu \cdot \Ba^\conj
-=
-\gpgradezero{ \Bu \Bb \wedge \Bc \inv{\Ba \wedge \Bb \wedge \Bc} }
-=
+&=
+\gpgradezero{ \Bu \Bb \wedge \Bc \inv{\Ba \wedge \Bb \wedge \Bc} } \\
+&=
 \gpgradezero{ \Bu \cdot \lr{ \Bb \wedge \Bc} \inv{\Ba \wedge \Bb \wedge \Bc} }
 +
-\gpgradezero{ \Bu \wedge \Bb \wedge \Bc \inv{\Ba \wedge \Bb \wedge \Bc} }
-=
+\gpgradezero{ \Bu \wedge \Bb \wedge \Bc \inv{\Ba \wedge \Bb \wedge \Bc} } \\
+&=
 \cancel{\gpgradezero{
 \lr{
 \lr{ \Bu \cdot \Bb} \Bc
@@ -481,7 +478,8 @@ Consider the dot product of \(\acap^\conj\) with \(\Bu \in \setlr{\Ba, \Bb, \Bc}
 }
 +
 \gpgradezero{ \Bu \wedge \Bb \wedge \Bc \inv{\Ba \wedge \Bb \wedge \Bc} }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 The canceled term is eliminated since it is the product of a vector and trivector producing no scalar term.  Substituting \(\Ba, \Bb, \Bc\), and noting that \(\Bu \wedge \Bu = 0\), we have
 %

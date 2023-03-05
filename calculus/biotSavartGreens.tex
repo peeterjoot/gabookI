@@ -38,7 +38,7 @@ The magnetostatics equation in linear media has the Geometric Algebra form
 \end{equation}
 
 The Green's inversion of this is
-\begin{dmath}\label{eqn:biotSavartGreens:40}
+\begin{equation}\label{eqn:biotSavartGreens:40}
 \begin{aligned}
 I \BB(\Bx)
 &= \int_V dV' G(\Bx, \Bx') \spacegrad' I \BB(\Bx') \\
@@ -47,7 +47,7 @@ I \BB(\Bx)
 &= \inv{4\pi} \int_V dV' \frac{\Bx - \Bx'}{ \Abs{\Bx - \Bx'}^3 } \wedge (-\mu \BJ(\Bx')) \\
 &= \frac{\mu}{4\pi} \int_V dV' \BJ(\Bx') \wedge \frac{\Bx - \Bx'}{ \Abs{\Bx - \Bx'}^3 }.
 \end{aligned}
-\end{dmath}
+\end{equation}
 A duality transformation can be used to obtain the usual cross product form of the Biot-Savart law if desired.
 
 Note that freedom to insert a no-op vector grade selection was utilized to simplify the calculation above.
@@ -72,24 +72,24 @@ the LHS is a bivector, the gradient of the current must also be a bivector
 \( \spacegrad \BJ = \spacegrad \wedge \BJ \),
 or equivaalently the divergence of the current must be zero 
 \( \spacegrad \cdot \BJ = 0 \).  This kills the \( \spacegrad' \cdot \BJ(\Bx') \) integrand numerator in \cref{eqn:biotSavartGreens:60}, leaving
-
-\begin{dmath}\label{eqn:biotSavartGreens:100}
+\begin{equation}\label{eqn:biotSavartGreens:100}
+\begin{aligned}
 -\frac{\mu}{4\pi} \int_V dV' \frac{\Bx - \Bx'}{ \Abs{\Bx - \Bx'}^3 } \cdot \BJ(\Bx')
-= -\frac{\mu}{4\pi} \int_V dV' \spacegrad' \cdot \frac{\BJ(\Bx')}{ \Abs{\Bx - \Bx'} }
-= -\frac{\mu}{4\pi} \int_{\partial V} dA' \ncap \cdot \frac{\BJ(\Bx')}{ \Abs{\Bx - \Bx'} }.
-\end{dmath}
+&= -\frac{\mu}{4\pi} \int_V dV' \spacegrad' \cdot \frac{\BJ(\Bx')}{ \Abs{\Bx - \Bx'} } \\
+&= -\frac{\mu}{4\pi} \int_{\partial V} dA' \ncap \cdot \frac{\BJ(\Bx')}{ \Abs{\Bx - \Bx'} }.
+\end{aligned}
+\end{equation}
 
 Provided the normal component of \( \BJ/\Abs{\Bx - \Bx'} \) vanishes on the boundary of the infinite sphere, we see that the 
 the scalar selection of the convolution integral is zero, justifying the vector selection operation.
 %Observe that the traditional vector form of the Biot-Savart law can be obtained by premultiplying both sides with \( -I \), leaving
 %
-%\begin{dmath}\label{eqn:biotSavartGreens:140}
+%\begin{equation}\label{eqn:biotSavartGreens:140}
 %\BB(\Bx)
 %= \frac{\mu}{4\pi} \int_V dV' \BJ(\Bx') \cross \frac{\Bx - \Bx'}{ \Abs{\Bx - \Bx'}^3 }.
-%\end{dmath}
+%\end{equation}
 %
 %This checks against a trusted source such as \citep{griffiths1999introduction} (eq. 5.39).
 } % example
-
 %}
 %\EndArticle

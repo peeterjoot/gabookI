@@ -37,25 +37,22 @@ A_s \cdot \lr{ \Bb \wedge B_r }
 \end{equation}
 
 The last term above is zero since we are selecting the \(s - r - 1\) grade element of a multivector with grades \(s - r + 1\) and \(s + r - 1\), which has no terms for \(r > 0\).  Now we can expand the \(A_s \Bb\) multivector product, for
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:1520}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:1520}
 A_s \cdot \lr{ \Bb \wedge B_r }
 =
 \gpgrade{ \lr{ A_s \cdot \Bb + A_s \wedge \Bb} B_r }{s - (r + 1)}.
-\end{dmath}
+\end{equation}
 
 The latter multivector (with the wedge product factor) above has grades \(s + 1 - r\) and \(s + 1 + r\), so this selection operator finds nothing.  This leaves
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:1540}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:1540}
 A_s \cdot \lr{ \Bb \wedge B_r }
 =
 \gpgrade{
 \lr{ A_s \cdot \Bb } \cdot B_r
 + \lr{ A_s \cdot \Bb } \wedge B_r
 }{s - (r + 1)}.
-\end{dmath}
+\end{equation}
 
 The first dot products term has grade \(s - 1 - r\) and is selected, whereas the wedge term has grade \(s - 1 + r \ne s - r - 1\) (for \(r > 0\)).  \(\qedmarker\)
-
 %Next consider an expansion that we cannot do above, but require
 } % answer

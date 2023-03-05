@@ -12,16 +12,15 @@ The gradient of the vector \( \BM \) can be written as a single even grade multi
 %
 %Observe that the Laplacian of \( \BM \) is vector valued
 %
-%\begin{dmath}\label{eqn:helmholtzDerviationMultivector:760}
+%\begin{equation}\label{eqn:helmholtzDerviationMultivector:760}
 %\spacegrad^2 \BM = \spacegrad s + I \spacegrad \BC.
-%\end{dmath}
+%\end{equation}
 %
 %This means that \( \spacegrad \BC \) must be a bivector \( \spacegrad \BC = \spacegrad \wedge \BC \), or that \( \BC \) has zero divergence
 %
-%\begin{dmath}\label{eqn:helmholtzDerviationMultivector:780}
+%\begin{equation}\label{eqn:helmholtzDerviationMultivector:780}
 %\spacegrad \cdot \BC = 0.
-%\end{dmath}
-
+%\end{equation}
 This can be used to attempt to discover the relation between the vector \( \BM \) and its divergence and curl.  
 The vector \( \BM \) can be expressed at the point of interest as a convolution with the delta function at all other points in space
 \begin{equation}\label{eqn:helmholtzDerviationMultivector:80}
@@ -39,13 +38,13 @@ so \( \BM \) can be represented as the following convolution
 
 %As noted in \cref{eqn:helmholtzDerviationMultivector:460} the Laplacian of a vector can be factored as
 %
-%\begin{dmath}\label{eqn:helmholtzDerviationMultivector:140}
+%\begin{equation}\label{eqn:helmholtzDerviationMultivector:140}
 %\spacegrad^2 \Ba
 %=
 %\spacegrad (\spacegrad \cdot \Ba)
 %-
 %\spacegrad \cross (\spacegrad \cross \Ba).
-%\end{dmath}
+%\end{equation}
 %
 %Note that the last term can be written in cross product notation using \( \Bc \cdot (\Ba \wedge \Bb) = -\Bc \cross (\Ba \cross \Bb) \) if desired.
 
@@ -56,32 +55,30 @@ Using this relation and proceeding with a few applications of the chain rule, pl
 %Here's a third way of deriving the Helmholtz theorem inversion relation.  This is a refinement of the traditional vector algebra solution that led to \cref{eqn:helmholtzDerviationMultivector:200}, that uses a factorization of the Laplacian directly, deferring any expansion in terms of dot and cross (or wedge) products until the very end.
 %
 %Starting from the first line of \cref{eqn:helmholtzDerviationMultivector:160}, we have
-
-\begin{dmath}\label{eqn:helmholtzDerviationMultivector:720}
+\begin{equation}\label{eqn:helmholtzDerviationMultivector:720}
+\begin{aligned}
 -4 \pi \BM(\Bx)
-= \int_V dV' \spacegrad^2 \inv{\Norm{\Bx - \Bx'}} \BM(\Bx')
-= \gpgradeone{\int_V dV' \spacegrad^2 \inv{\Norm{\Bx - \Bx'}} \BM(\Bx')}
-= -\gpgradeone{\int_V dV' \spacegrad \lr{ \spacegrad' \inv{\Norm{\Bx - \Bx'}}} \BM(\Bx')}
-= -\gpgradeone{\spacegrad \int_V dV' \lr{
-\spacegrad' \frac{\BM(\Bx')}{\Norm{\Bx - \Bx'}}
--\frac{\spacegrad' \BM(\Bx')}{\Norm{\Bx - \Bx'}}
-} }
-=
--\gpgradeone{\spacegrad \int_{\partial V} dA'
-\ncap \frac{\BM(\Bx')}{\Norm{\Bx - \Bx'}}
- }
-+\gpgradeone{\spacegrad \int_V dV'
-\frac{s(\Bx') + I\BC(\Bx')}{\Norm{\Bx - \Bx'}}
- }
-=
--\gpgradeone{\spacegrad \int_{\partial V} dA'
+&= \int_V dV' \spacegrad^2 \inv{\Norm{\Bx - \Bx'}} \BM(\Bx') \\
+&= \gpgradeone{\int_V dV' \spacegrad^2 \inv{\Norm{\Bx - \Bx'}} \BM(\Bx')} \\
+&= -\gpgradeone{\int_V dV' \spacegrad \lr{ \spacegrad' \inv{\Norm{\Bx - \Bx'}}} \BM(\Bx')} \\
+&= -\gpgradeone{\spacegrad \int_V dV' \lr{
+  \spacegrad' \frac{\BM(\Bx')}{\Norm{\Bx - \Bx'}}
+  -\frac{\spacegrad' \BM(\Bx')}{\Norm{\Bx - \Bx'}}
+  } } \\
+&= -\gpgradeone{\spacegrad \int_{\partial V} dA'
+ \ncap \frac{\BM(\Bx')}{\Norm{\Bx - \Bx'}}
+ } +\gpgradeone{\spacegrad \int_V dV'
+ \frac{s(\Bx') + I\BC(\Bx')}{\Norm{\Bx - \Bx'}}
+ } \\
+&= -\gpgradeone{\spacegrad \int_{\partial V} dA'
 \ncap \frac{\BM(\Bx')}{\Norm{\Bx - \Bx'}}
  }
 +\spacegrad \int_V dV'
 \frac{s(\Bx')}{\Norm{\Bx - \Bx'}}
 +\spacegrad \cdot \int_V dV'
 \frac{I\BC(\Bx')}{\Norm{\Bx - \Bx'}}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 By inserting a no-op grade selection operation in the second step, the trivector terms that would show up in subsequent steps are automatically filtered out.
 %the troublesome trivector term that shows up in my first purely Geometric Algebra
@@ -115,7 +112,7 @@ For the grade selection in the boundary integral, note that
 \end{equation}
 
 These give
-%\begin{dmath}\label{eqn:helmholtzDerviationMultivector:721}
+%\begin{equation}\label{eqn:helmholtzDerviationMultivector:721}
 \boxedEquation{eqn:helmholtzDerviationMultivector:721}{
 \begin{aligned}
 \BM(\Bx)
@@ -129,4 +126,4 @@ These give
 \frac{\BC(\Bx')}{\Norm{\Bx - \Bx'}}.
 \end{aligned}
 }
-%\end{dmath}
+%\end{equation}
