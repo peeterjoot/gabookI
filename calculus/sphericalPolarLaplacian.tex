@@ -51,7 +51,7 @@ R_\theta &= e^{ \tilde{R_\phi} \Be_3 \Be_1 R_\phi \theta/2 } = \tilde{R_\phi} e^
 \end{subequations}
 
 The composition of rotations now gives us
-
+%
 \begin{equation}\label{eqn:sphericalPolarLaplacian:461}
 \begin{aligned}
 \Bx
@@ -59,7 +59,7 @@ The composition of rotations now gives us
 R &= R_\phi R_\theta = e^{ \Be_3 \Be_1 \theta/2 } e^{ \Be_1 \Be_2 \phi/2 }.
 \end{aligned}
 \end{equation}
-
+%
 \section{Expressions for the unit vectors}
 
 The unit vectors in the rotated frame can now be calculated.  With \(I = \Be_1 \Be_2 \Be_3\) we can calculate
@@ -76,7 +76,7 @@ The unit vectors in the rotated frame can now be calculated.  With \(I = \Be_1 \
 \end{subequations}
 
 Performing these we get
-
+%
 \begin{equation}\label{eqn:sphericalPolarLaplacian:501}
 \begin{aligned}
 \phicap
@@ -84,7 +84,7 @@ Performing these we get
 &= \Be_2 e^{ i \phi },
 \end{aligned}
 \end{equation}
-
+%
 and
 \begin{equation}\label{eqn:sphericalPolarLaplacian:521}
 \begin{aligned}
@@ -96,9 +96,9 @@ and
 &= \Be_3 e^{I \phicap \theta},
 \end{aligned}
 \end{equation}
-
+%
 and
-
+%
 \begin{equation}\label{eqn:sphericalPolarLaplacian:541}
 \begin{aligned}
 \thetacap
@@ -110,7 +110,7 @@ and
 &= i \phicap e^{I \phicap \theta}.
 \end{aligned}
 \end{equation}
-
+%
 Summarizing these are
 
 \begin{subequations}
@@ -149,15 +149,15 @@ We will need the partials.  Most of these can be computed from \eqnref{eqn:spher
 \section{Expanding the Laplacian}
 
 We note that the line element is \(ds = dr + r d\theta + r\sin\theta d\phi\), so our gradient in spherical coordinates is
-
+%
 \begin{equation}\label{eqn:sphericalPolarLaplacian:300}
 \begin{aligned}
 \spacegrad &= \rcap \partial_r + \frac{\thetacap}{r} \partial_\theta + \frac{\phicap}{r\sin\theta} \partial_\phi.
 \end{aligned}
 \end{equation}
-
+%
 We can now evaluate the Laplacian
-
+%
 \begin{equation}\label{eqn:sphericalPolarLaplacian:310}
 \begin{aligned}
 \spacegrad^2 &=
@@ -165,14 +165,14 @@ We can now evaluate the Laplacian
 \left( \rcap \partial_r + \frac{\thetacap}{r} \partial_\theta + \frac{\phicap}{r\sin\theta} \partial_\phi \right).
 \end{aligned}
 \end{equation}
-
+%
 Evaluating these one set at a time we have
 \begin{equation}\label{eqn:sphericalPolarLaplacian:601}
 \begin{aligned}
 \rcap \partial_r \cdot \left( \rcap \partial_r + \frac{\thetacap}{r} \partial_\theta + \frac{\phicap}{r\sin\theta} \partial_\phi \right) &= \partial_{rr},
 \end{aligned}
 \end{equation}
-
+%
 and
 \begin{equation}\label{eqn:sphericalPolarLaplacian:621}
 \begin{aligned}
@@ -190,9 +190,9 @@ and
 +\inv{r^2} \partial_{\theta\theta},
 \end{aligned}
 \end{equation}
-
+%
 and
-
+%
 \begin{equation}\label{eqn:sphericalPolarLaplacian:641}
 \begin{aligned}
 \frac{\phicap}{r\sin\theta} \partial_\phi &\cdot
@@ -222,9 +222,9 @@ and
 + \inv{r^2 \sin^2\theta} \partial_{\phi\phi}
 \end{aligned}
 \end{equation}
-
+%
 Summing these we have
-
+%
 \begin{equation}\label{eqn:sphericalPolarLaplacian:400}
 \begin{aligned}
 \spacegrad^2 &=
@@ -235,9 +235,9 @@ Summing these we have
 + \inv{r^2 \sin^2\theta} \partial_{\phi\phi}
 \end{aligned}
 \end{equation}
-
+%
 This is often written with a chain rule trick to consolidate the \(r\) and \(\theta\) partials
-
+%
 \begin{equation}\label{eqn:sphericalPolarLaplacian:401}
 \begin{aligned}
 \spacegrad^2 \Psi &=
@@ -249,7 +249,7 @@ This is often written with a chain rule trick to consolidate the \(r\) and \(\th
 + \inv{r^2 \sin^2\theta} \partial_{\psi\psi} \Psi
 \end{aligned}
 \end{equation}
-
+%
 It is simple to verify that this is identical to \eqnref{eqn:sphericalPolarLaplacian:400}.
 
 %\EndArticle

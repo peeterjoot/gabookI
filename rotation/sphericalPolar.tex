@@ -20,7 +20,7 @@ Reading the math intro of \citep{zeilik1998iaa}, I found the statement that the 
 +\phicap \inv{r \sin\theta}\PD{\phi}{}
 \end{aligned}
 \end{equation}
-
+%
 There was no picture or description showing the conventions for measurement of the angles or directions.
 To clarify things and leave a margin note I decided to derive the coordinates and unit vector transformation relationships,
 gradient, divergence and curl in spherical polar coordinates.
@@ -55,7 +55,7 @@ R_\theta &= \exp(-\Be_{12}\theta/2) \\
 \Be_i' &= R_\theta \Be_i R_\theta^\dagger.
 \end{aligned}
 \end{equation}
-
+%
 For the rotational plane for the \(\phi\) rotation is
 \begin{equation}\label{eqn:sphericalPolar:60}
 \begin{aligned}
@@ -64,7 +64,7 @@ For the rotational plane for the \(\phi\) rotation is
 &= \inv{2} ( R_\theta \Be_1 R_\theta^\dagger \Be_3 - \Be_3 R_\theta \Be_1 R_\theta^\dagger ).
 \end{aligned}
 \end{equation}
-
+%
 The rotor (or quaternion) \(R_\theta\) has scalar and \(\Be_{12}\) components, so it commutes with \(\Be_3\) leaving
 \begin{equation}\label{eqn:sphericalPolar:80}
 \begin{aligned}
@@ -100,7 +100,7 @@ R_\phi &= \exp(-\Be_{13}\phi/2) \\
 R_\theta &= \exp(-\Be_{12}\theta/2).
 \end{aligned}
 \end{equation}
-
+%
 Application of these to the \(\{\Be_i\}\) basis produces the \(\{\rcap, \thetacap, \phicap\}\) basis.  First application
 of \(R_\phi\) yields the basis vectors for the intermediate rotation.
 \begin{equation}\label{eqn:sphericalPolar:160}
@@ -137,7 +137,7 @@ and applying the second rotation to \(R_\phi(\Be_i)\) gives
 + \Be_3 \cos\phi.
 \end{aligned}
 \end{equation}
-
+%
 In summary these are
 \begin{equation}\label{eqn:sphericalPolar:unitTxSummary}
 \begin{aligned}
@@ -160,13 +160,13 @@ latitudinal plane (ie: \(x,y\) plane), and is perpendicular to the outwards radi
 \thetacap
 = (\cos\theta \Be_1 + \sin\theta \Be_2) \Be_1 \Be_2.
 \end{equation}
-
+%
 Lastly, \(\phicap\) can be calculated from the dual of \(\rcap \wedge \thetacap\)
 \begin{equation}\label{eqn:sphericalPolar:240}
 \phicap
 = - \Be_1 \Be_2 \Be_3 (\rcap \wedge \thetacap).
 \end{equation}
-
+%
 Completing the algebra for the expressions above we have
 \begin{equation}\label{eqn:sphericalPolar:260}
 \begin{aligned}
@@ -193,7 +193,7 @@ Completing the algebra for the expressions above we have
 + \cos\phi \Be_3.
 \end{aligned}
 \end{equation}
-
+%
 Sure enough this produces the same result as with the rotor logic.
 
 The rotor approach was purely algebraically and does not have
@@ -209,12 +209,12 @@ Considering a linear transformation providing a mapping from one basis to anothe
 \begin{equation}\label{eqn:sphericalPolar:280}
 f_i = \LL(e_i) = L e_i L^{-1}.
 \end{equation}
-
+%
 The coordinate representation, or Fourier decomposition, of the vectors in each of these frames is
 \begin{equation}\label{eqn:sphericalPolar:300}
 x = x^i e_i = y^j f_j.
 \end{equation}
-
+%
 Utilizing a reciprocal frame (ie: not yet requiring an orthonormal frame here), such that \(e^i \cdot e_j = {\delta^i}_j\),
 then dot product provide the coordinate transformations
 \begin{equation}\label{eqn:sphericalPolar:320}
@@ -226,7 +226,7 @@ x^i &= y^j f_j \cdot e^i \\
 y^i &= x^j e_j \cdot f^i
 \end{aligned}
 \end{equation}
-
+%
 The transformed reciprocal frame vectors can be expressed directly in terms of the initial reciprocal frame \(f^i = \LL(e^i)\).  Taking
 dot products confirms this
 \begin{equation}\label{eqn:sphericalPolar:340}
@@ -300,7 +300,7 @@ It is also interesting to observe (as in \citep{DenkerMaxwell}) that the gradien
 \begin{equation}\label{eqn:sphericalPolar:460}
 \grad = \inv{f_j} \PD{y^j}{}.
 \end{equation}
-
+%
 Observe the similarity to the Fourier component decomposition of the vector itself \(x = f_i y^i\).  Thus, roughly speaking, the differential operator
 parts of the gradient can be seen to be directional derivatives
 along the directions of each of the frame vectors.
@@ -321,7 +321,7 @@ so the gradient is just
 +\thetacap \inv{r \cos\phi} \PD{\theta}{}
 +\phicap \inv{r} \PD{\phi}{}.
 \end{equation}
-
+%
 Although this last bit has been
 derived graphically, and not analytically, it does
 clarify the original question of exactly angle and unit vector
@@ -598,7 +598,7 @@ In \eqnref{eqn:sphericalPolar:planeRotationAppliedToCoordinates} the matrix for 
 was observed to be the transpose of the matrix that transformed the frame vectors themselves.  This is also the case
 in this spherical polar case, as can be seen by forming a general vector and applying equation
 \eqnref{eqn:sphericalPolar:sphericalPolarRotationMatrixForFrameVectors}.
-
+%
 \begin{equation}\label{eqn:sphericalPolar:640}
 \begin{aligned}
 x^1 \Be_1 &\rightarrow x^1 ( \cos\phi \cos\theta \Be_1 + \cos\phi \sin\theta \Be_2 + \sin\phi \Be_3 ) \\

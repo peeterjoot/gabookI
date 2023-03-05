@@ -14,25 +14,25 @@ The aim is to compute the interpolating rotor \(r\) that takes an object
 from one position to another in \(n\) steps.
 Here the initial and final positions are given by two rotors \(R_1\), and \(R_2\)
 like so
-
+%
 \begin{equation}\label{eqn:slerp:20}
 \begin{aligned}
 X_1 &= R_1 X {R_1}^\dagger \\
 X_2 &= R_2 X {R_2}^\dagger = r^n R_1 X {R_1}^\dagger {r^n}^\dagger
 \end{aligned}
 \end{equation}
-
+%
 So, writing
-
+%
 \begin{equation}\label{eqn:slerp:40}
 \begin{aligned}
 %r^n R_1 = R_2
 a = r^n = R_2 \inv{R_1} = \frac{R_2 {R_1}^\dagger}{R_1 {{R_1}^\dagger}} = \cos\theta + I \sin\theta
 \end{aligned}
 \end{equation}
-
+%
 So,
-
+%
 \begin{equation}\label{eqn:slerp:60}
 \begin{aligned}
 \frac{\gpgradetwo{a}}{\gpgradezero{a}} &=
@@ -40,7 +40,7 @@ So,
 &= I \tan\theta
 \end{aligned}
 \end{equation}
-
+%
 Therefore the interpolating rotor is:
 \begin{equation}\label{eqn:slerp:80}
 \begin{aligned}
@@ -49,7 +49,7 @@ I &= \frac{\gpgradetwo{a}}{\Abs{\gpgradetwo{a}}} \\
 r &= \cos(\theta/n) + I \sin(\theta/n)
 \end{aligned}
 \end{equation}
-
+%
 In \citep{dorst2007gac}, equation \(10.15\), they have got something like this
 for a fractional angle, but then say that they do not use that in software,
 instead using \(r\) directly, with a comment about designing more sophisticated

@@ -11,36 +11,36 @@
 %\date{Mar 17, 2008.  angleBetweenLineAndPlane.tex}
 
 Have the calculation for the angle between bivectors done elsewhere
-
+%
 \begin{equation}\label{eqn:angleLinePlane:bivectorangle}
 \cos\theta = - \frac{\BA \cdot \BB}{\abs{\BA} \abs{\BB} }
 \end{equation}
-
+%
 For \(\theta \in [0,\pi]\).
 
 The vector/vector result is well known and also works fine in \R{N}
-
+%
 \begin{equation}\label{eqn:angleLinePlane:vectorangle}
 \cos\theta = \frac{\Bu \cdot \Bv}{\abs{\Bu} \abs{\Bv} }
 \end{equation}
-
+%
 \section{Calculation for a line and a plane}
 
 Given a line with unit direction vector \(\Bu\), and plane with unit direction bivector \(\BA\), the component of that
 vector in the plane is:
-
+%
 \begin{equation}\label{eqn:angleBetweenLineAndPlane:20}
 -\Bu \cdot \BA \BA.
 \end{equation}
-
+%
 So the direction cosine is available immediately
-
+%
 \begin{equation}\label{eqn:angleBetweenLineAndPlane:40}
 \cos\theta = \Bu \cdot \frac{-\Bu \cdot \BA \BA}{\abs{\Bu \cdot \BA \BA}}
 \end{equation}
-
+%
 However, this can be reduced significantly.  Start with the denominator
-
+%
 \begin{equation}\label{eqn:angleBetweenLineAndPlane:60}
 \begin{aligned}
 \abs{\Bu \cdot \BA \BA}^2
@@ -48,9 +48,9 @@ However, this can be reduced significantly.  Start with the denominator
 &= (\Bu \cdot \BA )^2. \\
 \end{aligned}
 \end{equation}
-
+%
 And in the numerator we have:
-
+%
 \begin{equation}\label{eqn:angleBetweenLineAndPlane:80}
 \begin{aligned}
 \Bu \cdot (\Bu \cdot \BA \BA)
@@ -70,19 +70,19 @@ And in the numerator we have:
 &= -(\BA \cdot \Bu)^2.
 \end{aligned}
 \end{equation}
-
+%
 Putting things back together
-
+%
 \begin{equation*}
 \cos\theta
 = \frac{(\BA \cdot \Bu)^2}{\abs{\Bu \cdot \BA}} = \abs{\Bu \cdot \BA}
 \end{equation*}
-
+%
 The strictly positive value here is consistent with the fact that theta as calculated is in the \([0,\pi/2]\) range.
 
 Restated for consistency with equations \eqnref{eqn:angleLinePlane:vectorangle} and \eqnref{eqn:angleLinePlane:bivectorangle} in terms of not necessarily
 unit vector and bivectors \(\Bu\) and \(\BA\), we have
-
+%
 \begin{equation}
 \cos\theta =
 \frac{\abs{\Bu \cdot \BA}}{ \abs{\Bu} \abs{\BA} }

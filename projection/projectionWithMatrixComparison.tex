@@ -33,49 +33,49 @@ There is some GA content here, but the focus in this chapter is not neccessarily
 The simplest sort of projection to compute is projection onto a line.  Given a direction vector \(b\), and a line with direction vector \(u\) as in \cref{fig:Projection_line}.
 
 The projection onto \(u\) is some value:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:20}
 p = \alpha u
 \end{equation}
-
+%
 and we can write
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:40}
 b = p + e
 \end{equation}
-
+%
 where e is the component perpendicular to the line \(u\).
 
 Expressed in terms of the dot product this relationship is described by:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:60}
 (b - p) \cdot a = 0
 \end{equation}
-
+%
 Or,
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:80}
 b \cdot a = \alpha a \cdot a
 \end{equation}
-
+%
 and solving for \(\alpha\) and substituting we have:
-
+%
 \begin{equation}
 p = a \frac{a \cdot b}{a \cdot a}
 \end{equation}
-
+%
 In matrix notation that is:
-
+%
 \begin{equation}
 p = a \left(\frac{a^\T b}{a^\T a} \right)
 \end{equation}
-
+%
 Following Gilbert Strang's MIT lecture on subspace projection, the parenthesis can be moved to directly express this as a projection matrix operating on b.
-
+%
 \begin{equation}\label{eqn:projMatrixCompare:projectmatrixline}
 p = \left(\frac{a a^\T}{a^\T a}\right) b = P b
 \end{equation}
-
+%
 
 \subsection{Projection onto plane (or subspace)}
 \index{plane projection!matrix}
@@ -90,28 +90,28 @@ For projection onto a plane (or hyperplane) the idea is the same, splitting the 
 Since the
 idea is the same for any dimensional subspace, explicit specification of the summation range is omitted here so the result is good for higher dimensional
 subspaces as well as the plane:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:100}
 b - p = e
 \end{equation}
 \begin{equation}\label{eqn:projectionWithMatrixComparison:120}
 p = \sum \alpha_i u_i
 \end{equation}
-
+%
 however, we get a set of equations, one for each direction vector in the plane
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:140}
 (b - p) \cdot u_i = 0
 \end{equation}
-
+%
 Expanding \(p\) explicitly and rearranging we have the following set of equations:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:160}
 b \cdot u_i = (\sum_s \alpha_s u_s) \cdot u_i
 \end{equation}
-
+%
 putting this in matrix form
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:560}
 \begin{aligned}
 [b \cdot u_i]_i
@@ -123,7 +123,7 @@ putting this in matrix form
 }_i \\
 \end{aligned}
 \end{equation}
-
+%
 Writing $U =
 \begin{bmatrix}
 u_1 & u_2 & \cdots
@@ -153,9 +153,9 @@ u_i \cdot u_j
 \end{bmatrix} \\
 \end{aligned}
 \end{equation}
-
+%
 Solving for the vector of unknown coefficients \(\alpha = [\alpha_i]_i\) we have
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:180}
 \alpha
 =
@@ -166,9 +166,9 @@ u_i \cdot u_j
 }_{ij}}^{-1}
 U^\T b
 \end{equation}
-
+%
 And
-
+%
 \begin{equation}\label{eqn:projMatrixCompare:projectionwitheucliandot}
 p = U \alpha = U
 {{
@@ -179,9 +179,9 @@ u_i \cdot u_j
 }_{ij}}^{-1}
 U^\T b
 \end{equation}
-
+%
 However, this matrix in the middle is just \(U^\T U\):
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:600}
 \begin{aligned}
 \begin{bmatrix}
@@ -212,28 +212,28 @@ u_i^\T {u_j}
 }_{ij} \\
 \end{aligned}
 \end{equation}
-
+%
 This provides the final result:
-
+%
 \begin{equation}\label{eqn:projMatrixCompare:projectiongeneralmatrix}
 \Proj_{U}\left(b\right) = U (U^\T U)^{-1} U^\T b
 \end{equation}
-
+%
 \subsection{Simplifying case.  Orthonormal basis for column space}
 
 To evaluate \eqnref{eqn:projMatrixCompare:projectiongeneralmatrix} we need only full column rank for \(U\), but this will be messy in general due to the matrix inversion required for the center product.  That can be avoided by picking an orthonormal basis for the vector space that we are projecting on.  With an orthonormal column basis that
 central product term to invert is:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:200}
 U^\T U = [ u_i^\T u_j ]_{ij} = [ \delta_{ij} ]_{ij} = I_{r,r}
 \end{equation}
-
+%
 Therefore, the projection matrix can be expressed using the two exterior terms alone:
-
+%
 \begin{equation}\label{eqn:projMatrixCompare:projOrthonormal}
 \Proj_U = U (U^\T U)^{-1} U^\T = U U^\T
 \end{equation}
-
+%
 \subsection{Numerical expansion of left pseudoscalar matrix with matrix}
 
 Numerically expanding the projection matrix \(A (A^\T A)^{-1}A^\T\) is not something
@@ -245,7 +245,7 @@ Let us do this to get a feel for things.
 \subsubsection{\texorpdfstring{\R{4}}{4D} plane projection example}
 
 Take a simple projection onto the plane spanned by the following two orthonormal vectors
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:220}
 u_1 =
 \frac{\sqrt{2}}{4}
@@ -256,7 +256,7 @@ u_1 =
 0 \\
 \end{bmatrix}
 \end{equation}
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:240}
 u_2 =
 \frac{\sqrt{2}}{4}
@@ -267,9 +267,9 @@ u_2 =
 2 \\
 \end{bmatrix}
 \end{equation}
-
+%
 Thus the projection matrix is:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:260}
 P =
 \begin{bmatrix}
@@ -310,7 +310,7 @@ P =
 -\sqrt{3}/4 & 0 & 1/4 & 1/2 \\
 \end{bmatrix}
 \end{equation}
-
+%
 What can be said about this just by looking at the matrix itself?
 
 \begin{enumerate}
@@ -330,11 +330,11 @@ so this validates all the math performed so far.  Good!
 \item
 It is symmetric.  Analytically, we know to expect this, since for a
 a full column rank matrix \(A\) the transpose of the projection matrix is:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:300}
 P^\T = {\left(A \inv{A^\T A} A^\T \right)}^\T = P.
 \end{equation}
-
+%
 \item
 In this particular case columns 2,4 and columns 1,3 are each pairs of
 perpendicular vectors.  Is something like this to be expected in general for
@@ -351,28 +351,28 @@ Let us look at the matrix for projection onto an orthonormal basis in a bit more
 some observations that are a bit harder in the general form.
 
 Suppose we have a vector \(n\) that is perpendicular to all the orthonormal vectors \(u_i\) that span the subspace.  We can then write:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:320}
 u_i \cdot n = 0
 \end{equation}
-
+%
 Or,
 \begin{equation}\label{eqn:projectionWithMatrixComparison:340}
 u_i^\T n = 0
 \end{equation}
-
+%
 In block matrix form for all \(u_i\) that is:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:360}
 [u_i^\T n]_i = [u_i^\T]_i n = U^\T n = 0
 \end{equation}
-
+%
 This is all we need to verify that our projection matrix indeed produces a zero for any vector completely outside of the subspace:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:380}
 \Proj_U(n) = U (U^\T n) = U 0 = 0
 \end{equation}
-
+%
 Now we have seen numerically that \(U U^\T\) is not an identity matrix despite
 operating as one on any vector that lies completely in the subspace.
 %Although this matrix may
@@ -382,7 +382,7 @@ Having seen the action of this matrix on vectors in the null space, we can now
 directly examine the action of this matrix on any vector that lies in the
 span of the set \(\{u_i\}\).  By linearity it is sufficient to do this calculation
 for a particular \(u_i\):
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:620}
 \begin{aligned}
 U U^\T u_i
@@ -408,7 +408,7 @@ u_r^\T u_i \\
 &= u_i \\
 \end{aligned}
 \end{equation}
-
+%
 This now completes the validation of the properties of this matrix (in its simpler form with an orthonormal basis for the subspace).
 
 \section{Matrix projection vs. Geometric Algebra}
@@ -420,17 +420,17 @@ to write this out and point out the similarities and differences.
 \subsection{General projection matrix}
 
 We have shown above, provided a matrix A is of full column rank, a projection onto its columns can be written:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:400}
 \Proj_A(x) = \left( A \frac{1}{A^\T A} A^\T \right) x
 \end{equation}
-
+%
 Now contrast this with the projection written in terms of a vector dot product with a non-null blade
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:420}
 \Proj_A(x) = A \left(\inv{A} \cdot x\right) = A \inv{A^\dagger A} \left(A^\dagger \cdot x\right)
 \end{equation}
-
+%
 This is a curious correspondence and naive comparison could lead one to think that perhaps there the concepts of matrix
 transposition and blade reversal are equivalent.
 
@@ -452,7 +452,7 @@ full column rank implies \(A^\T A\) invertability.
 If one writes out the matrix \(A^\T A\) in full
 
 Now, if \(A = [a_i]_i\), the matrix
-
+%
 \begin{equation}\label{eqn:projMatrixCompare:AtA}
 A^\T A
 =
@@ -462,7 +462,7 @@ A^\T A
 \vdots & & \\
 \end{bmatrix}.
 \end{equation}
-
+%
 This is an invertible matrix provided \(\{a_i\}_i\) is a linearly independent set of vectors.
 For full column rank to imply invertability, it would be sufficient to prove that the
 determinant of this matrix was non-zero.
@@ -470,22 +470,22 @@ determinant of this matrix was non-zero.
 I am not sure how to show that this is true with just matrix algebra, however
 one can identify the determinant of the matrix of \eqnref{eqn:projMatrixCompare:AtA}, after an adjustment
 of sign for reversion, as the GA dot product of a k-blade:
-
+%
 \begin{equation}\label{eqn:projMatrixCompare:AdagdotA}
 (-1)^{k(k-1)/2} (a_1 \wedge \cdots \wedge a_k) \cdot (a_1 \wedge \cdots \wedge a_k).
 \end{equation}
-
+%
 Linear independence means that this wedge product is non-zero, and therefore the dot product, and thus original determinant is also non-zero.
 
 When the \(A^\T A\) matrix of \eqnref{eqn:projMatrixCompare:AtA} is invertible that inverse can be written using a cofactor matrix (adjoint expansion):
 
 Let us write this out, where \(C_{ij}\) are the cofactor matrices of \(A^\T A\), we have:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:440}
 % \Abs for Det:
 \inv{A^\T A} = \inv{ \Abs{ A^\T A } } {[ C_{ij} ]}^\T
 \end{equation}
-
+%
 Observe that the denominator here is exactly the determinant of \eqnref{eqn:projMatrixCompare:AdagdotA}.  This illustrates
 the motivation of Hestenes to label the explicit alternating vector-vector dot product expansion of a
 blade-vector dot product the ``generalized Laplace expansion''.
@@ -500,17 +500,17 @@ blade-vector dot product the ``generalized Laplace expansion''.
 
 When the
 columns of the matrix \(A\) are orthonormal, the projection matrix is reduced to:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:460}
 \Proj_A(x) = \left( A A^\T \right) x.
 \end{equation}
-
+%
 The corresponding GA entity is a projection onto a unit magnitude blade.  With that scaling the inverse term also drops out leaving:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:480}
 \Proj_A(x) = A \left(A^\dagger \cdot x\right)
 \end{equation}
-
+%
 This helps point out the similarity between the matrix inverse \(\inv{A^\T A}\) and the blade product inverse \(\inv{{A^\dagger}A}\) is only on the surface,
 since this blade product is only a scalar.
 
@@ -522,7 +522,7 @@ Remove the parenthesis in some of these expressions may not always be correct, s
 done to calculate the projection matrix \(P\) in
 \eqnref{eqn:projMatrixCompare:projectmatrixline}.
 We only need to look at the numerator since the denominator is a scalar in this case.
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:640}
 \begin{aligned}
 (a a^\T) b
@@ -541,7 +541,7 @@ a_i \sum_k a_k b_k
 &= a (a^\T b) \\
 \end{aligned}
 \end{equation}
-
+%
 
 
 \subsection{Any invertible scaling of column space basis vectors does not change the projection}
@@ -549,26 +549,26 @@ a_i \sum_k a_k b_k
 
 Suppose that one introduces an alternate basis for the column space
 
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:500}
 v_i = \sum \alpha_{ik} u_k
 \end{equation}
-
+%
 This can be expressed in matrix form as:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:520}
 V = U E
 \end{equation}
-
+%
 or
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:540}
 U E^{-1} = V
 \end{equation}
-
+%
 We should expect that the projection onto the plane expressed with this alternate basis should be identical to the original.  Verification
 is straightforward:
-
+%
 \begin{equation}\label{eqn:projectionWithMatrixComparison:660}
 \begin{aligned}
 \Proj_V

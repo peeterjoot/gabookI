@@ -10,7 +10,7 @@ This will allow for the expansion a general inner product of the form \(d^k \Bx 
 
 \maketheorem{Distribution of two bivectors}{thm:stokesTheoremGeometricAlgebra:2300}{
 For vectors \(\Ba\), \(\Bb\), and bivector \(B\), we have
-
+%
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2320}
 \lr{ \Ba \wedge \Bb } \cdot B = \inv{2} \lr{
 \Ba \cdot \lr{ \Bb \cdot B }
@@ -63,7 +63,7 @@ Given a bivector \(B\), and trivector \(\Ba \wedge \Bb \wedge \Bc\) where \(\Ba,
 }
 
 This is also problem 1.1(c) from Exercises 2.1 in \citep{hestenes1999nfc}, and submits to a dumb expansion in successive dot products with a final regrouping.  With \(B = \Bu \wedge \Bv\)
-
+%
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2860}
 \begin{aligned}
 \left(  \Ba \wedge \Bb \wedge \Bc  \right)
@@ -156,7 +156,7 @@ This is also problem 1.1(c) from Exercises 2.1 in \citep{hestenes1999nfc}, and s
 \cdot B. \qedmarker
 \end{aligned}
 \end{equation}
-
+%
 \maketheorem{Distribution of two trivectors}{thm:stokesTheoremGeometricAlgebra:2560}{
 Given a trivector \(T\) and three vectors \(\Ba, \Bb\), and \(\Bc\), the entire inner product can be expanded in terms of any successive set inner products, subject to change of sign with interchange of any two adjacent vectors within the dot product sequence
 
@@ -194,9 +194,9 @@ Given a trivector \(T\) and three vectors \(\Ba, \Bb\), and \(\Bc\), the entire 
 %%%}.
 %%%\end{aligned}
 %%%\end{equation}
-
+%
 To show this, we first expand within a scalar selection operator
-
+%
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2600}
 \begin{aligned}
 \lr{ \Ba \wedge \Bb \wedge \Bc } \cdot T
@@ -218,7 +218,7 @@ To show this, we first expand within a scalar selection operator
 } \\
 \end{aligned}
 \end{equation}
-
+%
 Now consider any single term from the scalar selection, such as the first.  This can be reordered using the vector dot product identity
 
 \begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:2680}
@@ -317,7 +317,7 @@ Substituting this back into \eqnref{eqn:stokesTheoremGeometricAlgebra:2600} prov
 %%%}.
 %%%\end{aligned}
 %%%\end{equation}
-
+%
 \maketheorem{Permutation of two successive dot products with trivector}{thm:stokesTheoremGeometricAlgebra:2740}{
 Given a trivector \(T\) and two vectors \(\Ba\) and \(\Bb\), alternating the order of the dot products changes the sign
 
@@ -460,11 +460,11 @@ We can use this form after scaling it appropriately to express duality in terms 
 
 \maketheorem{Dual vector in a three vector subspace}{thm:stokesTheoremGeometricAlgebra:4950}{
 In the subspace spanned by \(\setlr{\Ba, \Bb, \Bc}\), the dual of \(\Ba\) is
-
+%
 \begin{equation*}
 \Ba^\conj = \Bb \wedge \Bc \inv{\Ba \wedge \Bb \wedge \Bc},
 \end{equation*}
-
+%
 }
 
 Consider the dot product of \(\acap^\conj\) with \(\Bu \in \setlr{\Ba, \Bb, \Bc}\).
@@ -490,7 +490,7 @@ Consider the dot product of \(\acap^\conj\) with \(\Bu \in \setlr{\Ba, \Bb, \Bc}
 \end{dmath}
 
 The canceled term is eliminated since it is the product of a vector and trivector producing no scalar term.  Substituting \(\Ba, \Bb, \Bc\), and noting that \(\Bu \wedge \Bu = 0\), we have
-
+%
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4990}
 \begin{aligned}
 \Ba \cdot \Ba^\conj &= 1 \\
@@ -498,11 +498,11 @@ The canceled term is eliminated since it is the product of a vector and trivecto
 \Bc \cdot \Ba^\conj &= 0.
 \end{aligned}
 \end{equation}
-
+%
 \maketheorem{Pseudoscalar selection}{thm:stokesTheoremGeometricAlgebra:4690}{
 
 For grade \(k\) blade \(K \in \bigwedge^k\) (i.e. a \textAndIndex{pseudoscalar}), and vectors \(\Ba, \Bb\), the grade \(k\) selection of this blade sandwiched between the vectors is
-
+%
 \begin{equation*}
 \gpgrade{ \Ba K \Bb }{k} = (-1)^{k+1} \gpgrade{K a b}{k} = (-1)^{k+1} K \lr{ \Ba \cdot \Bb}.
 \end{equation*}

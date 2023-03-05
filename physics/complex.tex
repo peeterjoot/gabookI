@@ -17,7 +17,7 @@ These are some rather rough notes filling in some details
 on the treatment of \citep{DoranHamiltonian}.
 
 Expanding equation 4.17
-
+%
 \begin{equation}\label{eqn:complex:20}
 \begin{aligned}
 J &= e_i \wedge f_i \\
@@ -26,7 +26,7 @@ b &= x_i e_i + y_i f_i \\
 B &= a \wedge b + (a \cdot J) \wedge (b \cdot J)  \\
 \end{aligned}
 \end{equation}
-
+%
 \begin{equation}\label{eqn:complex:40}
 \begin{aligned}
 a \wedge b
@@ -38,7 +38,7 @@ u_i x_j e_i \wedge e_j
 + v_i y_j f_i \wedge f_j \\
 \end{aligned}
 \end{equation}
-
+%
 \begin{equation}\label{eqn:complex:60}
 \begin{aligned}
 a \cdot J
@@ -48,9 +48,9 @@ u_i e_i \cdot ( e_j \wedge f_j )
 &= u_j f_j - v_j e_j
 \end{aligned}
 \end{equation}
-
+%
 Search and replace for \(b \cdot J\) gives
-
+%
 \begin{equation}\label{eqn:complex:80}
 \begin{aligned}
 b \cdot J
@@ -60,9 +60,9 @@ x_i e_i \cdot ( e_j \wedge f_j )
 &= x_j f_j - y_j e_j
 \end{aligned}
 \end{equation}
-
+%
 So we have
-
+%
 \begin{equation}\label{eqn:complex:100}
 \begin{aligned}
 (a \cdot J) \wedge (b \cdot J)
@@ -74,7 +74,7 @@ So we have
 + v_i y_j e_i \wedge e_j
 \end{aligned}
 \end{equation}
-
+%
 For
 \begin{equation}\label{eqn:complex:120}
 \begin{aligned}
@@ -84,7 +84,7 @@ a \wedge b + (a \cdot J) \wedge (b \cdot J)
 + ( u_i x_j + v_i y_j ) (e_i \wedge e_j + f_i \wedge f_j)
 \end{aligned}
 \end{equation}
-
+%
 This shows why the elements were picked as a basis
 \begin{equation}\label{eqn:complex:140}
 \begin{aligned}
@@ -96,29 +96,29 @@ e_i \wedge f_j - f_i \wedge e_j
 e_i \wedge e_j + f_i \wedge f_j
 \end{aligned}
 \end{equation}
-
+%
 The first of which is a multiple of \(J_i = e_i \wedge f_i\) when \(i=j\), and the second of which is zero if \(i=j\).
 
 \section{5.1 Conservation Theorems and Flows}
 
 equation 5.10 is
-
+%
 \begin{equation}\label{eqn:complex:180}
 \begin{aligned}
 \fdot = \xdot \cdot \grad f = (\grad f \wedge \grad H) \cdot J
 \end{aligned}
 \end{equation}
-
+%
 This one is not obvious to me.  For \(\fdot\) we have
-
+%
 \begin{equation}\label{eqn:complex:200}
 \begin{aligned}
 \fdot = \PD{p_i}{f} \pdot_i +\PD{q_i}{f} \qdot_i + \mathLabelBox{\PD{t}{f}}{\(=0\)}
 \end{aligned}
 \end{equation}
-
+%
 compare to
-
+%
 \begin{equation}\label{eqn:complex:220}
 \begin{aligned}
 \xdot \cdot \grad f
@@ -126,9 +126,9 @@ compare to
 &= \pdot_i \PD{p_i}{f} + \qdot_i \PD{q_i}{f}
 \end{aligned}
 \end{equation}
-
+%
 Okay, this part matches the first part of (5.10).  Writing this in terms of the Hamiltonian relation (5.9) \(\xdot = \grad H \cdot J\) we have
-
+%
 \begin{equation}\label{eqn:complex:240}
 \begin{aligned}
 \fdot
@@ -136,7 +136,7 @@ Okay, this part matches the first part of (5.10).  Writing this in terms of the 
 &= \grad f \cdot (\grad H \cdot J) \\
 \end{aligned}
 \end{equation}
-
+%
 The relation \(a \cdot (b \cdot (c \wedge d)) = (a \wedge b) \cdot (c \wedge d)\),
 can be used here to factor out the \(J\), we have
 \begin{equation}\label{eqn:complex:260}
@@ -146,17 +146,17 @@ can be used here to factor out the \(J\), we have
 &= (\grad f \wedge \grad H) \cdot J \\
 \end{aligned}
 \end{equation}
-
+%
 which completes (5.10).
 
 Also with \(f=H\) since H was also specified as having no explicit time dependence, one has
-
+%
 \begin{equation}\label{eqn:complex:280}
 \begin{aligned}
 \dot{H} &= (\grad H \wedge \grad H) \cdot J = 0 \cdot J = 0
 \end{aligned}
 \end{equation}
-
+%
 %\bibliographystyle{plainnat}
 %\bibliography{myrefs}
 

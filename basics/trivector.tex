@@ -14,14 +14,14 @@
 
 The direction vector for two intersecting planes can be found to have the
 form:
-
+%
 \begin{equation}\label{eqn:trivector:dirvecintersection}
 a\left( (\Bv \wedge \BB)^2 \Bu
 - (\Bv \wedge \BB)(\Bu \wedge \BB)\Bv \right)
 + b\left((\Bu \wedge \BB)^2 \Bv
 - (\Bu \wedge \BB)(\Bv \wedge \BB)\Bu\right)
 \end{equation}
-
+%
 While trying to put \eqnref{eqn:trivector:dirvecintersection} into a form
 that eliminated \(\Bu\), and \(\Bv\) in favor of \(\BA = \Bu \wedge \Bv\)
 symmetric and antisymmetric formulations for the various grade terms
@@ -34,20 +34,20 @@ of those results.
 
 Writing two trivectors in terms
 of mutually orthogonal components
-
+%
 \begin{equation}\label{eqn:trivector:26}
 \BA = \Bx \wedge \By \wedge \Bz = \Bx\By\Bz
 \end{equation}
-
+%
 and
-
+%
 \begin{equation}\label{eqn:trivector:46}
 \BB = \Bu \wedge \Bv \wedge \Bw =\Bu\Bv\Bw
 \end{equation}
-
+%
 Assuming that there is no common vector between the two, the
 wedge of these is
-
+%
 \begin{equation}\label{eqn:trivector:186}
 \begin{aligned}
 \BA \wedge \BB
@@ -64,7 +64,7 @@ wedge of these is
 &= -\BB \wedge \BA
 \end{aligned}
 \end{equation}
-
+%
 Note above that any interchange of terms inverts the sign (demonstrated
 explicitly for all the \(\Bx\) interchanges).
 
@@ -80,28 +80,28 @@ wedge product definition.
 
 The end result here is that the grade 6 term of a trivector trivector product
 changes sign on interchange of the trivectors:
-
+%
 \begin{equation}\label{eqn:trivector:trivecgpgrade6}
 \gpgrade{\BA\BB}{6} = -\gpgrade{\BB\BA}{6}
 \end{equation}
-
+%
 \subsection{Grade 4 term}
 
 For a trivector product to have a grade 4 term there must be a common
 vector between the two
-
+%
 \begin{equation}\label{eqn:trivector:66}
 \BA = \Bx \wedge \By \wedge \Bz = \Bx\By\Bz
 \end{equation}
-
+%
 and
-
+%
 \begin{equation}\label{eqn:trivector:86}
 \BB = \Bu \wedge \Bv \wedge \Bz =\Bu\Bv\Bz
 \end{equation}
-
+%
 The grade four term of the product is
-
+%
 \begin{equation}\label{eqn:trivector:206}
 \begin{aligned}
 \gpgrade{\BB \BA}{4}
@@ -119,31 +119,31 @@ The grade four term of the product is
 &= \gpgrade{\BA \BB}{4}
 \end{aligned}
 \end{equation}
-
+%
 Thus the grade 4 term commutes on interchange:
-
+%
 \begin{equation}\label{eqn:trivector:trivecgpgrade4}
 \gpgrade{\BA\BB}{4} = \gpgrade{\BB\BA}{4}
 \end{equation}
-
+%
 \subsection{Grade 2 term}
 
 Similar to above,
 for a trivector product to have a grade 2 term there must be two common
 vectors between the two
-
+%
 \begin{equation}\label{eqn:trivector:106}
 \BA = \Bx \wedge \By \wedge \Bz = \Bx\By\Bz
 \end{equation}
-
+%
 and
-
+%
 \begin{equation}\label{eqn:trivector:126}
 \BB = \Bu \wedge \By \wedge \Bz =\Bu\By\Bz
 \end{equation}
-
+%
 The grade two term of the product is
-
+%
 \begin{equation}\label{eqn:trivector:226}
 \begin{aligned}
 \gpgrade{\BA \BB}{2}
@@ -154,17 +154,17 @@ The grade two term of the product is
 &= -\gpgrade{ \BB \BA }{2} \\
 \end{aligned}
 \end{equation}
-
+%
 The grade 2 term anticommutes on interchange:
-
+%
 \begin{equation}\label{eqn:trivector:trivecgpgrade2}
 \gpgrade{\BA\BB}{2} = -\gpgrade{\BB\BA}{2}
 \end{equation}
-
+%
 \subsection{Grade 0 term}
 
 Any grade 0 terms are due to products of the form \(\BA = k\BB\)
-
+%
 \begin{equation}\label{eqn:trivector:246}
 \begin{aligned}
 \gpgrade{\BA \BB}{0}
@@ -173,15 +173,15 @@ Any grade 0 terms are due to products of the form \(\BA = k\BB\)
 &= \gpgrade{\BB \BA}{0} \\
 \end{aligned}
 \end{equation}
-
+%
 The grade 2 term commutes on interchange:
-
+%
 \begin{equation}\label{eqn:trivector:trivecgpgrade0}
 \gpgrade{\BA\BB}{0} = \gpgrade{\BB\BA}{0}
 \end{equation}
-
+%
 \subsection{combining results}
-
+%
 \begin{equation*}
 \BA \BB
 =\gpgrade{\BA\BB}{0}
@@ -189,7 +189,7 @@ The grade 2 term commutes on interchange:
 +\gpgrade{\BA\BB}{4}
 +\gpgrade{\BA\BB}{6}
 \end{equation*}
-
+%
 \begin{equation}\label{eqn:trivector:266}
 \begin{aligned}
 \BB\BA
@@ -203,10 +203,10 @@ The grade 2 term commutes on interchange:
 -\gpgrade{\BA\BB}{6} \\
 \end{aligned}
 \end{equation}
-
+%
 These can be combined to express each of the grade terms as subsets
 of the symmetric and antisymmetric parts:
-
+%
 \begin{equation}\label{eqn:trivector:286}
 \begin{aligned}
 \BA \cdot \BB = \gpgrade{\BA\BB}{0} &= \gpgrade{\frac{\BA\BB + \BB\BA}{2}}{0} \\
@@ -215,21 +215,21 @@ of the symmetric and antisymmetric parts:
 \BA \wedge \BB = \gpgrade{\BA\BB}{6} &= \gpgrade{\frac{\BA\BB - \BB\BA}{2}}{6} \\
 \end{aligned}
 \end{equation}
-
+%
 Note that above I have been somewhat loose with the argument above.  A grade three vector
 will have the following form:
-
+%
 \begin{equation}\label{eqn:trivector:146}
 \sum_{i<j<k} D_{ijk} \Be_{ijk}
 \end{equation}
-
+%
 Where \(D_{ijk}\) is the determinant of \(ijk\) components of the vectors being wedged.  Thus the product
 of two trivectors will be of the following form:
-
+%
 \begin{equation}\label{eqn:trivector:166}
 \sum_{i<j<k} \sum_{i'<j'<k'} D_{ijk} D'_{i'j'k'} (\Be_{ijk} \Be_{i'j'k'})
 \end{equation}
-
+%
 It is really each of these \(\Be_{ijk} \Be_{i'j'k'}\) products that have to be considered in the grade
 and sign arguments above.  The end result will be the same though... one would just have to present
 it a bit more carefully for a true proof.
@@ -238,7 +238,7 @@ it a bit more carefully for a true proof.
 
 As with the intersecting bivector case, when there is a line of intersection between the two volumes one can
 write:
-
+%
 \begin{equation}\label{eqn:trivector:306}
 \begin{aligned}
 \BA \cdot \BB = \gpgrade{\BA\BB}{0} &= \gpgrade{\frac{\BA\BB + \BB\BA}{2}}{0} \\
@@ -247,7 +247,7 @@ write:
 \BA \wedge \BB = \gpgrade{\BA\BB}{6} &= 0 \\
 \end{aligned}
 \end{equation}
-
+%
 And if these volumes intersect in a plane a further simplification is possible:
 \begin{equation}\label{eqn:trivector:326}
 \begin{aligned}
@@ -257,4 +257,4 @@ And if these volumes intersect in a plane a further simplification is possible:
 \BA \wedge \BB = \gpgrade{\BA\BB}{6} &= 0 \\
 \end{aligned}
 \end{equation}
-
+%

@@ -15,18 +15,18 @@ Find the first couple terms of the Legendre polynomial expansion of
 \begin{equation}\label{eqn:legendre:20}
 \inv{\abs{\Bx - \Ba}}.
 \end{equation}
-
+%
 Write
 \begin{equation}\label{eqn:legendre:40}
 f(x) = \inv{\abs{\Bx}}.
 \end{equation}
-
+%
 Expanding \(f(\Bx - \Ba)\) about \(\Bx\) we have
 \begin{equation}\label{eqn:legendre:60}
 \inv{\abs{\Bx - \Ba}} =
 \sum_{k=0}{ \inv{k!} (-\agrad)^k} \inv{\abs{\Bx}}
 \end{equation}
-
+%
 Expanding the first term we have
 \begin{equation}\label{eqn:legendre:200}
 \begin{aligned}
@@ -41,7 +41,7 @@ Expanding the first term we have
 \frac{\Ba \cdot \Bx}{{\abs{\Bx}}^3}
 \end{aligned}
 \end{equation}
-
+%
 Expansion of the second derivative term is
 \begin{equation}\label{eqn:legendre:220}
 \begin{aligned}
@@ -54,7 +54,7 @@ Expansion of the second derivative term is
 \frac{\agrad {(\Ba \cdot \Bx)}}{{\abs{\Bx}}^3} + {(\Ba \cdot \Bx)}\agrad \inv{{\abs{\Bx}}^3} \right) \\
 \end{aligned}
 \end{equation}
-
+%
 For this we need
 \begin{equation}\label{eqn:legendre:80}
 \agrad {(\Ba \cdot \Bx)} =
@@ -83,7 +83,7 @@ The second derivative term is
 { {{\abs{\Bx}}^5} }
 \end{aligned}
 \end{equation}
-
+%
 Summing these terms we have
 \begin{equation}\label{eqn:legendre:100}
 \inv{\abs{\Bx -\Ba}} =
@@ -91,7 +91,7 @@ Summing these terms we have
 \frac{ \Ba \cdot \Bx } { {\abs{\Bx}}^3 } +
 \frac{ (1/2)\left( 3 (\Ba \cdot \Bx)^2 - \Ba^2 \Bx^2 \right) } { {{\abs{\Bx}}^5} } + \cdots
 \end{equation}
-
+%
 NFCM writes this as
 \begin{equation}\label{eqn:legendre:120}
 \inv{\abs{\Bx -\Ba}} =
@@ -135,7 +135,7 @@ or
 -\Bx^2 {\agrad{P_k}}.
 \end{aligned}
 \end{equation}
-
+%
 Some of these have been calculated
 \begin{equation}\label{eqn:legendre:320}
 \begin{aligned}
@@ -144,7 +144,7 @@ P_1 &= \Ba \cdot \Bx \\
 P_2 &= \half(3(\Ba \cdot \Bx)^2 -\Ba^2\Bx^2).
 \end{aligned}
 \end{equation}
-
+%
 For the derivatives
 \begin{equation}\label{eqn:legendre:340}
 \begin{aligned}
@@ -154,7 +154,7 @@ For the derivatives
            &= 2\Ba^2(\Bx \cdot \Ba).
 \end{aligned}
 \end{equation}
-
+%
 Using the recurrence relation one can calculate \(P_3\) for example.
 \begin{equation}\label{eqn:legendre:360}
 \begin{aligned}
@@ -187,7 +187,7 @@ P_0(\bxa) &= 1 \\
 \frac{P_3(\bxa)}{\abs{\Bx}^3 \abs{\Ba}^3} &= \half ( {5}(\costheta)^3 - 3 {(\costheta)} ).
 \end{aligned}
 \end{equation}
-
+%
 With this scaling, we have the standard form for the Legendre polynomials, and can write
 \begin{equation}\label{eqn:legendre:140}
 \inv{\Bx-\Ba} = \inv{\abs{\Bx}}\left(
@@ -207,7 +207,7 @@ P_2(\bxa) &= \abs{\Bx}^2\abs{\Ba}^2 P_2(\costheta) = \half(3(\Ba \cdot \Bx)^2 - 
 P_3(\bxa) &= \abs{\Bx}^3\abs{\Ba}^3 P_3(\costheta) = \half(5(\Ba \cdot \Bx)^3 - 3(\Ba \cdot \Bx) \Bx^2\Ba^2) \\
 \end{aligned}
 \end{equation}
-
+%
 Every term for the \(k^{th}\) polynomial is a permutation of the geometric product \(\Bx^k\Ba^k\).
 
 This allows for writing some of these terms using the wedge product.  Using the product expansion:
@@ -216,7 +216,7 @@ This allows for writing some of these terms using the wedge product.  Using the 
 %\Ba^2 \Bx^2 = (\Ba \cdot \Bx)^2 - ( \Ba \wedge \Bx )^2
 (\Ba \cdot \Bx)^2 = ( \Ba \wedge \Bx )^2 + \Ba^2 \Bx^2.
 \end{equation}
-
+%
 Thus we have:
 \begin{equation}\label{eqn:legendre:420}
 \begin{aligned}
@@ -225,7 +225,7 @@ P_2(\bxa)
 &= (\Ba \cdot \Bx)^2 - \half\abs{\Ba \wedge \Bx}^2 \\
 \end{aligned}
 \end{equation}
-
+%
 This is nice geometrically since the directional dependence of this term on the co-linearity and
 perpendicularity of the vectors \(\Ba\) and \(\Bx\) is clear.
 
@@ -237,7 +237,7 @@ P_3(\bxa) &= (\Ba \cdot \Bx)\half(5(\Ba \cdot \Bx)^2 - 3\Bx^2\Ba^2) \\
           &= (\Ba \cdot \Bx)((\Ba \cdot \Bx)^2 - \frac{3}{2}\abs{\Ba \wedge \Bx}^2) \\
 \end{aligned}
 \end{equation}
-
+%
 I suppose that one could get the same geometrical interpretation with a standard Legendre expansion in terms of \(\costheta = cos(\theta)\) terms, by collect both \(sin(\theta)\) and \(cos(\theta)\) powers, but one
 can see the power of writing things explicitly in terms of the original vectors.
 \section{ Note on NFCM Legendre polynomial notation}
@@ -250,7 +250,7 @@ Note for example that the standard first degree Legendre polynomial \(P_1(x) = x
 &= \xcap \cdot \acap + \xcap \wedge \acap \\
 \end{aligned}
 \end{equation}
-
+%
 This has a bivector component in addition to the component identical to the standard Legendre polynomial
 term (the first part).
 
@@ -265,10 +265,10 @@ is not the case for other terms.  Example, \(P_2(\bxa)\):
 &=  -(3/2)\Ba^2 \Bx^2 + 3(\Ba \cdot \Bx)^2 + 3(\Ba \cdot \Bx)(\Bx \wedge \Ba) - 1/2  \\
 \end{aligned}
 \end{equation}
-
+%
 Scaling this by \(1/(\Ba^2\Bx^2)\) is
 \begin{equation}\label{eqn:legendre:180}
 -\frac{3}{2} + 3(\costheta)^2 + 3(\costheta)(\xcap \wedge \acap) - \inv{\Ba^2\Bx^2} \\
 \end{equation}
-
+%
 The scalar part of this is not anything recognizable.
