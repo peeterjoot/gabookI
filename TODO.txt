@@ -1,3 +1,12 @@
+=== Sat  4 Mar 2023 23:12:22 EST ===
+
+- Prune spaces before and after boxedEquation.
+- Review the whole thing now that I've got it compiling again.
+- Tried uploading to KDP to have it automatically review gutters for me, but it failed to process.  probably need to do a manual visual review myself once.
+
+
+=== OLD NOTES ===
+
 - In nfcmCh2.tex
 
    Turn the problems into \makeproblem form, and probably move elsewhere (somewhere appropriate by 
