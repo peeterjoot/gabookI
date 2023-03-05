@@ -24,22 +24,18 @@ The gradient of the vector \( \BM \) can be written as a single even grade multi
 
 This can be used to attempt to discover the relation between the vector \( \BM \) and its divergence and curl.  
 The vector \( \BM \) can be expressed at the point of interest as a convolution with the delta function at all other points in space
-
-\begin{dmath}\label{eqn:helmholtzDerviationMultivector:80}
+\begin{equation}\label{eqn:helmholtzDerviationMultivector:80}
 \BM(\Bx) = \int_V dV' \delta(\Bx - \Bx') \BM(\Bx').
-\end{dmath}
+\end{equation}
 
 The Laplacian representation of the delta function in \R{3} is
-
-\begin{dmath}\label{eqn:helmholtzDerviationMultivector:100}
+\begin{equation}\label{eqn:helmholtzDerviationMultivector:100}
 \delta(\Bx - \Bx') = -\inv{4\pi} \spacegrad^2 \inv{\Norm{\Bx - \Bx'}},
-\end{dmath}
-
+\end{equation}
 so \( \BM \) can be represented as the following convolution
-
-\begin{dmath}\label{eqn:helmholtzDerviationMultivector:120}
+\begin{equation}\label{eqn:helmholtzDerviationMultivector:120}
 \BM(\Bx) = -\inv{4\pi} \int_V dV' \spacegrad^2 \inv{\Norm{\Bx - \Bx'}} \BM(\Bx').
-\end{dmath}
+\end{equation}
 
 %As noted in \cref{eqn:helmholtzDerviationMultivector:460} the Laplacian of a vector can be factored as
 %
@@ -100,25 +96,25 @@ In order to express final result in traditional vector algebra form, a couple tr
 \end{equation}
 %
 For the grade selection in the boundary integral, note that
-
-\begin{dmath}\label{eqn:helmholtzDerviationMultivector:740}
+\begin{equation}\label{eqn:helmholtzDerviationMultivector:740}
+\begin{aligned}
 \gpgradeone{ \spacegrad \ncap \BX }
-=
+&=
 \gpgradeone{ \spacegrad (\ncap \cdot \BX) }
 +
-\gpgradeone{ \spacegrad (\ncap \wedge \BX) }
-=
+\gpgradeone{ \spacegrad (\ncap \wedge \BX) } \\
+&=
 \spacegrad (\ncap \cdot \BX)
 +
-\gpgradeone{ \spacegrad I (\ncap \cross \BX) }
-=
+\gpgradeone{ \spacegrad I (\ncap \cross \BX) } \\
+&=
 \spacegrad (\ncap \cdot \BX)
 -
 \spacegrad \cross (\ncap \cross \BX).
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 These give
-
 %\begin{dmath}\label{eqn:helmholtzDerviationMultivector:721}
 \boxedEquation{eqn:helmholtzDerviationMultivector:721}{
 \begin{aligned}

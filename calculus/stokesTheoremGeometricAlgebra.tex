@@ -41,15 +41,14 @@ These are equivalent to the usual pair of tensor equations
 \end{equation}
 %
 or the Geometric Algebra equation
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:5910}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5910}
 \grad F = 0.
-\end{dmath}
+\end{equation}
 
 An aspect of differential forms that I found unintuitive, is that all physical quantities have to be expressed as forms, even when we have no pressing desire to integrate them.  It also seemed to me that it ought to be possible to express volume and area elements in parameterized spaces directly as wedge products.  For example, given a two parameter surface of all the points that can be traced out on \(\Bx(u, v)\), we can express the (oriented) area of a patch of that surface directly as
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:5930}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5930}
 dA = \lr{ du \PD{u}{\Bx} } \wedge \lr{ dv \PD{v}{\Bx} }.
-\end{dmath}
+\end{equation}
 
 With such a capability is the abstract notion of a form really required?  Can we stick with the vector notation that we are comfortable with, perhaps just generalizing slightly?  How would something like Stokes theorem, a basic tool needed to tackle so many problems in electromagnetism, be expressed so that it acted on vectors directly?
 
@@ -214,29 +213,26 @@ Associated implicitly with this basis is a curvilinear coordinate representation
 \end{equation}
 %
 (sums over mixed indices are implied).   These coordinates can be calculated by taking dot products with the \textAndIndex{reciprocal frame vectors}
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:1360}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:1360}
+\begin{aligned}
 \Bx \cdot \Bx^i
-= x^j \Bx_j \cdot \Bx^i
-= x^j {\delta_j}^i
-= x^i.
-\end{dmath}
+&= x^j \Bx_j \cdot \Bx^i \\
+&= x^j {\delta_j}^i \\
+&= x^i.
+\end{aligned}
+\end{equation}
 
 %Having used the same notation for coordinates with respect to the standard basis and its dual, we must rely on context to disambiguate the two.
 In this document all coordinates are with respect to a specific \textAndIndex{curvilinear basis}, and not with respect to the \textAndIndex{standard basis} \(\setlr{\Be_i}\) or its \textAndIndex{dual basis} unless otherwise noted.
 
 Similar to the usual notation for derivatives with respect to the standard basis coordinates we form a lower index partial derivative operator
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:2900}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2900}
 \PD{u^i}{} \equiv \partial_i,
-\end{dmath}
-
+\end{equation}
 so that when the complete vector space is spanned by \(\setlr{\Bx_i}\) the gradient has the curvilinear representation
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:1380}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:1380}
 \spacegrad = \Bx^i \PD{u^i}{}.
-\end{dmath}
-
+\end{equation}
 %This can be motivated by noting that the directional derivative is defined by
 %
 %\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:1260}
@@ -261,21 +257,15 @@ given by \eqnref{eqn:stokesTheoremGeometricAlgebra:1400}.
 
 % redundant:
 %See \citep{aMacdonaldVAGC} for a more complete discussion of the gradient and vector derivatives in curvilinear coordinates.
-
 \section{Green's theorem}
-
 \input{calculus/greensTheorem.tex}
-
 \section{Stokes theorem, two volume vector field}
-
 Having examined the right hand side of \cref{thm:stokesTheoremGeometricAlgebra:1740} for the very simplest geometric object \(\Bf\), let's look at the right hand side, the area integral in more detail.  We restrict our attention for now to vectors \(\Bf\) still defined by \eqnref{eqn:stokesTheoremGeometricAlgebra:1640}.
 
 First we need to assign a meaning to \(d^2 \Bx\).  By this, we mean the wedge products of the two differential elements.  With
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:1780}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:1780}
 d\Bx_i = du^i \PD{u^i}{\Bx} = du^i \Bx_i,
-\end{dmath}
-
+\end{equation}
 that area element is
 %
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:1800}
@@ -453,10 +443,9 @@ which can be cross checked against \cref{fig:clockwiseLoopOnSurface:clockwiseLoo
 \makeexample{Green's theorem, a 2D Cartesian parameterization for a Euclidean space}{example:stokesTheoremGeometricAlgebra:2920}{
 
 For a Cartesian 2D Euclidean parameterization of a vector field and the integration space, Stokes theorem should be equivalent to Green's theorem \eqnref{eqn:stokesTheoremGeometricAlgebra:1710}.  Let's expand both sides of \eqnref{eqn:stokesTheoremGeometricAlgebra:1980} independently to verify equality.  The parameterization is
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:2940}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2940}
 \Bx(x, y) = x \Be_1 + y \Be_2.
-\end{dmath}
+\end{equation}
 
 Here the dual basis is the basis, and the projection onto the tangent space is just the gradient
 %
@@ -540,78 +529,70 @@ As expected, we can also obtain this by integrating \eqnref{eqn:stokesTheoremGeo
 Let's now consider a cylindrical parameterization of a 4D space with Euclidean metric \index{metric!Euclidean} \(++++\) or Minkowski metric \index{metric!Minkowski} \(+++-\).  For such a space let's do a brute force expansion of both sides of Stokes theorem to gain some confidence that all is well.
 
 With \(\kappa = \Be_3 \Be_4\), such a space is conveniently parameterized as illustrated in \cref{fig:cylindricalPolarParameterization:cylindricalPolarParameterizationFig7} as
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3080}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3080}
 \Bx(\rho, \theta, h) = x \Be_1 + y \Be_2 + \rho \Be_3 e^{\kappa \theta}.
-\end{dmath}
-
+\end{equation}
 \imageFigure{../figures/gabook/cylindricalPolarParameterizationFig7}{Cylindrical polar parameterization}{fig:cylindricalPolarParameterization:cylindricalPolarParameterizationFig7}{0.15}
 
 %\imageFigure{../figures/gabook/cylindricalPolarParameterizationFig5}{Cylindrical polar parameterization}{fig:cylindricalPolarParameterization:cylindricalPolarParameterizationFig5}{0.15}
-
 Note that the Euclidean case where \(\lr{\Be_4}^2 = 1\) rejection of the non-axial components of \(\Bx\) expands to
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3100}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3100}
 \lr{ \lr{ \Bx \wedge \Be_1 \wedge \Be_2} \cdot \Be^2 } \cdot \Be^1 =
 \rho \lr{ \Be_3 \cos\theta + \Be_4 \sin \theta },
-\end{dmath}
-
+\end{equation}
 whereas for the Minkowski case where \(\lr{\Be_4}^2 = -1\) the expansion is hyperbolic
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3120}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3120}
 \lr{ \lr{ \Bx \wedge \Be_1 \wedge \Be_2} \cdot \Be^2 } \cdot \Be^1 =
 \rho \lr{ \Be_3 \cosh\theta + \Be_4 \sinh \theta }.
-\end{dmath}
+\end{equation}
 
 Within such a space consider the surface along \(x = c, y = d\), for which the vectors are parameterized by
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3140}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3140}
 \Bx(\rho, \theta) = c \Be_1 + d \Be_2 + \rho \Be_3 e^{\kappa \theta}.
-\end{dmath}
+\end{equation}
 
 The tangent space unit vectors are
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3160}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3160}
 \Bx_\rho
 = \PD{\rho}{\Bx} = \Be_3 e^{\kappa \theta},
-\end{dmath}
-
+\end{equation}
 and
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3180}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3180}
+\begin{aligned}
 \Bx_\theta
-= \PD{\theta}{\Bx}
-= \rho \Be_3 \Be_3 \Be_4 e^{\kappa \theta}
-= \rho \Be_4 e^{\kappa \theta}.
-\end{dmath}
+&= \PD{\theta}{\Bx} \\
+&= \rho \Be_3 \Be_3 \Be_4 e^{\kappa \theta} \\
+&= \rho \Be_4 e^{\kappa \theta}.
+\end{aligned}
+\end{equation}
 
 Observe that both of these vectors have their origin at the point of evaluation, and aren't relative to the absolute origin used to parameterize the complete space. % projective geometry?
 
 We wish to compute the volume element for the tangent plane.  Noting that \(\Be_3\) and \(\Be_4\) both anticommute with \(\kappa\) we have for \(\Ba \in \Span \setlr{\Be_3, \Be_4}\)
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3380}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3380}
 \Ba e^{\kappa \theta} = e^{-\kappa \theta} \Ba,
-\end{dmath}
-
+\end{equation}
 so
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3400}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3400}
+\begin{aligned}
 \Bx_\theta \wedge \Bx_\rho
-=
+&=
 \gpgradetwo{
 \Be_3 e^{\kappa \theta} \rho \Be_4 e^{\kappa \theta}
-}
-=
+} \\
+&=
 \rho \gpgradetwo{
 \Be_3 e^{\kappa \theta} e^{-\kappa \theta} \Be_4
-}
-=
+} \\
+&=
 \rho \Be_3 \Be_4.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 The tangent space volume element is thus
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3420}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3420}
 d^2 \Bx = \rho d\rho d\theta \Be_3 \Be_4.
-\end{dmath}
+\end{equation}
 
 With the tangent plane vectors both perpendicular we don't need the general \cref{thm:stokesTheoremGeometricAlgebra:3200} to compute the reciprocal basis, but can do so by inspection
 %
@@ -878,20 +859,19 @@ e^{-i\alpha/2}
 \end{equation}
 %
 Continuing a specific example where \(i = \gamma_0\gamma_1, j = \gamma_1 \gamma_2\) let's also pick \(\Bx_0 = \gamma_0\), the spacetime position of a particle at the origin of a frame at that frame's \(c t = 1\).  The tangent space vectors for the subspace parameterized by this transformation and this initial position is then reduced to
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4390}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4390}
 \Bx_\alpha = -\gamma_1 e^{j \theta} = \gamma_1 \sin\theta + \gamma_2 \cos\theta,
-\end{dmath}
-
+\end{equation}
 and
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4410}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4410}
+\begin{aligned}
 \Bx_\theta
-= \lr{ \gamma_0 e^{-i \alpha} } \cdot j
-= \lr{ \gamma_0\lr{ \cosh\alpha - \gamma_0 \gamma_1 \sinh\alpha }} \cdot \lr{ \gamma_1 \gamma_2}
-=
-\gpgradeone{ \lr{ \gamma_0 \cosh\alpha - \gamma_1 \sinh\alpha } \gamma_1 \gamma_2 }
-= \gamma_2 \sinh\alpha.
-\end{dmath}
+&= \lr{ \gamma_0 e^{-i \alpha} } \cdot j \\
+&= \lr{ \gamma_0\lr{ \cosh\alpha - \gamma_0 \gamma_1 \sinh\alpha }} \cdot \lr{ \gamma_1 \gamma_2} \\
+&= \gpgradeone{ \lr{ \gamma_0 \cosh\alpha - \gamma_1 \sinh\alpha } \gamma_1 \gamma_2 } \\
+&= \gamma_2 \sinh\alpha.
+\end{aligned}
+\end{equation}
 
 By inspection the dual basis for this parameterization is
 %
@@ -1023,31 +1003,27 @@ Now scale the normal vector and its dual to have unit norm as follows
 \end{equation}
 %
 so that for \(\beta > 0\), the volume element can be
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3860}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3860}
 \Bx_1 \wedge \Bx_2 \wedge \xcap_3 = \beta I.
-\end{dmath}
+\end{equation}
 
 This scaling choice is illustrated in \cref{fig:outwardsNormal:outwardsNormalFig8}, and represents the ``outwards'' normal.  With such a scaling choice we have
-
 \imageFigure{../figures/gabook/outwardsNormalFig8}{Outwards normal}{fig:outwardsNormal:outwardsNormalFig8}{0.15}
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3800}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3800}
 \beta du^1 du^2 = dA,
-\end{dmath}
-
+\end{equation}
 and almost have the desired cross product representation
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3820}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3820}
+\begin{aligned}
 d^2 \Bx \cdot \lr{ \boldpartial \wedge \Bf }
-=
-dA \xcap^3 \cdot \lr{ I \cdot \lr{\spacegrad \wedge \Bf} }
-=
+&=
+dA \xcap^3 \cdot \lr{ I \cdot \lr{\spacegrad \wedge \Bf} } \\
+&=
 dA \xcap^3 \cdot \lr{ I \lr{\spacegrad \wedge \Bf} }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 With the duality identity \(\Ba \wedge \Bb = I \lr{\Ba \cross \Bb}\), we have the traditional 3D representation of Stokes theorem
-
 \boxedEquation{eqn:stokesTheoremGeometricAlgebra:3840}{
 \int d^2 \Bx \cdot \lr{ \boldpartial \wedge \Bf }
 =
@@ -1059,35 +1035,34 @@ dA \xcap^3 \cdot \lr{\spacegrad \cross \Bf}
 
 Note that the orientation of the loop integral in the traditional statement of the 3D Stokes theorem is counterclockwise instead of clockwise, as written here.
 }
-
 \section{Stokes theorem, three variable volume element parameterization}
-
 Let's now proceed to evaluate the area elements defined by \eqnref{eqn:stokesTheoremGeometricAlgebra:2840} for a three variable parameterization, and a vector blade \(\Bf\)
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:1940}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:1940}
+\begin{aligned}
 d^3 \Bx \cdot \lr{ \boldpartial \wedge \Bf }
-=
-\lr{ d^3 \Bx \cdot \Bx^i } \cdot \partial_i \Bf
-=
+&=
+\lr{ d^3 \Bx \cdot \Bx^i } \cdot \partial_i \Bf \\
+&=
 du^1 du^2 du^3
 \lr{
 \lr{ \Bx_1 \wedge \Bx_2 \wedge \Bx_3 }
- \cdot \Bx^i } \cdot \partial_i \Bf
-=
+ \cdot \Bx^i } \cdot \partial_i \Bf \\
+ &=
 du^1 du^2 du^3
 \lr{
 \lr{ \Bx_1 \wedge \Bx_2 } {\delta_3}^i
 -\lr{ \Bx_1 \wedge \Bx_3 } {\delta_2}^i
 +\lr{ \Bx_2 \wedge \Bx_3 } {\delta_1}^i
-} \cdot \partial_i \Bf
-=
+} \cdot \partial_i \Bf \\
+&=
 du^1 du^2 du^3
 \lr{
 \lr{ \Bx_1 \wedge \Bx_2 } \cdot \partial_3 \Bf
 -\lr{ \Bx_1 \wedge \Bx_3 } \cdot \partial_2 \Bf
 +\lr{ \Bx_2 \wedge \Bx_3 } \cdot \partial_1 \Bf
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 It should not be surprising that this has the structure found in the theory of differential forms.  Using the differentials for each of the parameterization ``directions'', we can write this dot product expansion as
 
@@ -1505,13 +1480,11 @@ where it is implied that this (and the dot products with \(\Bf\)) are evaluated 
 \section{Duality and its relation to the pseudoscalar.}
 
 Looking to \eqnref{eqn:stokesTheoremGeometricAlgebra:4870} of \cref{thm:stokesTheoremGeometricAlgebra:3200}, and scaling the wedge product \(\Ba \wedge \Bb\)  by its absolute magnitude, we can express duality using that scaled bivector as a \textAndIndex{pseudoscalar} for the plane that spans \(\setlr{\Ba, \Bb}\).  Let's introduce a subscript notation for such scaled blades
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4910}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4910}
 I_{\Ba\Bb} = \frac{\Ba \wedge \Bb}{\Abs{\Ba \wedge \Bb}}.
-\end{dmath}
+\end{equation}
 
 This allows us to express the unit vector in the direction of \(\Ba^\conj\) as
-
 \boxedEquation{example:stokesTheoremGeometricAlgebra:4950}{
 %\acap^\conj
 \aconjcap
@@ -1520,8 +1493,7 @@ This allows us to express the unit vector in the direction of \(\Ba^\conj\) as
 }
 
 Following the pattern of \eqnref{eqn:stokesTheoremGeometricAlgebra:4870}, it is clear how to express the dual vectors for higher dimensional subspaces.  For example
-
-or for the unit vector in the direction of \(\Ba^\conj\),
+for the unit vector in the direction of \(\Ba^\conj\),
 %
 \begin{equation*}
 %\acap^\conj
@@ -1550,41 +1522,39 @@ First note that, for a scalar Stokes integral we are integrating the vector deri
 \end{equation}
 %
 Multiplication of \(F\) by the pseudoscalar will always produce a vector.  With the introduction of such a dual vector, as in
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4570}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4570}
 F = I \Bf,
-\end{dmath}
+\end{equation}
 
 Stokes theorem takes the form
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4590}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4590}
 \int_V d^k \Bx \cdot \gpgrade{\spacegrad I \Bf}{k}
 = \int_{\partial V} \gpgradezero{ d^{k-1} \Bx I \Bf},
-\end{dmath}
-
+\end{equation}
 or
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4610}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4610}
 \int_V \gpgradezero{ d^k \Bx \spacegrad I \Bf}
 = \int_{\partial V} \lr{ d^{k-1} \Bx I} \cdot \Bf,
-\end{dmath}
-
+\end{equation}
 where we will see that the vector \(d^{k-1} \Bx I\) can roughly be characterized as a normal to the boundary surface.  Using primes to indicate the scope of the action of the gradient, cyclic permutation within the scalar selection operator can be used to factor out the pseudoscalar
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4630}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4630}
+\begin{aligned}
 \int_V \gpgradezero{ d^k \Bx \spacegrad I \Bf}
-=
-\int_V \gpgradezero{ \Bf' d^k \Bx \spacegrad' I}
-=
-\int_V \gpgrade{ \Bf' d^k \Bx \spacegrad'}{k} I
-=
+&=
+\int_V \gpgradezero{ \Bf' d^k \Bx \spacegrad' I} \\
+&=
+\int_V \gpgrade{ \Bf' d^k \Bx \spacegrad'}{k} I \\
+&=
 \int_V
-(-1)^{k+1} d^k \Bx \lr{ \spacegrad \cdot \Bf} I
-=
+(-1)^{k+1} d^k \Bx \lr{ \spacegrad \cdot \Bf} I \\
+&=
 (-1)^{k+1}
 I^2
 \int_V
 dV
 \lr{ \spacegrad \cdot \Bf}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 The second last step uses \cref{thm:stokesTheoremGeometricAlgebra:4690}, and the last writes \(d^k \Bx = I^2 \Abs{d^k \Bx} = I^2 dV\), where we have assumed (without loss of generality) that \(d^k \Bx\) has the same orientation as the pseudoscalar for the space.  We also assume that the parameterization is non-degenerate over the integration volume (i.e. no \(d\Bx_i = 0\)), so the sign of this product cannot change.
 
@@ -1636,36 +1606,36 @@ To spell out the details, we have to be very careful with the signs.  However, t
 \makeexample{2D divergence theorem}{example:stokesTheoremGeometricAlgebra:4690}{
 \index{divergence theorem!2D}
 Let's start back at
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:5230}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5230}
 \int_A \gpgradezero{ d^2 \Bx \spacegrad I \Bf } = \int_{\partial A} \lr{ d^1 \Bx I} \cdot \Bf.
-\end{dmath}
+\end{equation}
 
 On the left our integral can be rewritten as
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:5090}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5090}
+\begin{aligned}
 \int_A \gpgradezero{ d^2 \Bx \spacegrad I \Bf }
-=
--\int_A \gpgradezero{ d^2 \Bx I \spacegrad \Bf }
-=
--\int_A d^2 \Bx I \lr{ \spacegrad \cdot \Bf }
-=
+&=
+-\int_A \gpgradezero{ d^2 \Bx I \spacegrad \Bf } \\
+&=
+-\int_A d^2 \Bx I \lr{ \spacegrad \cdot \Bf } \\
+&=
 - I^2 \int_A dA \spacegrad \cdot \Bf,
-\end{dmath}
-
+\end{aligned}
+\end{equation}
 where \(d^2 \Bx = I dA\) and we pick the \textAndIndex{pseudoscalar} with the same orientation as the volume (area in this case) element \(I = (\Bx_1 \wedge \Bx_2)/\Abs{\Bx_1 \wedge \Bx_2}\).
 
 For the boundary form we have
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:5110}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5110}
+\begin{aligned}
 d^1 \Bx
-=
+&=
 du^2 \lr{ \Bx_1 \wedge \Bx_2 } \cdot \Bx^1
-+ du^1 \lr{ \Bx_1 \wedge \Bx_2 } \cdot \Bx^2
-=
++ du^1 \lr{ \Bx_1 \wedge \Bx_2 } \cdot \Bx^2 \\
+&=
 -du^2 \Bx_2
 +du^1 \Bx_1.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 The duality relations for the tangent space are
 %
@@ -1745,21 +1715,20 @@ Note that we can use the same algebraic notion of outward normal for non-Euclide
 \makeexample{3D divergence theorem}{example:stokesTheoremGeometricAlgebra:4470}{
 \index{divergence theorem!3D}
 As with the 2D example, let's start back with
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:5330}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5330}
 \int_V \gpgradezero{ d^3 \Bx \spacegrad I \Bf } = \int_{\partial V} \lr{ d^2 \Bx I} \cdot \Bf.
-\end{dmath}
+\end{equation}
 
 In a 3D space, the pseudoscalar commutes with all grades, so we have
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:5350}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5350}
+\begin{aligned}
 \int_V \gpgradezero{ d^3 \Bx \spacegrad I \Bf }
-=
-\int_V \lr{ d^3 \Bx I } \spacegrad \cdot \Bf
-=
+&=
+\int_V \lr{ d^3 \Bx I } \spacegrad \cdot \Bf \\
+&=
 I^2 \int_V dV \spacegrad \cdot \Bf,
-\end{dmath}
-
+\end{aligned}
+\end{equation}
 where \(d^3 \Bx I = dV I^2\), and we have used a pseudoscalar with the same orientation as the volume element
 %
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5390}
@@ -1770,14 +1739,14 @@ I &= \widehat{ \Bx_{123} } \\
 \end{equation}
 %
 In the boundary integral our dual two form is
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:5370}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5370}
+\begin{aligned}
 d^2 \Bx I
-=
+&=
  du^1 du^2 \Bx_1 \wedge \Bx_2
 +du^3 du^1 \Bx_3 \wedge \Bx_1
-+du^2 du^3 \Bx_2 \wedge \Bx_3
-=
++du^2 du^3 \Bx_2 \wedge \Bx_3 \\
+&=
 \lr{
 % dA_{3} \widehat{\Bx_1 \wedge \Bx_2} \inv{I}
 %+dA_{2} \widehat{\Bx_3 \wedge \Bx_1} \inv{I}
@@ -1786,8 +1755,8 @@ d^2 \Bx I
 +dA_{2} \widehat{ \Bx_{31} } \inv{I}
 +dA_{1} \widehat{ \Bx_{23} } \inv{I}
 } I^2,
-\end{dmath}
-
+\end{aligned}
+\end{equation}
 where \(\Bx_{ij} = \Bx_i \wedge \Bx_j\), and
 %
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5410}
@@ -1807,9 +1776,10 @@ Observe that we can do a cyclic permutation of a 3 blade without any change of s
 \end{equation}
 %
 Because of this we can write the dual two form as we expressed the normals in \cref{thm:stokesTheoremGeometricAlgebra:4950}
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:5450}
-d^2 \Bx I = \lr{
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5450}
+\begin{aligned}
+d^2 \Bx I 
+&= \lr{
    dA_1
    \widehat{\Bx_{23}}
    \inv{\widehat{\Bx_{123}}}
@@ -1821,12 +1791,13 @@ d^2 \Bx I = \lr{
    dA_3
    \widehat{\Bx_{12}}
    \inv{\widehat{\Bx_{312}}}
-} I^2
-=
+} I^2 \\
+&=
 \lr{ dA_1 \widehat{\Bx^1}
 +dA_2 \widehat{\Bx^2}
 +dA_3 \widehat{\Bx^3} } I^2.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 We can now state the 3D divergence theorem, canceling out the metric and orientation dependent term \(I^2\) on both sides
 %
@@ -1925,10 +1896,9 @@ d^3 \Bx I
 \end{dmath}
 
 Here, we've written
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:5570}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5570}
 dA^{ijk} = \Abs{ d\Bx_i \wedge d\Bx_j \wedge d\Bx_k }.
-\end{dmath}
+\end{equation}
 
 Observe that the dual representation nicely removes the alternation of sign that we had in the Stokes theorem boundary integral, since each alternation of the wedged vectors in the pseudoscalar changes the sign once.
 

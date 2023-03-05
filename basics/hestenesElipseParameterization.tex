@@ -29,92 +29,81 @@
 \makeoproblem{Elliptic parameterization}{problem:hestenesElipseParameterization:1}{\citep{hestenes1999nfc} ch. 3, pr. 8.6}{
 Show that an ellipse can be parameterized by
 \index{ellipse}
-
-\begin{dmath}\label{eqn:hestenesElipseParameterization:20}
+\begin{equation}\label{eqn:hestenesElipseParameterization:20}
 \Br(t) = \Bc \cosh( \mu + i t ).
-\end{dmath}
-
+\end{equation}
 Here \( i \) is a unit bivector, and \( i \wedge \Bc \) is zero (i.e. \( \Bc \) must be in the plane of the bivector \( i \)).
 } % problem
-
 \makeanswer{problem:hestenesElipseParameterization:1}{
-
 Note that \( \mu, t, i \) all commute since \( \mu, t \) are both scalars.
 That allows a complex-like expansion of the hyperbolic cosine to be used
-
-\begin{dmath}\label{eqn:hestenesElipseParameterization:40}
+\begin{equation}\label{eqn:hestenesElipseParameterization:40}
+\begin{aligned}
 \cosh( \mu + i t )
-=
-\inv{2} \lr{ e^{\mu + i t} + e^{-\mu -i t} }
-=
-\inv{2} \lr{ e^{\mu} (\cos t + i \sin t) + e^{-\mu} (\cos t -i \sin t) }
-=
+&=
+\inv{2} \lr{ e^{\mu + i t} + e^{-\mu -i t} } \\
+&=
+\inv{2} \lr{ e^{\mu} (\cos t + i \sin t) + e^{-\mu} (\cos t -i \sin t) } \\
+&=
 \cosh \mu \cos t + i \sinh \mu \sin t.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 Since an ellipse can be parameterized as
-
-\begin{dmath}\label{eqn:hestenesElipseParameterization:60}
+\begin{equation}\label{eqn:hestenesElipseParameterization:60}
 \Br(t) = \Ba \cos t + \Bb \sin t,
-\end{dmath}
-
+\end{equation}
 where the vector directions \( \Ba \) and \( \Bb \) are perpendicular, the multivector hyperbolic cosine representation parameterizes the ellipse provided
-
-\begin{dmath}\label{eqn:hestenesElipseParameterization:80}
+\begin{equation}\label{eqn:hestenesElipseParameterization:80}
 \begin{aligned}
 \Ba &= \Bc \cosh \mu \\
 \Bb &= \Bc i \sinh \mu.
 \end{aligned}
-\end{dmath}
-
+\end{equation}
 It is desirable to relate the parameters \( \mu, i \) to the vectors \( \Ba, \Bb \).  Because \( \Bc \wedge i = 0 \), the vector \( \Bc \) anticommutes with \( i \), and therefore \( (\Bc i)^2 = -\Bc i i \Bc = \Bc^2 \), which means
-
-\begin{dmath}\label{eqn:hestenesElipseParameterization:100}
+\begin{equation}\label{eqn:hestenesElipseParameterization:100}
 \begin{aligned}
 \Ba^2 &= \Bc^2 \cosh^2 \mu \\
 \Bb^2 &= \Bc^2 \sinh^2 \mu,
 \end{aligned}
-\end{dmath}
-
+\end{equation}
 or
-\begin{dmath}\label{eqn:hestenesElipseParameterization:120}
+\begin{equation}\label{eqn:hestenesElipseParameterization:120}
 \mu = \tanh^{-1} \frac{\Abs{\Bb}}{\Abs{\Ba}}.
-\end{dmath}
+\end{equation}
 
 The bivector \( i \) is just the unit bivector for the plane containing \( \Ba \) and \( \Bb \)
-
-\begin{dmath}\label{eqn:hestenesElipseParameterization:140}
+\begin{equation}\label{eqn:hestenesElipseParameterization:140}
+\begin{aligned}
 \Ba \wedge \Bb
-= \cosh \mu \sinh \mu \Bc \wedge (\Bc i)
-= \cosh \mu \sinh \mu \gpgradetwo{ \Bc \Bc i }
-= \cosh \mu \sinh \mu i \Bc^2
-= \cosh \mu \sinh \mu i \frac{ \Ba^2 }{ \cosh^2 \mu }
-= \Ba^2 \tanh \mu i
-= \Ba^2 i \frac{\Abs{\Bb}}{\Abs{\Ba}},
-\end{dmath}
-
+&= \cosh \mu \sinh \mu \Bc \wedge (\Bc i) \\
+&= \cosh \mu \sinh \mu \gpgradetwo{ \Bc \Bc i } \\
+&= \cosh \mu \sinh \mu i \Bc^2 \\
+&= \cosh \mu \sinh \mu i \frac{ \Ba^2 }{ \cosh^2 \mu } \\
+&= \Ba^2 \tanh \mu i \\
+&= \Ba^2 i \frac{\Abs{\Bb}}{\Abs{\Ba}},
+\end{aligned}
+\end{equation}
 so
-\begin{dmath}\label{eqn:hestenesElipseParameterization:160}
+\begin{equation}\label{eqn:hestenesElipseParameterization:160}
 i = \frac{ \Ba \wedge \Bb }{\Abs{\Ba}\Abs{\Bb}}.
-\end{dmath}
+\end{equation}
 
 Observe that \( i \) is a unit bivector provided the vectors \( \Ba, \Bb \) are perpendicular, as required
-
-\begin{dmath}\label{eqn:hestenesElipseParameterization:180}
+\begin{equation}\label{eqn:hestenesElipseParameterization:180}
 (\Ba \wedge \Bb)^2
-=
-(\Ba \wedge \Bb) \cdot (\Ba \wedge \Bb)
-=
-( (\Ba \wedge \Bb) \cdot \Ba ) \cdot \Bb
-=
-( \Ba (\Bb \cdot \Ba) - \Bb \Ba^2 ) \cdot \Bb
-=
-(\Ba \cdot \Bb)^2 - \Bb^2 \Ba^2
-=
+&=
+(\Ba \wedge \Bb) \cdot (\Ba \wedge \Bb) \\
+&=
+( (\Ba \wedge \Bb) \cdot \Ba ) \cdot \Bb \\
+&=
+( \Ba (\Bb \cdot \Ba) - \Bb \Ba^2 ) \cdot \Bb \\
+&=
+(\Ba \cdot \Bb)^2 - \Bb^2 \Ba^2 \\
+&=
 - \Bb^2 \Ba^2.
-\end{dmath}
+\end{equation}
 } % answer
-
 %%}
 %\EndArticle
 %%\EndNoBibArticle

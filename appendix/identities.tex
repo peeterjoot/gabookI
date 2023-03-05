@@ -350,94 +350,88 @@ This and \cref{thm:stokesTheoremGeometricAlgebra:2560} are clearly examples of a
 \end{dmath}
 
 Cancellation of terms above was because they could not contribute to a grade one selection.   We also employed the relation \(\Bx \cdot B = - B \cdot \Bx\) for bivector \(B\) and vector \(\Bx\).
-
 \maketheorem{Duality in a plane}{thm:stokesTheoremGeometricAlgebra:3200}{
-
 \index{dual}
 For a vector \(\Ba\), and a plane containing \(\Ba\) and \(\Bb\), the dual \(\Ba^\conj\) of this vector with respect to this plane is
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3220}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3220}
 \Ba^\conj = \frac{\Bb \cdot \lr{ \Ba \wedge \Bb }}{\lr{\Ba \wedge \Bb}^2},
-\end{dmath}
-
-Satisfying
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3240}
+\end{equation}
+satisfying
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3240}
 \Ba^\conj \cdot \Ba = 1,
-\end{dmath}
-
+\end{equation}
 and
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3260}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3260}
 \Ba^\conj \cdot \Bb = 0.
-\end{dmath}
+\end{equation}
 }
 
 To demonstrate, we start with the expansion of
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3280}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3280}
 \Bb \cdot \lr{ \Ba \wedge \Bb }
 =
 \lr{ \Bb \cdot \Ba } \Bb
 -\Bb^2 \Ba.
-\end{dmath}
+\end{equation}
 
 Dotting with \(\Ba\) we have
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3300}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3300}
+\begin{aligned}
 \Ba \cdot \lr{ \Bb \cdot \lr{ \Ba \wedge \Bb } }
-=
+&=
 \Ba \cdot \lr{
 \lr{ \Bb \cdot \Ba } \Bb
 -\Bb^2 \Ba
-}
-=
+} \\
+&=
 \lr{ \Bb \cdot \Ba }^2 - \Bb^2 \Ba^2,
-\end{dmath}
-
+\end{aligned}
+\end{equation}
 but dotting with \(\Bb\) yields zero
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3320}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3320}
+\begin{aligned}
 \Bb \cdot \lr{ \Bb \cdot \lr{ \Ba \wedge \Bb } }
-=
+&=
 \Bb \cdot \lr{
 \lr{ \Bb \cdot \Ba } \Bb
 -\Bb^2 \Ba
-}
-=
-\lr{ \Bb \cdot \Ba } \Bb^2 - \Bb^2 \lr{ \Ba \cdot \Bb }
-= 0.
-\end{dmath}
+} \\
+&=
+\lr{ \Bb \cdot \Ba } \Bb^2 - \Bb^2 \lr{ \Ba \cdot \Bb } \\
+&= 0.
+\end{aligned}
+\end{equation}
 
 To complete the proof, we note that the product in \eqnref{eqn:stokesTheoremGeometricAlgebra:3300} is just the wedge squared
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:3340}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3340}
+\begin{aligned}
 \lr{ \Ba \wedge \Bb}^2
-=
+&=
 \gpgradezero{
 \lr{ \Ba \wedge \Bb }^2
-}
-=
+} \\
+&=
 \gpgradezero{
 \lr{ \Ba \Bb - \Ba \cdot \Bb }
 \lr{ \Ba \Bb - \Ba \cdot \Bb }
-}
-=
+} \\
+&=
 \gpgradezero{
 \Ba \Bb \Ba \Bb - 2 \lr{\Ba \cdot \Bb} \Ba \Bb
 }
 +
-\lr{ \Ba \cdot \Bb }^2
-=
+\lr{ \Ba \cdot \Bb }^2 \\
+&=
 \gpgradezero{
 \Ba \Bb \lr{ -\Bb \Ba + 2 \Ba \cdot \Bb }
 }
 -
-\lr{ \Ba \cdot \Bb }^2
-=
+\lr{ \Ba \cdot \Bb }^2 \\
+&=
 \lr{ \Ba \cdot \Bb }^2
 -\Ba^2 \Bb^2.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 This duality relation can be recast with a linear denominator
 
@@ -509,39 +503,39 @@ For grade \(k\) blade \(K \in \bigwedge^k\) (i.e. a \textAndIndex{pseudoscalar})
 }
 
 To show this, we have to consider even and odd grades separately.  First for even \(k\) we have
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4710}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4710}
+\begin{aligned}
 \gpgrade{ \Ba K \Bb }{k}
-=
-\gpgrade{ \lr{ \Ba \cdot K + \cancel{\Ba \wedge K}} \Bb }{k}
-=
-\inv{2} \gpgrade{ \lr{ \Ba K - K \Ba } \Bb }{k}
-=
+&=
+\gpgrade{ \lr{ \Ba \cdot K + \cancel{\Ba \wedge K}} \Bb }{k} \\
+&=
+\inv{2} \gpgrade{ \lr{ \Ba K - K \Ba } \Bb }{k} \\
+&=
 \inv{2} \gpgrade{ \Ba K \Bb }{k}
 -\inv{2} \gpgrade{ K \Ba \Bb }{k},
-\end{dmath}
-
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4730}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4730}
 \gpgrade{ \Ba K \Bb }{k} = -\gpgrade{ K \Ba \Bb }{k} = -K \lr{ \Ba \cdot \Bb}.
-\end{dmath}
+\end{equation}
 
 Similarly for odd \(k\), we have
-
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:4790}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4790}
+\begin{aligned}
 \gpgrade{ \Ba K \Bb }{k}
-=
-\gpgrade{ \lr{ \Ba \cdot K + \cancel{\Ba \wedge K}} \Bb }{k}
-=
-\inv{2} \gpgrade{ \lr{ \Ba K + K \Ba } \Bb }{k}
-=
+&=
+\gpgrade{ \lr{ \Ba \cdot K + \cancel{\Ba \wedge K}} \Bb }{k} \\
+&=
+\inv{2} \gpgrade{ \lr{ \Ba K + K \Ba } \Bb }{k} \\
+&=
 \inv{2} \gpgrade{ \Ba K \Bb }{k}
 +\inv{2} \gpgrade{ K \Ba \Bb }{k},
-\end{dmath}
-
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:stokesTheoremGeometricAlgebra:5310}
+\begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5310}
 \gpgrade{ \Ba K \Bb }{k} = \gpgrade{ K \Ba \Bb }{k} = K \lr{ \Ba \cdot \Bb}.
-\end{dmath}
+\end{equation}
 
 Adjusting for the signs completes the proof.

@@ -4,87 +4,84 @@
 %
 
 \makeexample{Application to Maxwell's equation}{example:fundamentalTheoremOfCalculus:1}{
-
 Maxwell's equation is an example of a first order gradient equation
-
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:320}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:320}
 \grad F = \inv{\epsilon_0 c} J.
-\end{dmath}
+\end{equation}
 
 Integrating over a four-volume (where the vector derivative equals the gradient), and applying the Fundamental theorem, we have
-
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:340}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:340}
 \inv{\epsilon_0 c} \int d^4 x J = \oint d^3 x F.
-\end{dmath}
+\end{equation}
 
 Observe that the surface area element product with \( F \) has both vector and trivector terms.  This can be demonstrated by considering some examples
-
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:360}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:360}
 \begin{aligned}
 \gamma_{012} \gamma_{01} &\propto \gamma_2 \\
 \gamma_{012} \gamma_{23} &\propto \gamma_{023}.
 \end{aligned}
-\end{dmath}
+\end{equation}
 
 On the other hand, the four volume integral of \( J \) has only trivector parts.  This means that the integral can be split into a pair of same-grade equations
-
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:380}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:380}
 \begin{aligned}
 \inv{\epsilon_0 c} \int d^4 x \cdot J &=
 \oint \gpgradethree{ d^3 x F} \\
 0 &=
 \oint d^3 x \cdot F.
 \end{aligned}
-\end{dmath}
+\end{equation}
 
 The first can be put into a slightly tidier form using a duality transformation
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:400}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:400}
+\begin{aligned}
 \gpgradethree{ d^3 x F}
-=
--\gpgradethree{ d^3 x I^2 F}
-=
-\gpgradethree{ I d^3 x I F}
-=
+&=
+-\gpgradethree{ d^3 x I^2 F} \\
+&=
+\gpgradethree{ I d^3 x I F} \\
+&=
 (I d^3 x) \wedge (I F).
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 Letting \( n \Abs{d^3 x} = I d^3 x \), this gives
-
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:420}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:420}
 \oint \Abs{d^3 x} n \wedge (I F) = \inv{\epsilon_0 c} \int d^4 x \cdot J.
-\end{dmath}
+\end{equation}
 
 Note that this normal is normal to a three-volume subspace of the spacetime volume.  For example, if one component of that spacetime surface area element is \( \gamma_{012} c dt dx dy \), then the normal to that area component is \( \gamma_3 \).
 
 A second set of duality transformations
-
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:440}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:440}
+\begin{aligned}
 n \wedge (IF)
-=
-\gpgradethree{ n I F}
-=
--\gpgradethree{ I n F}
-=
--\gpgradethree{ I (n \cdot F)}
-=
+&=
+\gpgradethree{ n I F} \\
+&=
+-\gpgradethree{ I n F} \\
+&=
+-\gpgradethree{ I (n \cdot F)} \\
+&=
 -I (n \cdot F),
-\end{dmath}
-
+\end{aligned}
+\end{equation}
 and
-\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:460}
+\begin{equation}\label{eqn:fundamentalTheoremOfCalculus:460}
+\begin{aligned}
 I d^4 x \cdot J
-=
-\gpgradeone{ I d^4 x \cdot J }
-=
-\gpgradeone{ I d^4 x J }
-=
-\gpgradeone{ (I d^4 x) J }
-=
-(I d^4 x) J,
-\end{dmath}
+&=
+\gpgradeone{ I d^4 x \cdot J } \\
+&=
+\gpgradeone{ I d^4 x J } \\
+&=
+\gpgradeone{ (I d^4 x) J } \\
+&=
+(I d^4 x) J.
+\end{aligned}
+\end{equation}
 
-can further tidy things up, leaving us with
-
+We can further tidy things up, leaving us with
 %\begin{dmath}\label{eqn:fundamentalTheoremOfCalculus:500}
 \boxedEquation{eqn:fundamentalTheoremOfCalculus:500}{
 \begin{aligned}
