@@ -16,7 +16,7 @@ include ../latex/make.bookvars
 
 #ONCEFLAGS := -justonce
 
-FIGURES := ../figures/$(THISBOOK)
+FIGURES := ../figures/gabook
 
 SOURCE_DIRS += appendix
 SOURCE_DIRS += basics

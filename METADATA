@@ -3,7 +3,7 @@
 ###   DATE => 'September 27, 2008',
 ###   TITLE => qq(Stokes Law revisited with algebraic enumeration of boundary),
 ###   REF => 'PJStokes2',
-###   URL => 'http://peeterjoot.com/archives/geometric-algebra/stokes_revisited.pdf',
+###   URL => 'https://peeterjoot.com/archives/geometric-algebra/stokes_revisited.pdf',
 ###   WHAT => '',
 ###},
 ###{
@@ -11,7 +11,7 @@
 ###   DATE => 'September 18, 2008',
 ###   TITLE => qq(Stokes law in wedge product form),
 ###   REF => 'PJStokes1',
-###   URL => 'http://peeterjoot.com/archives/geometric-algebra/vector_integral_relations.pdf',
+###   URL => 'https://peeterjoot.com/archives/geometric-algebra/vector_integral_relations.pdf',
 ###   WHAT => '',
 ###},
 ###{
@@ -19,7 +19,7 @@
 ###   TITLE => qq(Stokes theorem applied to vector and bivector fields),
 ###   DATE => 'July 17, 2009',
 ###   REF => 'stokesGradeTwo',
-###   URL => 'http://peeterjoot.com/archives/math2009/stokesGradeTwo.pdf',
+###   URL => 'https://peeterjoot.com/archives/math2009/stokesGradeTwo.pdf',
 ###   WHAT => 'Tackle Stokes theorem again.',
 ###},
 ###{
@@ -27,7 +27,7 @@
 ###   TITLE => qq(Stokes theorem derivation without tensor expansion of the blade),
 ###   DATE => 'July 21, 2009',
 ###   REF => 'stokesNoTensor',
-###   URL => 'http://peeterjoot.com/archives/math2009/stokesNoTensor.pdf',
+###   URL => 'https://peeterjoot.com/archives/math2009/stokesNoTensor.pdf',
 ###   WHAT => 'Yet another attack at Stokes theorem.  Finally get one that I like here.',
 ###},
 ###{
@@ -35,7 +35,7 @@
 ###   TITLE => qq(Collection of old notes on Stokes theorem in Geometric algebra),
 ###   DATE => 'May 11, 2014',
 ###   REF => 'bigCollectionOfPartiallyIncorrectStokesTheoremMusings',
-###   URL => 'http://peeterjoot.com/archives/math2014/bigCollectionOfPartiallyIncorrectStokesTheoremMusings.pdf',
+###   URL => 'https://peeterjoot.com/archives/math2014/bigCollectionOfPartiallyIncorrectStokesTheoremMusings.pdf',
 ###   WHAT => qq(Previous attempts to blunder through Stokes theorem using Geometric Algebra, all without knowing about the requirement to project the gradient onto the tangent space, in order to properly use curvilinear coordinates),
 ###},
 ###{
@@ -43,7 +43,7 @@
 ###   TITLE => qq(Synposis of old notes on Stokes theorem in Geometric algebra),
 ###   DATE => 'May 11, 2014',
 ###   REF => 'synopsisOfBigCollectionOfPartiallyIncorrectStokesTheoremMusings',
-###   URL => 'http://peeterjoot.com/archives/math2014/synopsisOfBigCollectionOfPartiallyIncorrectStokesTheoremMusings.pdf',
+###   URL => 'https://peeterjoot.com/archives/math2014/synopsisOfBigCollectionOfPartiallyIncorrectStokesTheoremMusings.pdf',
 ###   WHAT => qq(Synposis of previous attempts to blunder through Stokes theorem using Geometric Algebra, all without knowing about the requirement to project the gradient onto the tangent space, in order to properly use curvilinear coordinates.  Wrote this to replace once and for all my hodge podge collection of Stokes notes, but realized that my approach only worked when the dimension of the integration volume equaled the dimension of the space.),
 ###},
 
@@ -57,7 +57,7 @@ my @gabook =
    DATE => 'April 28, 2009',
    TITLE => qq(Developing some intuition for Multivariable and Multivector Taylor Series),
    REF => 'PJmultiTaylors',
-   URL => 'http://peeterjoot.com/archives/math2009/multivector_taylors.pdf',
+   URL => 'https://peeterjoot.com/archives/math2009/multivector_taylors.pdf',
    WHAT => qq(Explicit expansion and Hessian matrix connection.  Factor out the gradient from the direction derivative for a few different multivector spaces. ),
 },
 {
@@ -73,7 +73,7 @@ my @gabook =
    DATE => 'June 10, 2008',
    TITLE => qq(Angular Velocity and Acceleration.  Again),
    REF => 'PJAngAcc',
-   URL => 'http://peeterjoot.com/archives/geometric-algebra/angular_acc.pdf',
+   URL => 'https://peeterjoot.com/archives/geometric-algebra/angular_acc.pdf',
    WHAT => '',
 }
 ,
@@ -82,7 +82,7 @@ my @gabook =
    DATE => 'July 8, 2008',
    TITLE => qq(Cross product Radial decomposition),
    REF => 'PJAngAccCross',
-   URL => 'http://peeterjoot.com/archives/geometric-algebra/angular_acc_cross.pdf',
+   URL => 'https://peeterjoot.com/archives/geometric-algebra/angular_acc_cross.pdf',
    WHAT => '',
 }
 ,
@@ -91,7 +91,7 @@ my @gabook =
    DATE => 'January 29, 2008',
    TITLE => qq(Rotational dynamics),
    REF => 'PJAngVel',
-   URL => 'http://peeterjoot.com/archives/geometric-algebra/angular_velocity.pdf',
+   URL => 'https://peeterjoot.com/archives/geometric-algebra/angular_velocity.pdf',
    WHAT => '',
 },
 {
@@ -100,7 +100,7 @@ my @gabook =
    TITLE => qq(Euler Angle Notes),
    #REF => 'eulerangle',
    REF => 'PJEulerAngle',
-   URL => 'http://peeterjoot.com/archives/geometric-algebra/eulerangle.pdf',
+   URL => 'https://peeterjoot.com/archives/geometric-algebra/eulerangle.pdf',
    WHAT => '',
 },
 {
@@ -108,7 +108,7 @@ my @gabook =
    DATE => 'January 9, 2009',
    TITLE => qq(Some Fourier transform notes),
    REF => 'PJqmFourier',
-   URL => 'http://peeterjoot.com/archives/math2009/fourier_tx.pdf',
+   URL => 'https://peeterjoot.com/archives/math2009/fourier_tx.pdf',
    WHAT => qq(QM formulation, with hbar's, of the Fourier transform pair, and Rayleigh Energy theorem, as seen in the book "Quantum Mechanics Demystified".  Very non-rigorous treatment, good only for intuition.  Also derive the Rayleigh Energy theorem used (but not proved) in this text. ),
 }
 ,
@@ -117,7 +117,7 @@ my @gabook =
    DATE => 'October 16, 2007',
    TITLE => qq(Derivatives of a unit vector),
    REF => 'PJUnitDer',
-   URL => 'http://peeterjoot.com/archives/geometric-algebra/ga_wiki_unit_derivative.pdf',
+   URL => 'https://peeterjoot.com/archives/geometric-algebra/ga_wiki_unit_derivative.pdf',
    WHAT => '',
 },
 {
@@ -125,7 +125,7 @@ my @gabook =
    DATE => 'May 17, 2008',
    TITLE => qq(Projection with generalized dot product),
    REF => 'PJprojGen',
-   URL => 'http://peeterjoot.com/archives/geometric-algebra/proj_generalized_dot_prod.pdf',
+   URL => 'https://peeterjoot.com/archives/geometric-algebra/proj_generalized_dot_prod.pdf',
    WHAT => '',
 }
 ,
@@ -135,7 +135,7 @@ my @gabook =
    TITLE => qq(Matrix review),
    #REF => 'matrixReview',
    REF => 'PJMatrixReview',
-   URL => 'http://peeterjoot.com/archives/geometric-algebra/projection_with_matrix_comparison.pdf',
+   URL => 'https://peeterjoot.com/archives/geometric-algebra/projection_with_matrix_comparison.pdf',
 }
 ,
 {
@@ -143,7 +143,7 @@ my @gabook =
    DATE => 'October 22, 2007',
    TITLE => qq(Radial components of vector derivatives),
    REF => 'PJRadialDer',
-   URL => 'http://peeterjoot.com/archives/geometric-algebra/radial_vector_derivatives.pdf',
+   URL => 'https://peeterjoot.com/archives/geometric-algebra/radial_vector_derivatives.pdf',
    WHAT => '',
 }
 ,
@@ -153,7 +153,7 @@ my @gabook =
    TITLE => qq(Rotor Notes),
    REF => 'rotor',
    BIBREF => 'PJRotor',
-   URL => 'http://peeterjoot.com/archives/geometric-algebra/rotor.pdf',
+   URL => 'https://peeterjoot.com/archives/geometric-algebra/rotor.pdf',
    WHAT => '',
 },
 {
@@ -176,7 +176,7 @@ my @gabook =
    DATE => 'January 13, 2009',
    TITLE => qq(Polar velocity and acceleration),
    REF => 'radial',
-   URL => 'http://peeterjoot.com/archives/math2009/radial.pdf',
+   URL => 'https://peeterjoot.com/archives/math2009/radial.pdf',
    WHAT => qq(Straight up column matrix vectors and complex number variants of radial motion derivatives. ),
 }
 ,
@@ -193,7 +193,7 @@ my @gabook =
    REF => 'vectorDifferentialIdentities',
    SOURCE => 'vectorDifferentialIdentities',
    DATE => 'January 5, 2009',
-   URL => 'http://peeterjoot.com/archives/math2009/vector_differential_identities.pdf',
+   URL => 'https://peeterjoot.com/archives/math2009/vector_differential_identities.pdf',
    WHAT => qq( Translate some identities from the Feynman lectures into GA form.  These apply in higher dimensions with the GA formalism, and proofs of the generalized identities are derived.  Make a note of the last two identities that I wanted to work through.  This is an incomplete attempt at them.  It was trickier than I expected, and probably why they were omitted from Feynman's text. ),
 }
 ,
@@ -216,7 +216,7 @@ my @gabook =
    REF => 'fourierNotation',
    TITLE => qq(A cheatsheet for Fourier transform conventions),
    SOURCE => 'fourierNotation',
-   URL => 'http://peeterjoot.com/archives/math2009/fourier_notation.pdf',
+   URL => 'https://peeterjoot.com/archives/math2009/fourier_notation.pdf',
    DATE => 'January 21, 2009',
    WHAT => '',
 }
@@ -257,7 +257,7 @@ my @gabook =
    DATE => 'March 13, 2009',
    TITLE => qq(Levi-Civitica summation identity),
    REF => 'levi',
-   URL => 'http://peeterjoot.com/archives/math2009/levi.pdf',
+   URL => 'https://peeterjoot.com/archives/math2009/levi.pdf',
    WHAT => qq(A summation identity given in Byron and Fuller, ch 1.  Initial proof with a perl script, then note equivalence to bivector dot product. ),
 }
 ,
@@ -310,7 +310,7 @@ my @gabook =
 #   TITLE => qq(Lorentz Force Trajectory),
 #   SOURCE => 'lorentzRotation',
 #   DATE => 'May 7, 2008',
-#   #URL => 'http://peeterjoot.com/archives/maxwell/lorentz_rotation.pdf',
+#   #URL => 'https://peeterjoot.com/archives/maxwell/lorentz_rotation.pdf',
 #   WHAT => '',
 #},
 {
@@ -408,7 +408,7 @@ my @gabook =
    TITLE => qq(Generator of rotations in arbitrary dimensions.),
    DATE => 'Aug 31, 2009',
    REF => 'rotationGenerator',
-   URL => 'http://peeterjoot.com/archives/math2009/rotationGenerator.pdf',
+   URL => 'https://peeterjoot.com/archives/math2009/rotationGenerator.pdf',
    WHAT => 'Similar to the exponential translation operator, the exponential operator that generates rotations is derived.  Geometric Algebra is used (with an attempt to make this somewhat understandable without a lot of GA background).  Explicit coordinate expansion is also covered, as well as a comparison to how the same derivation technique could be done with matrix only methods.  The results obtained apply to Euclidean and other metrics and also to all dimensions, both 2D and greater or equal to 3D (unlike the cross product form).',
 },
 {
@@ -416,7 +416,7 @@ my @gabook =
    TITLE => qq(Spherical Polar unit vectors in exponential form.),
    DATE => 'Sept 20, 2009',
    REF => 'sphericalPolarUnit',
-   URL => 'http://peeterjoot.com/archives/math2009/sphericalPolarUnit.pdf',
+   URL => 'https://peeterjoot.com/archives/math2009/sphericalPolarUnit.pdf',
    WHAT => 'An exponential representation of spherical polar unit vectors.  This was observed when considering the bivector form of the angular momentum operator, and is reiterated here independent of any quantum mechanical context.'
 },
 {
@@ -424,7 +424,7 @@ my @gabook =
    TITLE => qq(Newton's method for intersection of curves in a plane.),
    DATE => 'Mar 7, 2010',
    REF => 'intersectionNewton',
-   URL => 'http://peeterjoot.com/archives/math2010/intersectionNewton.pdf',
+   URL => 'https://peeterjoot.com/archives/math2010/intersectionNewton.pdf',
    WHAT => qq(Refresh my memory on Newton's method.  Then take the same idea and apply it to finding the intersection of two arbitrary curves in a plane.  This provides a nice example for the use of the wedge product in linear system solutions.  Curiously, the more general result for the iteration of an intersection estimate is tidier and prettier than that of a curve with a line.),
 }
 ,{
@@ -432,7 +432,7 @@ my @gabook =
    TITLE => qq(Center of mass of a toroidal segment.),
    DATE => 'May 15, 2010',
    REF => 'torusCenterOfMass',
-   URL => 'http://peeterjoot.com/archives/math2010/torusCenterOfMass.pdf',
+   URL => 'https://peeterjoot.com/archives/math2010/torusCenterOfMass.pdf',
    WHAT => qq(Calculate the volume element for a toroidal segment, and then the center of mass.  This is a nice application of bivector rotation exponentials.),
 }
 ,{
@@ -440,7 +440,7 @@ my @gabook =
    TITLE => qq(Derivation of the spherical polar Laplacian),
    DATE => 'Oct 20, 2010',
    REF => 'sphericalPolarLaplacian',
-   URL => 'http://peeterjoot.com/archives/math2010/sphericalPolarLaplacian.pdf',
+   URL => 'https://peeterjoot.com/archives/math2010/sphericalPolarLaplacian.pdf',
    WHAT => qq(A derivation of the spherical polar Laplacian.),
 }
 #,{
@@ -448,7 +448,7 @@ my @gabook =
 #   TITLE => qq(),
 #   DATE => '',
 #   REF => 'XX',
-#   URL => 'http://peeterjoot.com/archives/math2010/XX.pdf',
+#   URL => 'https://peeterjoot.com/archives/math2010/XX.pdf',
 #   WHAT => qq(),
 #}
 ,{
@@ -456,7 +456,7 @@ my @gabook =
    TITLE => qq(Vector form of Julia fractal.),
    DATE => 'Dec 27, 2010',
    REF => 'juliaVector',
-   URL => 'http://peeterjoot.com/archives/math2011/juliaVector.pdf',
+   URL => 'https://peeterjoot.com/archives/math2011/juliaVector.pdf',
    WHAT => qq(Vector form of Julia fractal.),
 }
 ,{
@@ -464,7 +464,7 @@ my @gabook =
    TITLE => qq(Infinitesimal rotations.),
    DATE => 'Jan 27, 2012',
    REF => 'infinitesimalRotation',
-   URL => 'http://peeterjoot.com/archives/math2012/infinitesimalRotation.pdf',
+   URL => 'https://peeterjoot.com/archives/math2012/infinitesimalRotation.pdf',
    WHAT => qq(Derive the cross product result for infinitesimal rotations with and without GA.)
 }
 ,{
@@ -472,7 +472,7 @@ my @gabook =
    TITLE => qq(Geometric Algebra.  The very quickest introduction.),
    DATE => 'Mar 16, 2012',
    REF => 'gaQuickIntro',
-   URL => 'http://peeterjoot.com/archives/math2012/gaQuickIntro.pdf',
+   URL => 'https://peeterjoot.com/archives/math2012/gaQuickIntro.pdf',
    WHAT => qq()
 }
 ,{
@@ -480,7 +480,7 @@ my @gabook =
    DATE => 'February 26, 2009',
    TITLE => qq(Spherical and hyperspherical parametrization),
    REF => 'nvolume',
-   URL => 'http://peeterjoot.com/archives/math2009/nvolume.pdf',
+   URL => 'https://peeterjoot.com/archives/math2009/nvolume.pdf',
    WHAT => "Volume calculations for 1-sphere (circle), 2-sphere (sphere), 3-sphere (hypersphere).  Followup with a calculation of the differential volume element for the hypersphere (ie: Minkowski spaces of signature (+,-,-,-).  Plan to use these results in an attempt to reduce the 4D hyperbolic Green's functions that we get from Fourier transforming Maxwell's equation. ",
 },
 {
@@ -495,7 +495,7 @@ my @gabook =
    TITLE => qq(Tangent planes and normals in three and four dimensions),
    DATE => 'January 04, 2013',
    REF => 'tangentAndNormalVectors',
-   URL => 'http://peeterjoot.com/archives/math2013/tangentAndNormalVectors.pdf',
+   URL => 'https://peeterjoot.com/archives/math2013/tangentAndNormalVectors.pdf',
    WHAT => qq(Figure out how to express a surface normal in 3d and a "volume" normal in 4d.)
 },
 {
@@ -503,7 +503,7 @@ my @gabook =
    TITLE => qq(Polar form for the gradient and Laplacian.),
    DATE => 'Dec 1, 2009',
    REF => 'polarGradAndLaplacian',
-   URL => 'http://peeterjoot.com/archives/math2009/polarGradAndLaplacian.pdf',
+   URL => 'https://peeterjoot.com/archives/math2009/polarGradAndLaplacian.pdf',
    WHAT => qq(Explore a chain rule derivation of the polar form of the Laplacian, and the validity of my old First year Professor's statements about divergence of the gradient being the only way to express the general Laplacian.  His insistence that the grad dot grad not being generally valid is reconciled here with reality, and the key is that the action on the unit vectors also has to be considered.),
 },
 {
@@ -511,7 +511,7 @@ my @gabook =
    TITLE => qq(Stokes theorem),
    DATE => 'May 17, 2014',
    REF => 'stokesTheoremGeometricAlgebra',
-   URL => 'http://peeterjoot.com/archives/math2014/stokesTheoremGeometricAlgebra.pdf',
+   URL => 'https://peeterjoot.com/archives/math2014/stokesTheoremGeometricAlgebra.pdf',
    WHAT => qq(New rewrite from scratch of Stokes theorem, properly treating curvilinear coordinates.)
 }
 ,{
@@ -519,7 +519,7 @@ my @gabook =
    TITLE => qq(Elliptic parameterization),
    DATE => 'September 01, 2016',
    REF => 'hestenesElipseParameterization',
-   URL => 'http://peeterjoot.com/archives/math2016/hestenesElipseParameterization.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/hestenesElipseParameterization.pdf',
    WHAT => qq()
 }
 ,{
@@ -527,7 +527,7 @@ my @gabook =
    TITLE => qq(Fundamental theorem of calculus),
    DATE => 'September 20, 2016',
    REF => 'fundamentalTheoremOfCalculus',
-   URL => 'http://peeterjoot.com/archives/math2016/fundamentalTheoremOfCalculus.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/fundamentalTheoremOfCalculus.pdf',
    WHAT => qq()
 }
 ,{
@@ -535,7 +535,7 @@ my @gabook =
    TITLE => qq(Green's function for the gradient in Euclidean spaces.),
    DATE => 'September 26, 2016',
    REF => 'gradientGreensFunction',
-   URL => 'http://peeterjoot.com/archives/math2016/gradientGreensFunction.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/gradientGreensFunction.pdf',
    WHAT => qq()
 }
 ,{
@@ -543,7 +543,7 @@ my @gabook =
    TITLE => qq(Helmholtz theorem),
    DATE => 'September 29, 2016',
    REF => 'helmholtzDerviationMultivector',
-   URL => 'http://peeterjoot.com/archives/math2016/helmholtzDerviationMultivector.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/helmholtzDerviationMultivector.pdf',
    WHAT => qq()
 }
 ,{
@@ -551,7 +551,7 @@ my @gabook =
    TITLE => qq(Corollaries to Stokes and Divergence theorems),
    DATE => 'October 12, 2016',
    REF => 'stokesCorollariesGriffiths',
-   URL => 'http://peeterjoot.com/archives/math2016/stokesCorollariesGriffiths.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/stokesCorollariesGriffiths.pdf',
    WHAT => qq()
 }
 ,{
@@ -559,7 +559,7 @@ my @gabook =
    TITLE => qq(math.se: What's the difference between exterior, clifford, geometric, ... algebras),
    DATE => 'October 30, 2016',
    REF => 'whatsTheDifference',
-   URL => 'http://peeterjoot.com/archives/math2016/whatsTheDifference.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/whatsTheDifference.pdf',
    WHAT => qq()
 }
 ) ; # @gabook
