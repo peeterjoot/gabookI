@@ -71,11 +71,11 @@ d\Bx_k = \Bx_k du^k,\qquad \text{(no sum)}.
 \item The volume element is non-zero on the manifold, or \( \Bx_1 \wedge \cdots \wedge \Bx_k \ne 0 \).
 \item The surface area element \( d^{k-1} \Bx \), is defined by
 \begin{equation}\label{eqn:fundamentalTheoremOfCalculus:120}
-%d^{k-1} \Bx = \sum_{i = 1}^k (-1)^{k-i} d\Bx_1 \wedge d\Bx_2 \cdots \widehat{d\Bx_i} \cdots \wedge d\Bx_k,
+%d^{k-1} \Bx = \sum_{i = 1}^k (-1)^{k-i} d\Bx_1 \wedge d\Bx_2 \cdots \wyhat{d\Bx_i} \cdots \wedge d\Bx_k,
 d^{k-1} \Bx = \sum_{i = 1}^k (-1)^{k-i} d\Bx_1 \wedge d\Bx_2 \cdots \wedge d\Bx_{i-1} \wedge d\Bx_{i+1} \wedge \cdots \wedge d\Bx_k.
 \end{equation}
 
-%where \( \widehat{d\Bx_i} \) indicates the omission of \( d\Bx_i \).
+%where \( \wyhat{d\Bx_i} \) indicates the omission of \( d\Bx_i \).
 \item My proof for this theorem was restricted to a simple ``rectangular'' volume parameterized by the ranges
    \(
    [u^1(0), u^1(1) ] \directproduct
@@ -86,7 +86,7 @@ d^{k-1} \Bx = \sum_{i = 1}^k (-1)^{k-i} d\Bx_1 \wedge d\Bx_2 \cdots \wedge d\Bx_
 \oint_{\partial V} d^{k-1} \Bx \cdot F
 =
 \sum_{i = 1}^k (-1)^{k-i} \int \evalrange{
-   %\lr{ \lr{ d\Bx_1 \wedge d\Bx_2 \cdots \widehat{d\Bx_i} \cdots \wedge d\Bx_k } \cdot F }
+   %\lr{ \lr{ d\Bx_1 \wedge d\Bx_2 \cdots \wyhat{d\Bx_i} \cdots \wedge d\Bx_k } \cdot F }
    \Biglr{ \lr{ d\Bx_1 \wedge d\Bx_2 \cdots \wedge d\Bx_{i-1} \wedge d\Bx_{i+1} \wedge \cdots \wedge d\Bx_k } \cdot F }
 }{u^i = u^i(0)}{u^i(1)},
 \end{equation}
@@ -146,12 +146,12 @@ This means that \( d^k \Bx \wedge \Bx^i = 0 \), and
 &=
 \sum_{i = 1}^{k}
 \int_V
-%du^1 du^2 \cdots \widehat{ du^i} \cdots du^k
+%du^1 du^2 \cdots \wyhat{ du^i} \cdots du^k
 du^1 du^2 \cdots du^{i-1} du^{i+1} \cdots du^k
 F \lr{
 (-1)^{k-i}
  \Bx_1 \wedge \Bx_2 \cdots \wedge \Bx_{i-1} \wedge \Bx_{i+1} \wedge \cdots \wedge \Bx_k } \partial_i G du^i
- %\Bx_1 \wedge \Bx_2 \cdots \widehat{\Bx_i} \cdots \wedge \Bx_k } \partial_i G du^i
+ %\Bx_1 \wedge \Bx_2 \cdots \wyhat{\Bx_i} \cdots \wedge \Bx_k } \partial_i G du^i
  \\
  &=
 \sum_{i = 1}^{k}
@@ -164,7 +164,7 @@ F \lr{
 \cdots
 \int_{u^k}
 \evalrange{ \Biglr{
-%F d\Bx_1 \wedge d\Bx_2 \cdots \widehat{d\Bx_i} \cdots \wedge d\Bx_k G
+%F d\Bx_1 \wedge d\Bx_2 \cdots \wyhat{d\Bx_i} \cdots \wedge d\Bx_k G
 F d\Bx_1 \wedge d\Bx_2 \cdots \wedge d\Bx_{i-1} \wedge d\Bx_{i+1} \wedge \cdots \wedge d\Bx_k G
 }
 }{u^i = u^i(0)}{u^i(1)}.

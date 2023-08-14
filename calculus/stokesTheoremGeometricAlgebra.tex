@@ -3,7 +3,6 @@
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
 \label{chap:stokesTheoremGeometricAlgebra}
-
 The subject of \textAndIndex{differential forms} is one way to obtain an understanding of how to apply \textAndIndex{Stokes theorem} to higher dimensional spaces, non-Euclidean metrics, and \textAndIndex{curvilinear coordinate} systems.
 %as covered for example in
 %, and \citep{spivak1965calculus}.  However, both of those texts, despite their small size, are intensely scary.
@@ -1442,7 +1441,7 @@ d\Bx_\tau,
 We follow the same procedure to calculate the corresponding boundary surface ``area'' element (with dimensions of volume in this case).  This is
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2060}
 \begin{aligned}
-d^4 \Bx \cdot \lr{ \boldpartial \wedge \Bf }
+&d^4 \Bx \cdot \lr{ \boldpartial \wedge \Bf } \\
 &=
 \lr{ d^4 \Bx \cdot \Bx^i } \cdot \partial_i \Bf \\
 &=
@@ -1575,12 +1574,12 @@ I_{1 2 \cdots (k-1)} I \Abs{d\Bx_1 \wedge d\Bx_2 \wedge \cdots \wedge d\Bx_{k-1}
 We've seen in \eqnref{example:stokesTheoremGeometricAlgebra:4950} and \cref{thm:stokesTheoremGeometricAlgebra:4950} that the dual of vector \(\Ba\) with respect to the unit pseudoscalar \(I_{\Bb \cdots \Bc \Bd}\) in a subspace spanned by \(\setlr{\Ba, \cdots \Bc, \Bd}\) is
 %
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5010}
-\widehat{\Ba^\conj} = I_{\Bb \cdots \Bc \Bd} \inv{ I_{\Ba \cdots \Bc \Bd} },
+\wyhat{\Ba^\conj} = I_{\Bb \cdots \Bc \Bd} \inv{ I_{\Ba \cdots \Bc \Bd} },
 \end{equation}
 %
 or
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5030}
-\widehat{\Ba^\conj} I_{\Ba \cdots \Bc \Bd}^2
+\wyhat{\Ba^\conj} I_{\Ba \cdots \Bc \Bd}^2
 =
 I_{\Bb \cdots \Bc \Bd}.
 \end{equation}
@@ -1590,7 +1589,7 @@ This allows us to write
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5050}
 d^{k-1} \Bx I
 =
-I^2 \sum_i \widehat{\Bx^i} d{A'}_i
+I^2 \sum_i \wyhat{\Bx^i} d{A'}_i
 \end{equation}
 %
 where \(d{A'}_i = \pm dA_i\), and \(dA_i\) is the area of the boundary area element normal to \(\Bx^i\).  Note that the \(I^2\) term will now cancel cleanly from both sides of the divergence equation, taking both the metric and the orientation specific dependencies with it.
@@ -1598,7 +1597,7 @@ where \(d{A'}_i = \pm dA_i\), and \(dA_i\) is the area of the boundary area elem
 This leaves us with
 %
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5070}
-\int_V dV \spacegrad \cdot \Bf = (-1)^{k+1} \int_{\partial V} d{A'}_i \widehat{\Bx^i} \cdot \Bf.
+\int_V dV \spacegrad \cdot \Bf = (-1)^{k+1} \int_{\partial V} d{A'}_i \wyhat{\Bx^i} \cdot \Bf.
 \end{equation}
 %
 To spell out the details, we have to be very careful with the signs.  However, that is a job best left for specific examples.
@@ -1649,8 +1648,8 @@ The duality relations for the tangent space are
 or
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5150}
 \begin{aligned}
-\widehat{\Bx^2} &= -\widehat{\Bx_1} \inv{I} \\
-\widehat{\Bx^1} &= \widehat{\Bx_2} \inv{I}
+\wyhat{\Bx^2} &= -\wyhat{\Bx_1} \inv{I} \\
+\wyhat{\Bx^1} &= \wyhat{\Bx_2} \inv{I}
 \end{aligned}.
 \end{equation}
 %
@@ -1659,19 +1658,19 @@ Back substitution into the line element gives
 \begin{aligned}
 d^1 \Bx
 &=
--du^2 \Abs{\Bx_2} \widehat{\Bx_2}
-+du^1 \Abs{\Bx_1} \widehat{\Bx_1} \\
+-du^2 \Abs{\Bx_2} \wyhat{\Bx_2}
++du^1 \Abs{\Bx_1} \wyhat{\Bx_1} \\
 &=
--du^2 \Abs{\Bx_2} \widehat{\Bx^1} I
--du^1 \Abs{\Bx_1} \widehat{\Bx^2} I.
+-du^2 \Abs{\Bx_2} \wyhat{\Bx^1} I
+-du^1 \Abs{\Bx_1} \wyhat{\Bx^2} I.
 \end{aligned}
 \end{equation}
 
 Writing (no sum) \(du^i \Abs{\Bx_i} = ds_i\), we have
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5190}
 d^1 \Bx I =
--\lr{ ds_2 \widehat{\Bx^1}
-+ds_1 \widehat{\Bx^2} } I^2.
+-\lr{ ds_2 \wyhat{\Bx^1}
++ds_1 \wyhat{\Bx^2} } I^2.
 \end{equation}
 
 This provides us a divergence and normal relationship, with \(-I^2\) terms on each side that can be canceled.  Restoring explicit range evaluation, that is
@@ -1680,13 +1679,13 @@ This provides us a divergence and normal relationship, with \(-I^2\) terms on ea
 %\int_{\partial A} \lr{ d^1 \Bx I } \cdot \Bf
 \int_A dA \spacegrad \cdot \Bf
 &=
-\int_{\Delta u^2} \evalbar{ ds_2 \widehat{\Bx^1} \cdot \Bf}{\Delta u^1}
-+ \int_{\Delta u^1} \evalbar{ ds_1 \widehat{\Bx^2} \cdot \Bf}{\Delta u^2} \\
+\int_{\Delta u^2} \evalbar{ ds_2 \wyhat{\Bx^1} \cdot \Bf}{\Delta u^1}
++ \int_{\Delta u^1} \evalbar{ ds_1 \wyhat{\Bx^2} \cdot \Bf}{\Delta u^2} \\
 &=
-\int_{\Delta u^2} \evalbar{ ds_2 \widehat{\Bx^1} \cdot \Bf}{u^1(1)}
--\int_{\Delta u^2} \evalbar{ ds_2 \widehat{\Bx^1} \cdot \Bf}{u^1(0)}
-+ \int_{\Delta u^1} \evalbar{ ds_1 \widehat{\Bx^2} \cdot \Bf}{u^2(0)}
-- \int_{\Delta u^1} \evalbar{ ds_1 \widehat{\Bx^2} \cdot \Bf}{u^2(0)}.
+\int_{\Delta u^2} \evalbar{ ds_2 \wyhat{\Bx^1} \cdot \Bf}{u^1(1)}
+-\int_{\Delta u^2} \evalbar{ ds_2 \wyhat{\Bx^1} \cdot \Bf}{u^1(0)}
++ \int_{\Delta u^1} \evalbar{ ds_1 \wyhat{\Bx^2} \cdot \Bf}{u^2(0)}
+- \int_{\Delta u^1} \evalbar{ ds_1 \wyhat{\Bx^2} \cdot \Bf}{u^2(0)}.
 \end{aligned}
 \end{equation}
 
@@ -1695,10 +1694,10 @@ Let's consider this graphically for an Euclidean metric as illustrated in \cref{
 
 We see that
 \begin{itemize}
-\item along \(u^2(0)\) the outwards normal is \(-\widehat{\Bx^2}\),
-\item along \(u^2(1)\) the outwards normal is \(\widehat{\Bx^2}\),
-\item along \(u^1(0)\) the outwards normal is \(-\widehat{\Bx^1}\), and
-\item along \(u^1(1)\) the outwards normal is \(\widehat{\Bx^2}\).
+\item along \(u^2(0)\) the outwards normal is \(-\wyhat{\Bx^2}\),
+\item along \(u^2(1)\) the outwards normal is \(\wyhat{\Bx^2}\),
+\item along \(u^1(0)\) the outwards normal is \(-\wyhat{\Bx^1}\), and
+\item along \(u^1(1)\) the outwards normal is \(\wyhat{\Bx^2}\).
 \end{itemize}
 
 Writing that outwards normal as \(\ncap\), we have
@@ -1733,7 +1732,7 @@ where \(d^3 \Bx I = dV I^2\), and we have used a pseudoscalar with the same orie
 %
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5390}
 \begin{aligned}
-I &= \widehat{ \Bx_{123} } \\
+I &= \wyhat{ \Bx_{123} } \\
 \Bx_{123} &= \Bx_1 \wedge \Bx_2 \wedge \Bx_3.
 \end{aligned}
 \end{equation}
@@ -1748,12 +1747,12 @@ d^2 \Bx I
 +du^2 du^3 \Bx_2 \wedge \Bx_3 \\
 &=
 \lr{
-% dA_{3} \widehat{\Bx_1 \wedge \Bx_2} \inv{I}
-%+dA_{2} \widehat{\Bx_3 \wedge \Bx_1} \inv{I}
-%+dA_{1} \widehat{\Bx_2 \wedge \Bx_3} \inv{I}
- dA_{3} \widehat{ \Bx_{12} } \inv{I}
-+dA_{2} \widehat{ \Bx_{31} } \inv{I}
-+dA_{1} \widehat{ \Bx_{23} } \inv{I}
+% dA_{3} \wyhat{\Bx_1 \wedge \Bx_2} \inv{I}
+%+dA_{2} \wyhat{\Bx_3 \wedge \Bx_1} \inv{I}
+%+dA_{1} \wyhat{\Bx_2 \wedge \Bx_3} \inv{I}
+ dA_{3} \wyhat{ \Bx_{12} } \inv{I}
++dA_{2} \wyhat{ \Bx_{31} } \inv{I}
++dA_{1} \wyhat{ \Bx_{23} } \inv{I}
 } I^2,
 \end{aligned}
 \end{equation}
@@ -1781,21 +1780,21 @@ Because of this we can write the dual two form as we expressed the normals in \c
 d^2 \Bx I 
 &= \lr{
    dA_1
-   \widehat{\Bx_{23}}
-   \inv{\widehat{\Bx_{123}}}
+   \wyhat{\Bx_{23}}
+   \inv{\wyhat{\Bx_{123}}}
    +
    dA_2
-   \widehat{\Bx_{31}}
-   \inv{\widehat{\Bx_{231}}}
+   \wyhat{\Bx_{31}}
+   \inv{\wyhat{\Bx_{231}}}
    +
    dA_3
-   \widehat{\Bx_{12}}
-   \inv{\widehat{\Bx_{312}}}
+   \wyhat{\Bx_{12}}
+   \inv{\wyhat{\Bx_{312}}}
 } I^2 \\
 &=
-\lr{ dA_1 \widehat{\Bx^1}
-+dA_2 \widehat{\Bx^2}
-+dA_3 \widehat{\Bx^3} } I^2.
+\lr{ dA_1 \wyhat{\Bx^1}
++dA_2 \wyhat{\Bx^2}
++dA_3 \wyhat{\Bx^3} } I^2.
 \end{aligned}
 \end{equation}
 
@@ -1810,14 +1809,14 @@ We can now state the 3D divergence theorem, canceling out the metric and orienta
 where (sums implied)
 %
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5490}
-dA \ncap = dA_i \widehat{\Bx^i},
+dA \ncap = dA_i \wyhat{\Bx^i},
 \end{equation}
 %
 and
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5510}
 \begin{aligned}
-\evalbar{\ncap}{u^i = u^i(1)} &= \widehat{\Bx^i} \\
-\evalbar{\ncap}{u^i = u^i(0)} &= -\widehat{\Bx^i}
+\evalbar{\ncap}{u^i = u^i(1)} &= \wyhat{\Bx^i} \\
+\evalbar{\ncap}{u^i = u^i(0)} &= -\wyhat{\Bx^i}
 \end{aligned}.
 \end{equation}
 %
@@ -1835,7 +1834,7 @@ This sign alternation originates with the two form elements \(\lr{d\Bx_i \wedge 
 -\evalbar{\lr{ \lr{ d\Bx_i \wedge d\Bx_j } \cdot F }}{u^k = u^k(0)}
 \end{equation}
 %
-In the context of the divergence theorem, this means that we are implicitly requiring the dot products \(\widehat{\Bx^k} \cdot \Bf\) to be evaluated specifically at the end points of the integration where \(u^k = u^k(1), u^k = u^k(0)\), accounting for the alternation of sign required to describe the normals as uniformly outwards.
+In the context of the divergence theorem, this means that we are implicitly requiring the dot products \(\wyhat{\Bx^k} \cdot \Bf\) to be evaluated specifically at the end points of the integration where \(u^k = u^k(1), u^k = u^k(0)\), accounting for the alternation of sign required to describe the normals as uniformly outwards.
 }
 
 \makeexample{4D divergence theorem}{example:stokesTheoremGeometricAlgebra:5270}{
@@ -1846,6 +1845,7 @@ Applying Stokes theorem to a trivector \(T = I \Bf\) in the 4D case we find
 \int_{\partial V} \lr{ d^3 \Bx I} \cdot \Bf.
 \end{equation}
 
+% FIXME: wyhat is repeating the text!?
 Here the pseudoscalar has been picked to have the same orientation as the hypervolume element \(d^4 \Bx = I d^4 x\).  Writing \(\Bx_{ij \cdots k} = \Bx_i \wedge \Bx_j \wedge \cdots \Bx_k\) the dual of the three form is
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5550}
 \begin{aligned}
@@ -1859,38 +1859,41 @@ d^3 \Bx I
 } I \\
 &=
 \lr{
-    dA^{123} \widehat{ \Bx_{123} }
-   -dA^{124} \widehat{ \Bx_{124} }
-   +dA^{134} \widehat{ \Bx_{134} }
-   -dA^{234} \widehat{ \Bx_{234} }
+    dA^{123} \wyhat{ \Bx_{123} }
+   -dA^{124} \wyhat{ \Bx_{124} }
+   +dA^{134} \wyhat{ \Bx_{134} }
+   -dA^{234} \wyhat{ \Bx_{234} }
 } I \\
 &=
-\lr{
-    dA^{123} \widehat{ \Bx_{123} } \inv{\widehat{\Bx_{1234} }}
-   -dA^{124} \widehat{ \Bx_{124} } \inv{\widehat{\Bx_{1234} }}
-   +dA^{134} \widehat{ \Bx_{134} } \inv{\widehat{\Bx_{1234} }}
-   -dA^{234} \widehat{ \Bx_{234} } \inv{\widehat{\Bx_{1234} }}
+\Biglr{
+    dA^{123} \wyhat{ \Bx_{123} } \inv{\wyhat{\Bx_{1234} }}
+   -dA^{124} \wyhat{ \Bx_{124} } \inv{\wyhat{\Bx_{1234} }} \\
+&\qquad
+   +dA^{134} \wyhat{ \Bx_{134} } \inv{\wyhat{\Bx_{1234} }}
+   -dA^{234} \wyhat{ \Bx_{234} } \inv{\wyhat{\Bx_{1234} }}
+} I^2 \\
+&=
+-\Biglr{
+    dA^{123} \wyhat{ \Bx_{123} } \inv{\wyhat{\Bx_{4123} }}
+   +dA^{124} \wyhat{ \Bx_{124} } \inv{\wyhat{\Bx_{3412} }} \\
+&\qquad
+   +dA^{134} \wyhat{ \Bx_{134} } \inv{\wyhat{\Bx_{2341} }}
+   +dA^{234} \wyhat{ \Bx_{234} } \inv{\wyhat{\Bx_{1234} }}
+} I^2 \\
+&=
+-\Biglr{
+    dA^{123} \wyhat{ \Bx_{123} } \inv{\wyhat{\Bx_{4123} }}
+   +dA^{124} \wyhat{ \Bx_{412} } \inv{\wyhat{\Bx_{3412} }} \\
+&\qquad
+   +dA^{134} \wyhat{ \Bx_{341} } \inv{\wyhat{\Bx_{2341} }}
+   +dA^{234} \wyhat{ \Bx_{234} } \inv{\wyhat{\Bx_{1234} }}
 } I^2 \\
 &=
 -\lr{
-    dA^{123} \widehat{ \Bx_{123} } \inv{\widehat{\Bx_{4123} }}
-   +dA^{124} \widehat{ \Bx_{124} } \inv{\widehat{\Bx_{3412} }}
-   +dA^{134} \widehat{ \Bx_{134} } \inv{\widehat{\Bx_{2341} }}
-   +dA^{234} \widehat{ \Bx_{234} } \inv{\widehat{\Bx_{1234} }}
-} I^2 \\
-&=
--\lr{
-    dA^{123} \widehat{ \Bx_{123} } \inv{\widehat{\Bx_{4123} }}
-   +dA^{124} \widehat{ \Bx_{412} } \inv{\widehat{\Bx_{3412} }}
-   +dA^{134} \widehat{ \Bx_{341} } \inv{\widehat{\Bx_{2341} }}
-   +dA^{234} \widehat{ \Bx_{234} } \inv{\widehat{\Bx_{1234} }}
-} I^2 \\
-&=
--\lr{
-    dA^{123} \widehat{ \Bx^{4} }
-   +dA^{124} \widehat{ \Bx^{3} }
-   +dA^{134} \widehat{ \Bx^{2} }
-   +dA^{234} \widehat{ \Bx^{1} }
+    dA^{123} \wyhat{ \Bx^{4} }
+   +dA^{124} \wyhat{ \Bx^{3} }
+   +dA^{134} \wyhat{ \Bx^{2} }
+   +dA^{234} \wyhat{ \Bx^{1} }
 } I^2
 \end{aligned}
 \end{equation}
@@ -1902,7 +1905,7 @@ dA^{ijk} = \Abs{ d\Bx_i \wedge d\Bx_j \wedge d\Bx_k }.
 
 Observe that the dual representation nicely removes the alternation of sign that we had in the Stokes theorem boundary integral, since each alternation of the wedged vectors in the pseudoscalar changes the sign once.
 
-As before, we define the outwards normals as \(\ncap = \pm \widehat{\Bx^i}\) on the upper and lower integration ranges respectively.  The scalar area elements on these faces can be written in a dual form
+As before, we define the outwards normals as \(\ncap = \pm \wyhat{\Bx^i}\) on the upper and lower integration ranges respectively.  The scalar area elements on these faces can be written in a dual form
 %
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5590}
 \begin{aligned}
@@ -1923,18 +1926,15 @@ so that the 4D divergence theorem looks just like the 2D and 3D cases
 Here we define the volume scaled normal as
 %
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:5630}
-d^3 x \ncap = dA_i \widehat{\Bx^i}.
+d^3 x \ncap = dA_i \wyhat{\Bx^i}.
 \end{equation}
 %
 As before, we have made use of the implicit fact that the three form (and it's dot product with \(\Bf\)) was evaluated on the boundaries of the integration region, with a toggling of sign on the lower limit of that evaluation that is now reflected in what we have defined as the outwards normal.
 
 We also obtain explicit instructions from this formalism how to compute the ``outwards'' normal for this surface in a 4D space (unit scaling of the dual basis elements), something that we cannot compute using any sort of geometrical intuition.  For free we've obtained a result that applies to both Euclidean and Minkowski (or other non-Euclidean) spaces.
 }
-
 \section{Volume integral coordinate representations}
-
 It may be useful to formulate the curl integrals in \textAndIndex{tensor} form.  For vectors \(\Bf\), and bivectors \index{bivector} \(B\), the coordinate representations of those differential forms (\cref{pr:stokesTheoremGeometricAlgebra:1}) are
-
 \begin{subequations}
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:2160}
 d^2 \Bx \cdot \lr{ \boldpartial \wedge \Bf }

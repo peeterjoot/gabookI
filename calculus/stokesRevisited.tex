@@ -207,7 +207,7 @@ The following will be used in the sections below
 \Br &= \gamma_j x^j \\
 \Br_{u_i} &= \gamma_j \PD{u_i}{x^j} \\
 I \Br^{u_i}
-&= (-1)^{k-i} \Br_{u_1} \wedge \Br_{u_2} \wedge \cdots \widehat{\Br_{u_i}} \cdots \wedge \Br_{u_k} \\
+&= (-1)^{k-i} \Br_{u_1} \wedge \Br_{u_2} \wedge \cdots \wyhat{\Br_{u_i}} \cdots \wedge \Br_{u_k} \\
 \end{aligned}
 \end{equation}
 %
@@ -216,7 +216,7 @@ I \Br^{u_i}
 = (-1)^{k-i}
 \gamma_{j_1} \wedge \cdots \gamma_{j_{k-1}}
 %\mathLabelBox{\PD{u_1}{x^{j_1}} \cdots \PD{u_k}{x^{j_{k-1}}}}{\(\partial_{u_i}\) \,omitted}
-\PD{u_1}{x^{j_1}} \cdots \widehat{\PD{u_i}{}} \cdots \PD{u_k}{x^{j_{k-1}}}
+\PD{u_1}{x^{j_1}} \cdots \wyhat{\PD{u_i}{}} \cdots \PD{u_k}{x^{j_{k-1}}}
 \end{equation}
 %
 Here the overhat is used to indicate omission.
@@ -322,7 +322,7 @@ Dotting this with \eqnref{eqn:stokesR:dA} we have
 \PD{x^{m_1}}{F_{m_2 m_3 \cdots m_{k}}}
 \left( \gamma^{m_2} \wedge \gamma^{m_2} \cdots \wedge \gamma^{m_{k}} \right) \cdot
 \left( \gamma_{j_1} \wedge \cdots \gamma_{j_{k-1}} \right) \\
-&\PD{u_1}{x^{j_1}} \cdots \widehat{\PD{u_i}{}} \cdots \PD{u_k}{x^{j_{k-1}}} \PD{u_i}{x^{m_1}} \\
+&\PD{u_1}{x^{j_1}} \cdots \wyhat{\PD{u_i}{}} \cdots \PD{u_k}{x^{j_{k-1}}} \PD{u_i}{x^{m_1}} \\
 &=
 \frac{(-1)^{k-i}}{(k-1)!}
 \PD{x^{m_1}}{F_{m_2 m_3 \cdots m_{k}}}
@@ -331,17 +331,17 @@ Dotting this with \eqnref{eqn:stokesR:dA} we have
 \cdots
 {\delta^{m_{2}}}_{j_{k-1}}
 \epsilon^{j_1 j_2 \cdots j_{k-1}} \\
-&\PD{u_1}{x^{j_1}} \cdots \widehat{\PD{u_i}{}} \cdots \PD{u_k}{x^{j_{k-1}}} \PD{u_i}{x^{m_1}} \\
+&\PD{u_1}{x^{j_1}} \cdots \wyhat{\PD{u_i}{}} \cdots \PD{u_k}{x^{j_{k-1}}} \PD{u_i}{x^{m_1}} \\
 &=
 \frac{(-1)^{k-i}}{(k-1)!}
 \PD{x^{m_1}}{F_{m_2 m_3 \cdots m_{k}}}
 \epsilon^{m_k m_{k-1} \cdots m_{2}}
-\PD{u_1}{x^{m_k}} \cdots \widehat{\PD{u_i}{}} \cdots \PD{u_k}{x^{m_{2}}} \PD{u_i}{x^{m_1}} \\
+\PD{u_1}{x^{m_k}} \cdots \wyhat{\PD{u_i}{}} \cdots \PD{u_k}{x^{m_{2}}} \PD{u_i}{x^{m_1}} \\
 &=
 \frac{-(-1)^{i + k(k-1)/2}}{(k-1)!}
 \PD{x^{m_1}}{F_{m_2 m_3 \cdots m_{k}}}
 \epsilon^{m_2 \cdots m_{k-1}}
-\PD{u_1}{x^{m_k}} \cdots \widehat{\PD{u_i}{}} \cdots \PD{u_k}{x^{m_{2}}} \PD{u_i}{x^{m_1}} \\
+\PD{u_1}{x^{m_k}} \cdots \wyhat{\PD{u_i}{}} \cdots \PD{u_k}{x^{m_{2}}} \PD{u_i}{x^{m_1}} \\
 \end{aligned}
 \end{equation}
 %
@@ -363,13 +363,13 @@ m_2 &= n_k \\
 \PD{u_i}{F} \cdot (I \Br^{u_i})
 &=
 \frac{-(-1)^{i + k(k-1)/2}}{(k-1)!}
-\PD{x^{n_i}}{F_{n_k n_{k-1} \cdots \widehat{n_i} \cdots n_{1}}}
-\epsilon^{n_k \cdots \widehat{n_i} \cdots n_{1}}
+\PD{x^{n_i}}{F_{n_k n_{k-1} \cdots \wyhat{n_i} \cdots n_{1}}}
+\epsilon^{n_k \cdots \wyhat{n_i} \cdots n_{1}}
 \PD{u_1}{x^{n_1}} \PD{u_2}{x^{n_2}} \cdots \PD{u_k}{x^{n_k}} \\
 &=
 \frac{-(-1)^{i + k(k-1)/2}}{(k-1)!}
-\PD{x^{n_i}}{F_{n_1 n_{2} \cdots \widehat{n_i} \cdots n_{k}}}
-\epsilon^{n_1 \cdots \widehat{n_i} \cdots n_{k}}
+\PD{x^{n_i}}{F_{n_1 n_{2} \cdots \wyhat{n_i} \cdots n_{k}}}
+\epsilon^{n_1 \cdots \wyhat{n_i} \cdots n_{k}}
 \PD{u_1}{x^{n_1}} \PD{u_2}{x^{n_2}} \cdots \PD{u_k}{x^{n_k}} \\
 \end{aligned}
 \end{equation}
@@ -388,8 +388,8 @@ to prove that within the sum the following two are identical
 \begin{equation}\label{eqn:stokesR:p2}
 \begin{aligned}
 (-1)^{i+1}
-\PD{x^{n_i}}{F_{n_1 n_{2} \cdots \widehat{n_i} \cdots n_{k}}}
-\epsilon^{n_1 \cdots \widehat{n_i} \cdots n_{k}}.
+\PD{x^{n_i}}{F_{n_1 n_{2} \cdots \wyhat{n_i} \cdots n_{k}}}
+\epsilon^{n_1 \cdots \wyhat{n_i} \cdots n_{k}}.
 \end{aligned}
 \end{equation}
 %
@@ -430,10 +430,10 @@ I &= \Br_{u_1} \wedge \Br_{u_2} \wedge \cdots \wedge \Br_{u_k} \\
 \begin{equation}\label{eqn:stokesRevisited:362}
 \begin{aligned}
 I \Br^{u_i} &= I \cdot \Br^{u_i} \\
-&= (-1)^{k-i} \Br_{u_1} \wedge \Br_{u_2} \wedge \cdots \widehat{\Br_{u_i}} \cdots \wedge \Br_{u_k} \\
+&= (-1)^{k-i} \Br_{u_1} \wedge \Br_{u_2} \wedge \cdots \wyhat{\Br_{u_i}} \cdots \wedge \Br_{u_k} \\
 &= (-1)^{k-i}
 \gamma_{j_1} \wedge \cdots \gamma_{j_{k-1}}
-\PD{u_1}{x^{j_1}} \cdots \widehat{\PD{u_i}{}} \cdots \PD{u_k}{x^{j_{k-1}}}
+\PD{u_1}{x^{j_1}} \cdots \wyhat{\PD{u_i}{}} \cdots \PD{u_k}{x^{j_{k-1}}}
 \end{aligned}
 \end{equation}
 %
@@ -443,7 +443,7 @@ parameter \(u_i\).  Putting things together we have the following algebraic desc
 %
 \begin{equation}
 \int_{\partial V} F \cdot d^{k-1}\Bx
-= \sum \int du_1 \cdots \widehat{du_i} \cdots du_k \left.{F \cdot (I \Br^{u_i})}\right\vert_{u_i(0)}^{u_i(1)} \\
+= \sum \int du_1 \cdots \wyhat{du_i} \cdots du_k \left.{F \cdot (I \Br^{u_i})}\right\vert_{u_i(0)}^{u_i(1)} \\
 \end{equation}
 %
 Observe that we have a Jacobian like relationship above due to the alternation provided by the wedge product.  For this
@@ -461,12 +461,12 @@ in order to suppress the explicit parametrization.
 &=
  \int \sum (-1)^{k-i}
 \left.{F \cdot
-\left( d\Bx_1 \wedge \cdots \widehat{d\Bx_i} \cdots \wedge d\Bx_k \right)
+\left( d\Bx_1 \wedge \cdots \wyhat{d\Bx_i} \cdots \wedge d\Bx_k \right)
 }\right\vert_{u_i(0)}^{u_i(1)} \\
 &=
 \int \sum (-1)^{k-i}
 \left.{F \cdot
-\left( d\Bx_1 \wedge \cdots \widehat{d\Bx_i} \cdots \wedge d\Bx_k \right)
+\left( d\Bx_1 \wedge \cdots \wyhat{d\Bx_i} \cdots \wedge d\Bx_k \right)
 }\right\vert_{\partial \Bx_i}
 \end{aligned}
 \end{equation}
@@ -517,7 +517,7 @@ Although not elegant, the partials here can be expanded by coordinates as done i
 We want to prove that
 \begin{equation}
 \sum (-1)^{k-i} \gamma_{j_1} \wedge \cdots \gamma_{j_{k-1}} \PD{u_i}{}
-\PD{u_1}{x^{j_1}} \cdots \widehat{\PD{u_i}{}} \cdots \PD{u_k}{x^{j_{k-1}}}
+\PD{u_1}{x^{j_1}} \cdots \wyhat{\PD{u_i}{}} \cdots \PD{u_k}{x^{j_{k-1}}}
 = 0
 \end{equation}
 %
