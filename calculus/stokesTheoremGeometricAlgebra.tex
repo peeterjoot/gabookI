@@ -625,7 +625,7 @@ e^{-\kappa \theta}
 
 From this we see that acting with the vector derivative on a scalar radial only dependent function \(f(\rho)\) is a vector function that has a radial direction, whereas the action of the vector derivative on an azimuthal only dependent function \(g(\theta)\) is a vector function that has only an azimuthal direction.  The interpretation of the geometric product action of the vector derivative on a vector function is not as simple since the product will be a multivector.
 
-Expanding the curl in coordinates is messier, but yields in the end when tackled with sufficient care
+Expanding the curl in coordinates is messier, but yields when tackled with sufficient care
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:3500}
 \begin{aligned}
 \boldpartial \wedge \Bf
@@ -681,7 +681,8 @@ e^{-\kappa \theta}
 \lr{
 -\frac{f_\theta}{\rho^2} + \inv{\rho} \partial_\rho f_\theta
 - \inv{\rho} \partial_\theta f_\rho
-}
+} \\
+&\qquad
 + \inv{\rho^2}
 \gpgradetwo{
 e^{-\kappa \theta} \lr{\Be^4}^2
@@ -690,8 +691,8 @@ e^{-\kappa \theta} \lr{\Be^4}^2
 + \cancel{\partial_\theta f_\theta}
 }
 e^{\kappa \theta}
-}
-=
+} \\
+&=
 \Be^3
 \Be^4
 \lr{
@@ -1085,8 +1086,8 @@ As was the case with the loop integral, we expect that the coordinate representa
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:1960}
 \begin{aligned}
 \Bx_1 \lr{ -\partial_2 f_3 + \partial_3 f_2 }
-+\Bx_2 \lr{ -\partial_3 f_1 + \partial_1 f_3 }
-+\Bx_3 \lr{ -\partial_1 f_2 + \partial_2 f_1 }
++&\Bx_2 \lr{ -\partial_3 f_1 + \partial_1 f_3 }
++\Bx_3 \lr{ -\partial_1 f_2 + \partial_2 f_1 } \\
 &=
 \Bx_1 \lr{ -\partial_2 \Bf \cdot \Bx_3 + \partial_3 \Bf \cdot \Bx_2 }
 +\Bx_2 \lr{ -\partial_3 \Bf \cdot \Bx_1 + \partial_1 \Bf \cdot \Bx_3 }
@@ -1297,7 +1298,7 @@ Observe that \eqnref{eqn:stokesTheoremGeometricAlgebra:4010} is a vector valued 
 This could easily be a difficult integral to evaluate since the vectors \(\Bx_i\) evaluated at the endpoints are still functions of two parameters.  An easier integral would result from the application of Stokes theorem to a bivector valued field, say \(B\), for which we have
 \begin{equation}\label{eqn:stokesTheoremGeometricAlgebra:4050}
 \begin{aligned}
-\int_V d^3 \Bx \cdot \lr{ \boldpartial \wedge B }
+\int_V &d^3 \Bx \cdot \lr{ \boldpartial \wedge B } \\
 &=
 \int_{\partial V} d^2 \Bx \cdot B \\
 &=
@@ -1450,7 +1451,8 @@ du^1 du^2 du^3 du^4
 \lr{ \Bx_1 \wedge \Bx_2 \wedge \Bx_3 \wedge \Bx_4 }
  \cdot \Bx^i } \cdot \partial_i \Bf \\
  &=
-du^1 du^2 du^3 du_4
+du^1 du^2 du^3 du_4 \\
+&\quad
 \lr{
 \lr{ \Bx_1 \wedge \Bx_2 \wedge \Bx_3 } {\delta_4}^i
 -\lr{ \Bx_1 \wedge \Bx_2 \wedge \Bx_4 } {\delta_3}^i
@@ -1458,7 +1460,8 @@ du^1 du^2 du^3 du_4
 -\lr{ \Bx_2 \wedge \Bx_3 \wedge \Bx_4 } {\delta_1}^i
 } \cdot \partial_i \Bf \\
 &=
-du^1 du^2 du^3 du^4
+du^1 du^2 du^3 du^4 \\
+&\quad
 \lr{
  \lr{ \Bx_1 \wedge \Bx_2 \wedge \Bx_3 } \cdot \partial_4 \Bf
 -\lr{ \Bx_1 \wedge \Bx_2 \wedge \Bx_4 } \cdot \partial_3 \Bf
