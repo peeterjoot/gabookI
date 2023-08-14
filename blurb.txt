@@ -1,0 +1,3 @@
+This is an exploratory collection of notes containing worked examples of a number of introductory applications of Geometric Algebra (GA), also known as Clifford
+
+Algebra.  This writing is focused on undergraduate level physics concepts, with a target audience of somebody with an undergraduate engineering background.
