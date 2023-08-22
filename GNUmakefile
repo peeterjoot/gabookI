@@ -37,18 +37,15 @@ SOURCE_DIRS += rotation
 
 # comment this out for online pdf version (uncomment for KDP)
 #PRINT_VERSION := 1
-
 #SUBFIGDIR := bw
 #ifndef SUBFIGDIR
 #SUBFIGDIR := color
 #endif
-
 ifdef PRINT_VERSION
 SUBFIGDIR := bw
 else
 SUBFIGDIR := color
 endif
-
 ifndef PRINT_VERSION
 PARAMS += --no-print
 endif
@@ -57,7 +54,6 @@ DISTEXTRA := $(SUBFIGDIR)
 ifdef PRINT_VERSION
 DISTEXTRA := $(DISTEXTRA).kdp
 endif
-
 PARAMS += --lettersize
 
 LOCAL_LISTING_FILES += levi.pl
